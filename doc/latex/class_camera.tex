@@ -1,0 +1,279 @@
+\hypertarget{class_camera}{\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+}
+
+
+Manages the Screen's viewport on a \hyperlink{class_room}{Room}.  
+
+
+
+
+{\ttfamily \#include $<$room.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_camera_adb0f46e5040f63b7a8451fa5ae5f9804}{Camera} (\hyperlink{class_object}{Object} $\ast$\hyperlink{class_camera_ad836de76be258c26164908b9a5caf770}{object})
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_camera_a5ff2de9f0242f1284b559fe2704fdb6d}{Camera} (int \hyperlink{class_camera_ae270fbd3b09b36f240a2d55b3b5b9cec}{x}, int \hyperlink{class_camera_ab0522c72fc25c7fa9ad6d0b91e0a3270}{y})
+\begin{DoxyCompactList}\small\item\em Another constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_camera_ad1897942d0ccf91052386388a497349f}{$\sim$\-Camera} ()
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_afd0d3e5987d40ab95269281e3849f4f5}{set\-Speed} (int xspe, int yspe)
+\begin{DoxyCompactList}\small\item\em Sets the \hyperlink{class_camera}{Camera} speed. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_ae00cfccd0a6af0209baa5a815e5576d0}{go\-To} (\hyperlink{class_object}{Object} $\ast$\hyperlink{class_camera_ad836de76be258c26164908b9a5caf770}{object}, bool smooth)
+\begin{DoxyCompactList}\small\item\em Takes the camera on a smooth ride or instant leap towards the given object. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_ae2a9b21471f91f559f99023fab5d8601}{go\-To} (int \hyperlink{class_camera_ae270fbd3b09b36f240a2d55b3b5b9cec}{x}, int \hyperlink{class_camera_ab0522c72fc25c7fa9ad6d0b91e0a3270}{y}, bool smooth)
+\begin{DoxyCompactList}\small\item\em Locks the \hyperlink{class_camera}{Camera} and takes it on a smooth ride or an instant leap towards the destination point. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_ae03c5b5d99889b54a8014129228d59e7}{lock} ()
+\begin{DoxyCompactList}\small\item\em Locks the \hyperlink{class_camera}{Camera}'s position so that it won't follow the object it's supposed to. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_ab26419a3af317221e08061e3106f8693}{release} ()
+\begin{DoxyCompactList}\small\item\em Releases the \hyperlink{class_camera}{Camera} from a previous lock. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_ad8f06bc68acea4df03ec87a23c888af8}{move} (int dx, int dy)
+\begin{DoxyCompactList}\small\item\em D\-E\-B\-U\-G F\-U\-N\-C\-T\-I\-O\-N. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_a42cda7239981a5618660d04bd5893556}{update} ()
+\begin{DoxyCompactList}\small\item\em The default update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_camera_ae270fbd3b09b36f240a2d55b3b5b9cec}{x}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_camera}{Camera} position variables. \end{DoxyCompactList}\item 
+float \hyperlink{class_camera_ab0522c72fc25c7fa9ad6d0b91e0a3270}{y}
+\item 
+float \hyperlink{class_camera_adfb4a7dd79bcb182a6266a0a66a267ac}{xspeed}
+\item 
+float \hyperlink{class_camera_ad504953b5800588a269fc29ca5521523}{yspeed}
+\item 
+float \hyperlink{class_camera_a316ec47e1e935729d49821ab4aad930e}{xtarget}
+\item 
+float \hyperlink{class_camera_a1265c77bac9fc73e043bc359793b2e61}{ytarget}
+\item 
+bool \hyperlink{class_camera_ac1b290d582f215ce1b0d13aa4dbb5f5a}{mode}
+\item 
+bool \hyperlink{class_camera_aca4707f8b35c7376b736ff825522eb37}{returning} = false
+\item 
+float \hyperlink{class_camera_a283eb5bb21146d7b8b12763c731c9b38}{defaultspeed} = 16
+\item 
+\hyperlink{class_object}{Object} $\ast$ \hyperlink{class_camera_ad836de76be258c26164908b9a5caf770}{object}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_camera_ae5cfe0c0e0b06d536d5814bd1ff4818f}{Graphics}
+\item 
+class \hyperlink{class_camera_ad70dac188b152e81b4323bb274bee959}{Background}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages the Screen's viewport on a \hyperlink{class_room}{Room}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_camera_adb0f46e5040f63b7a8451fa5ae5f9804}{\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}Camera\-::\-Camera (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{class_camera_adb0f46e5040f63b7a8451fa5ae5f9804}
+
+
+The constructor. 
+
+The constructor takes the \hyperlink{class_object}{Object} to follow as a parameter and follows it around. 
+\begin{DoxyParams}{Parameters}
+{\em object} & the \hyperlink{class_object}{Object} to follow around \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_camera_a5ff2de9f0242f1284b559fe2704fdb6d}{\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{Camera}]{\setlength{\rightskip}{0pt plus 5cm}Camera\-::\-Camera (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_camera_a5ff2de9f0242f1284b559fe2704fdb6d}
+
+
+Another constructor. 
+
+This constructor makes the \hyperlink{class_camera}{Camera} stay static on the given coordinates (top-\/left side of the screen). Useful when a sudden change in the viewport is needed. 
+\begin{DoxyParams}{Parameters}
+{\em x} & the horizontal position on \hyperlink{class_room}{Room} of the \hyperlink{class_camera}{Camera} \\
+\hline
+{\em y} & the vertical position on \hyperlink{class_room}{Room} of the \hyperlink{class_camera}{Camera} \\
+\hline
+{\em graphics} & a pointer to a \hyperlink{class_graphics}{Graphics} instance from where to get the game width and height \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_camera_ad1897942d0ccf91052386388a497349f}{\index{Camera@{Camera}!$\sim$\-Camera@{$\sim$\-Camera}}
+\index{$\sim$\-Camera@{$\sim$\-Camera}!Camera@{Camera}}
+\subsubsection[{$\sim$\-Camera}]{\setlength{\rightskip}{0pt plus 5cm}Camera\-::$\sim$\-Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_camera_ad1897942d0ccf91052386388a497349f}
+
+
+The destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_camera_ae00cfccd0a6af0209baa5a815e5576d0}{\index{Camera@{Camera}!go\-To@{go\-To}}
+\index{go\-To@{go\-To}!Camera@{Camera}}
+\subsubsection[{go\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::go\-To (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object, }
+\item[{bool}]{smooth}
+\end{DoxyParamCaption}
+)}}\label{class_camera_ae00cfccd0a6af0209baa5a815e5576d0}
+
+
+Takes the camera on a smooth ride or instant leap towards the given object. 
+
+Won't stop until the object is centered on the screen. 
+\begin{DoxyParams}{Parameters}
+{\em object} & the object to go to. \\
+\hline
+{\em smooth} & whether you want a smooth travel to the given object or not (instant leap) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_camera_ae2a9b21471f91f559f99023fab5d8601}{\index{Camera@{Camera}!go\-To@{go\-To}}
+\index{go\-To@{go\-To}!Camera@{Camera}}
+\subsubsection[{go\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::go\-To (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{bool}]{smooth}
+\end{DoxyParamCaption}
+)}}\label{class_camera_ae2a9b21471f91f559f99023fab5d8601}
+
+
+Locks the \hyperlink{class_camera}{Camera} and takes it on a smooth ride or an instant leap towards the destination point. 
+
+Won't stop until the destination point is on the top-\/left side of the screen. 
+\begin{DoxyParams}{Parameters}
+{\em x} & the horizontal coordinate of the destination point \\
+\hline
+{\em y} & the vertical coordinate of the destination point \\
+\hline
+{\em smooth} & whether you want a smooth travel to the destination point or not (instant leap) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_camera_ae03c5b5d99889b54a8014129228d59e7}{\index{Camera@{Camera}!lock@{lock}}
+\index{lock@{lock}!Camera@{Camera}}
+\subsubsection[{lock}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_camera_ae03c5b5d99889b54a8014129228d59e7}
+
+
+Locks the \hyperlink{class_camera}{Camera}'s position so that it won't follow the object it's supposed to. 
+
+\hypertarget{class_camera_ad8f06bc68acea4df03ec87a23c888af8}{\index{Camera@{Camera}!move@{move}}
+\index{move@{move}!Camera@{Camera}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::move (
+\begin{DoxyParamCaption}
+\item[{int}]{dx, }
+\item[{int}]{dy}
+\end{DoxyParamCaption}
+)}}\label{class_camera_ad8f06bc68acea4df03ec87a23c888af8}
+
+
+D\-E\-B\-U\-G F\-U\-N\-C\-T\-I\-O\-N. 
+
+\hypertarget{class_camera_ab26419a3af317221e08061e3106f8693}{\index{Camera@{Camera}!release@{release}}
+\index{release@{release}!Camera@{Camera}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_camera_ab26419a3af317221e08061e3106f8693}
+
+
+Releases the \hyperlink{class_camera}{Camera} from a previous lock. 
+
+\hypertarget{class_camera_afd0d3e5987d40ab95269281e3849f4f5}{\index{Camera@{Camera}!set\-Speed@{set\-Speed}}
+\index{set\-Speed@{set\-Speed}!Camera@{Camera}}
+\subsubsection[{set\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::set\-Speed (
+\begin{DoxyParamCaption}
+\item[{int}]{xspe, }
+\item[{int}]{yspe}
+\end{DoxyParamCaption}
+)}}\label{class_camera_afd0d3e5987d40ab95269281e3849f4f5}
+
+
+Sets the \hyperlink{class_camera}{Camera} speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xspe} & horizontal speed \\
+\hline
+{\em yspe} & vertical speed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_camera_a42cda7239981a5618660d04bd5893556}{\index{Camera@{Camera}!update@{update}}
+\index{update@{update}!Camera@{Camera}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_camera_a42cda7239981a5618660d04bd5893556}
+
+
+The default update method. 
+
+Overridable method. You can implement any path you would like your camera to follow as long as you modify the x and y coordinates whithin this method. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_camera_ad70dac188b152e81b4323bb274bee959}{\index{Camera@{Camera}!Background@{Background}}
+\index{Background@{Background}!Camera@{Camera}}
+\subsubsection[{Background}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Background}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_camera_ad70dac188b152e81b4323bb274bee959}
+\hypertarget{class_camera_ae5cfe0c0e0b06d536d5814bd1ff4818f}{\index{Camera@{Camera}!Graphics@{Graphics}}
+\index{Graphics@{Graphics}!Camera@{Camera}}
+\subsubsection[{Graphics}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Graphics}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_camera_ae5cfe0c0e0b06d536d5814bd1ff4818f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_camera_a283eb5bb21146d7b8b12763c731c9b38}{\index{Camera@{Camera}!defaultspeed@{defaultspeed}}
+\index{defaultspeed@{defaultspeed}!Camera@{Camera}}
+\subsubsection[{defaultspeed}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\-::defaultspeed = 16}}\label{class_camera_a283eb5bb21146d7b8b12763c731c9b38}
+\hypertarget{class_camera_ac1b290d582f215ce1b0d13aa4dbb5f5a}{\index{Camera@{Camera}!mode@{mode}}
+\index{mode@{mode}!Camera@{Camera}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}bool Camera\-::mode}}\label{class_camera_ac1b290d582f215ce1b0d13aa4dbb5f5a}
+\hypertarget{class_camera_ad836de76be258c26164908b9a5caf770}{\index{Camera@{Camera}!object@{object}}
+\index{object@{object}!Camera@{Camera}}
+\subsubsection[{object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ Camera\-::object}}\label{class_camera_ad836de76be258c26164908b9a5caf770}
+\hypertarget{class_camera_aca4707f8b35c7376b736ff825522eb37}{\index{Camera@{Camera}!returning@{returning}}
+\index{returning@{returning}!Camera@{Camera}}
+\subsubsection[{returning}]{\setlength{\rightskip}{0pt plus 5cm}bool Camera\-::returning = false}}\label{class_camera_aca4707f8b35c7376b736ff825522eb37}
+\hypertarget{class_camera_ae270fbd3b09b36f240a2d55b3b5b9cec}{\index{Camera@{Camera}!x@{x}}
+\index{x@{x}!Camera@{Camera}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\-::x}}\label{class_camera_ae270fbd3b09b36f240a2d55b3b5b9cec}
+
+
+\hyperlink{class_camera}{Camera} position variables. 
+
+\hypertarget{class_camera_adfb4a7dd79bcb182a6266a0a66a267ac}{\index{Camera@{Camera}!xspeed@{xspeed}}
+\index{xspeed@{xspeed}!Camera@{Camera}}
+\subsubsection[{xspeed}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\-::xspeed}}\label{class_camera_adfb4a7dd79bcb182a6266a0a66a267ac}
+\hypertarget{class_camera_a316ec47e1e935729d49821ab4aad930e}{\index{Camera@{Camera}!xtarget@{xtarget}}
+\index{xtarget@{xtarget}!Camera@{Camera}}
+\subsubsection[{xtarget}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\-::xtarget}}\label{class_camera_a316ec47e1e935729d49821ab4aad930e}
+\hypertarget{class_camera_ab0522c72fc25c7fa9ad6d0b91e0a3270}{\index{Camera@{Camera}!y@{y}}
+\index{y@{y}!Camera@{Camera}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\-::y}}\label{class_camera_ab0522c72fc25c7fa9ad6d0b91e0a3270}
+\hypertarget{class_camera_ad504953b5800588a269fc29ca5521523}{\index{Camera@{Camera}!yspeed@{yspeed}}
+\index{yspeed@{yspeed}!Camera@{Camera}}
+\subsubsection[{yspeed}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\-::yspeed}}\label{class_camera_ad504953b5800588a269fc29ca5521523}
+\hypertarget{class_camera_a1265c77bac9fc73e043bc359793b2e61}{\index{Camera@{Camera}!ytarget@{ytarget}}
+\index{ytarget@{ytarget}!Camera@{Camera}}
+\subsubsection[{ytarget}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\-::ytarget}}\label{class_camera_a1265c77bac9fc73e043bc359793b2e61}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{room_8h}{room.\-h}\item 
+src/\hyperlink{room_8cpp}{room.\-cpp}\end{DoxyCompactItemize}

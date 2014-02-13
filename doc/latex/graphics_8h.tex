@@ -1,0 +1,103 @@
+\hypertarget{graphics_8h}{\section{src/graphics.h File Reference}
+\label{graphics_8h}\index{src/graphics.\-h@{src/graphics.\-h}}
+}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$S\-D\-L2/\-S\-D\-L.\-h$>$}\\*
+{\ttfamily \#include $<$S\-D\-L2/\-S\-D\-L\-\_\-image.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Easings/\-Expo.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}options.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}object.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gui.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_graphics}{Graphics}
+\begin{DoxyCompactList}\small\item\em Controlls everything graphics-\/related. \end{DoxyCompactList}\item 
+class \hyperlink{class_sprite}{Sprite}
+\begin{DoxyCompactList}\small\item\em A simple abstraction of a set of images and animations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphics}{Graphics} $\ast$ \hyperlink{graphics_8h_af54edc6139c22267ec016afc79d9b15f}{S2\-M\-\_\-\-Create\-Graphics} ()
+\begin{DoxyCompactList}\small\item\em Creates the global \hyperlink{class_graphics}{Graphics} instance. \end{DoxyCompactList}\item 
+void \hyperlink{graphics_8h_a01ce708f97ddc15c1845c68a6709a6d3}{S2\-M\-\_\-\-Update\-Graphics} ()
+\begin{DoxyCompactList}\small\item\em Updates the game's graphics. \end{DoxyCompactList}\item 
+\hyperlink{class_sprite}{Sprite} $\ast$ \hyperlink{graphics_8h_a82e2b9920588f7b66312451f1ee79480}{S2\-M\-\_\-\-Create\-Sprite} (string filename, int w, int h)
+\begin{DoxyCompactList}\small\item\em Creates a \hyperlink{class_sprite}{Sprite} and registers it on the \hyperlink{class_graphics}{Graphics} sprite vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphics}{Graphics} $\ast$ \hyperlink{graphics_8h_a39566e00b94311ad006855b930cd8a94}{g\-Graphics}
+\begin{DoxyCompactList}\small\item\em Global instance of \hyperlink{class_graphics}{Graphics}. \end{DoxyCompactList}\item 
+\hyperlink{class_options}{Options} $\ast$ \hyperlink{graphics_8h_a44f850d0bdace291630066f31737978d}{g\-Options}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{graphics_8h_af54edc6139c22267ec016afc79d9b15f}{\index{graphics.\-h@{graphics.\-h}!S2\-M\-\_\-\-Create\-Graphics@{S2\-M\-\_\-\-Create\-Graphics}}
+\index{S2\-M\-\_\-\-Create\-Graphics@{S2\-M\-\_\-\-Create\-Graphics}!graphics.h@{graphics.\-h}}
+\subsubsection[{S2\-M\-\_\-\-Create\-Graphics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graphics}$\ast$ S2\-M\-\_\-\-Create\-Graphics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_af54edc6139c22267ec016afc79d9b15f}
+
+
+Creates the global \hyperlink{class_graphics}{Graphics} instance. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the global \hyperlink{class_graphics}{Graphics} instance. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_a82e2b9920588f7b66312451f1ee79480}{\index{graphics.\-h@{graphics.\-h}!S2\-M\-\_\-\-Create\-Sprite@{S2\-M\-\_\-\-Create\-Sprite}}
+\index{S2\-M\-\_\-\-Create\-Sprite@{S2\-M\-\_\-\-Create\-Sprite}!graphics.h@{graphics.\-h}}
+\subsubsection[{S2\-M\-\_\-\-Create\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sprite}$\ast$ S2\-M\-\_\-\-Create\-Sprite (
+\begin{DoxyParamCaption}
+\item[{string}]{filename, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a82e2b9920588f7b66312451f1ee79480}
+
+
+Creates a \hyperlink{class_sprite}{Sprite} and registers it on the \hyperlink{class_graphics}{Graphics} sprite vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the bitmap filename where all the sprite images are to be loaded \\
+\hline
+{\em w} & the width of each image \\
+\hline
+{\em h} & the height of each image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the recently created \hyperlink{class_sprite}{Sprite}. 
+\end{DoxyReturn}
+\hypertarget{graphics_8h_a01ce708f97ddc15c1845c68a6709a6d3}{\index{graphics.\-h@{graphics.\-h}!S2\-M\-\_\-\-Update\-Graphics@{S2\-M\-\_\-\-Update\-Graphics}}
+\index{S2\-M\-\_\-\-Update\-Graphics@{S2\-M\-\_\-\-Update\-Graphics}!graphics.h@{graphics.\-h}}
+\subsubsection[{S2\-M\-\_\-\-Update\-Graphics}]{\setlength{\rightskip}{0pt plus 5cm}void S2\-M\-\_\-\-Update\-Graphics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{graphics_8h_a01ce708f97ddc15c1845c68a6709a6d3}
+
+
+Updates the game's graphics. 
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{graphics_8h_a39566e00b94311ad006855b930cd8a94}{\index{graphics.\-h@{graphics.\-h}!g\-Graphics@{g\-Graphics}}
+\index{g\-Graphics@{g\-Graphics}!graphics.h@{graphics.\-h}}
+\subsubsection[{g\-Graphics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graphics}$\ast$ g\-Graphics}}\label{graphics_8h_a39566e00b94311ad006855b930cd8a94}
+
+
+Global instance of \hyperlink{class_graphics}{Graphics}. 
+
+Yeah, yeah, I know it's bad to have globals, but whatever, I'm just a C++ noob. \hypertarget{graphics_8h_a44f850d0bdace291630066f31737978d}{\index{graphics.\-h@{graphics.\-h}!g\-Options@{g\-Options}}
+\index{g\-Options@{g\-Options}!graphics.h@{graphics.\-h}}
+\subsubsection[{g\-Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Options}$\ast$ g\-Options}}\label{graphics_8h_a44f850d0bdace291630066f31737978d}

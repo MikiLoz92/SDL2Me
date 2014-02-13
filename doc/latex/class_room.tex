@@ -1,0 +1,359 @@
+\hypertarget{class_room}{\section{Room Class Reference}
+\label{class_room}\index{Room@{Room}}
+}
+
+
+An abstraction of a certain space within a game.  
+
+
+
+
+{\ttfamily \#include $<$room.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_room_a5fd7380ec44c3e7c4c85cde194c8c4c5}{Room} (string filename, string scriptname)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}{Room} ()
+\begin{DoxyCompactList}\small\item\em Another constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_room_aec8c6468cfa356445e072430df3ed73b}{Room} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Yet another constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_room_a67d5da09983cc53097807fd43ba5481a}{$\sim$\-Room} ()
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_room_a297c938f6a2e911b6ae846e795d6d05e}{get\-Width} ()
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{class_room}{Room}'s width. \end{DoxyCompactList}\item 
+int \hyperlink{class_room_acbc864ff80ab5e2782a9bbcf78377e06}{get\-Height} ()
+\begin{DoxyCompactList}\small\item\em Get the \hyperlink{class_room}{Room}'s height. \end{DoxyCompactList}\item 
+void \hyperlink{class_room_aee02820d3a2a3c70d59e2f0455338cd7}{set\-Camera} (\hyperlink{class_camera}{Camera} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Sets the pointer to the default \hyperlink{class_camera}{Camera} instance. \end{DoxyCompactList}\item 
+\hyperlink{class_object}{Object} $\ast$ \hyperlink{class_room_a0c09098560d165c23287969c77c702cc}{create\-Object} (\hyperlink{class_sprite}{Sprite} $\ast$sprite, float x, float y, char d)
+\item 
+void \hyperlink{class_room_acf9689e04f8bc98d658d12d62b95e8bf}{add\-Object} (\hyperlink{class_object}{Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Adds an \hyperlink{class_object}{Object} to the \hyperlink{class_room}{Room}. \end{DoxyCompactList}\item 
+void \hyperlink{class_room_ac9b5844f9e5e251d95ec60c3ec2bc1b6}{add\-Background} (\hyperlink{class_background}{Background} $\ast$background)
+\begin{DoxyCompactList}\small\item\em Adds a \hyperlink{class_background}{Background} to the \hyperlink{class_room}{Room}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_room_a801c3de6ddff533edeb8fa68c7fcbb61}{update} ()
+\begin{DoxyCompactList}\small\item\em The update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_camera}{Camera} $\ast$ \hyperlink{class_room_ae5dbd0283ba91cb66a53fd6f5229c4a3}{camera}
+\begin{DoxyCompactList}\small\item\em The default camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_room_a0c68c6762e7d93eb459ba552dadaf308}{width}
+\item 
+int \hyperlink{class_room_ab7d56b80d9eeefca79a2e83447ad4d66}{height}
+\item 
+int \hyperlink{class_room_a1ee2ea2d741c7196d7d2fd37ae741042}{tilewidth}
+\item 
+int \hyperlink{class_room_ae7a9ba3c048cd82f2335f8da3e7dbe17}{tileheight}
+\item 
+int \hyperlink{class_room_a4664e77f8780c752449b57f2d603be5c}{tilesetwidth}
+\item 
+int \hyperlink{class_room_ac6125cd56db3bf38d2f44158159b3899}{pfirstgid}
+\item 
+vector$<$ \hyperlink{class_object}{Object} $\ast$ $>$ \hyperlink{class_room_a6495b4a5cd0ea4979fcfbbb27c6b419e}{objects}
+\item 
+vector$<$ \hyperlink{class_background}{Background} $\ast$ $>$ \hyperlink{class_room_a2fc816969da445fc7f0bbb3ff7a5ca9f}{backgrounds}
+\item 
+vector$<$ event $>$ \hyperlink{class_room_a881d5a108a9a3aba5f44279ebbd8a4f9}{events}
+\item 
+vector$<$ vector$<$ vector$<$ int $>$ $>$ $>$ \hyperlink{class_room_aba520dbf1dd1907f5cdcbc8b6372ec53}{tmap}
+\item 
+vector$<$ vector$<$ int $>$ $>$ \hyperlink{class_room_a37b095fddfc6230033ed1de7afd9ec8d}{pmap}
+\item 
+vector$<$ S\-D\-L\-\_\-\-Texture $\ast$ $>$ \hyperlink{class_room_a9ad1d805bf9c69b138a66b3f64adf88d}{tilesets}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_room_ae5cfe0c0e0b06d536d5814bd1ff4818f}{Graphics}
+\item 
+class \hyperlink{class_room_a614439ccac0344926adc4c0165d64060}{Entity}
+\item 
+bool \hyperlink{class_room_ae842d44dccbe2dfeb3671612e0a3e377}{compare\-Objects\-By\-Depth} (\hyperlink{class_object}{Object} $\ast$obj1, \hyperlink{class_object}{Object} $\ast$obj2)
+\begin{DoxyCompactList}\small\item\em A function that sorts Sprites by its depth. \end{DoxyCompactList}\item 
+bool \hyperlink{class_room_aa580169e4f3c63e66b19f5216034eb54}{compare\-Backgrounds\-By\-Depth} (\hyperlink{class_background}{Background} $\ast$bg1, \hyperlink{class_background}{Background} $\ast$bg2)
+\item 
+void \hyperlink{class_room_aae5aa308717d7affd253c3645b9e011b}{S2\-M\-\_\-\-Room\-::\-Load\-Script} (string filename)
+\item 
+void \hyperlink{class_room_a85c37ccb227fe7bcf3252708caa40d56}{S2\-M\-\_\-\-Room\-::\-Load\-Script} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstraction of a certain space within a game. 
+
+Rooms are a very abstract concept, much like objects. They represent a certain part of the game, like a level, the game menu or the rolling credits screen. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_room_a5fd7380ec44c3e7c4c85cde194c8c4c5}{\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection[{Room}]{\setlength{\rightskip}{0pt plus 5cm}Room\-::\-Room (
+\begin{DoxyParamCaption}
+\item[{string}]{filename, }
+\item[{string}]{scriptname}
+\end{DoxyParamCaption}
+)}}\label{class_room_a5fd7380ec44c3e7c4c85cde194c8c4c5}
+
+
+The constructor. 
+
+Creates a \hyperlink{class_room}{Room} from a file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the design file \\
+\hline
+{\em scriptname} & the script file \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}{\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection[{Room}]{\setlength{\rightskip}{0pt plus 5cm}Room\-::\-Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}
+
+
+Another constructor. 
+
+Creates an empty black \hyperlink{class_room}{Room}. \hypertarget{class_room_aec8c6468cfa356445e072430df3ed73b}{\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\subsubsection[{Room}]{\setlength{\rightskip}{0pt plus 5cm}Room\-::\-Room (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}}\label{class_room_aec8c6468cfa356445e072430df3ed73b}
+
+
+Yet another constructor. 
+
+Creates an empty black \hyperlink{class_room}{Room} with the specified dimensions 
+\begin{DoxyParams}{Parameters}
+{\em w} & the \hyperlink{class_room}{Room}'s width \\
+\hline
+{\em h} & the Rooms height \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_room_a67d5da09983cc53097807fd43ba5481a}{\index{Room@{Room}!$\sim$\-Room@{$\sim$\-Room}}
+\index{$\sim$\-Room@{$\sim$\-Room}!Room@{Room}}
+\subsubsection[{$\sim$\-Room}]{\setlength{\rightskip}{0pt plus 5cm}Room\-::$\sim$\-Room (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_room_a67d5da09983cc53097807fd43ba5481a}
+
+
+The destructor. 
+
+Destroys the \hyperlink{class_room}{Room} and all its associated tile textures 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_room_ac9b5844f9e5e251d95ec60c3ec2bc1b6}{\index{Room@{Room}!add\-Background@{add\-Background}}
+\index{add\-Background@{add\-Background}!Room@{Room}}
+\subsubsection[{add\-Background}]{\setlength{\rightskip}{0pt plus 5cm}void Room\-::add\-Background (
+\begin{DoxyParamCaption}
+\item[{{\bf Background} $\ast$}]{background}
+\end{DoxyParamCaption}
+)}}\label{class_room_ac9b5844f9e5e251d95ec60c3ec2bc1b6}
+
+
+Adds a \hyperlink{class_background}{Background} to the \hyperlink{class_room}{Room}. 
+
+Right after this the background vector will get sorted. 
+\begin{DoxyParams}{Parameters}
+{\em object} & the \hyperlink{class_background}{Background} to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_room_acf9689e04f8bc98d658d12d62b95e8bf}{add\-Object()} 
+\end{DoxySeeAlso}
+\hypertarget{class_room_acf9689e04f8bc98d658d12d62b95e8bf}{\index{Room@{Room}!add\-Object@{add\-Object}}
+\index{add\-Object@{add\-Object}!Room@{Room}}
+\subsubsection[{add\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void Room\-::add\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{class_room_acf9689e04f8bc98d658d12d62b95e8bf}
+
+
+Adds an \hyperlink{class_object}{Object} to the \hyperlink{class_room}{Room}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & the \hyperlink{class_object}{Object} to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_room_ac9b5844f9e5e251d95ec60c3ec2bc1b6}{add\-Background()} 
+\end{DoxySeeAlso}
+\hypertarget{class_room_a0c09098560d165c23287969c77c702cc}{\index{Room@{Room}!create\-Object@{create\-Object}}
+\index{create\-Object@{create\-Object}!Room@{Room}}
+\subsubsection[{create\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} $\ast$ Room\-::create\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Sprite} $\ast$}]{sprite, }
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{char}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_room_a0c09098560d165c23287969c77c702cc}
+\hypertarget{class_room_acbc864ff80ab5e2782a9bbcf78377e06}{\index{Room@{Room}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!Room@{Room}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int Room\-::get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_room_acbc864ff80ab5e2782a9bbcf78377e06}
+
+
+Get the \hyperlink{class_room}{Room}'s height. 
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{class_room}{Room}'s height 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_room_a297c938f6a2e911b6ae846e795d6d05e}{get\-Width()} 
+\end{DoxySeeAlso}
+\hypertarget{class_room_a297c938f6a2e911b6ae846e795d6d05e}{\index{Room@{Room}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!Room@{Room}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int Room\-::get\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_room_a297c938f6a2e911b6ae846e795d6d05e}
+
+
+Get the \hyperlink{class_room}{Room}'s width. 
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{class_room}{Room}'s width 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_room_acbc864ff80ab5e2782a9bbcf78377e06}{get\-Height()} 
+\end{DoxySeeAlso}
+\hypertarget{class_room_aee02820d3a2a3c70d59e2f0455338cd7}{\index{Room@{Room}!set\-Camera@{set\-Camera}}
+\index{set\-Camera@{set\-Camera}!Room@{Room}}
+\subsubsection[{set\-Camera}]{\setlength{\rightskip}{0pt plus 5cm}void Room\-::set\-Camera (
+\begin{DoxyParamCaption}
+\item[{{\bf Camera} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{class_room_aee02820d3a2a3c70d59e2f0455338cd7}
+
+
+Sets the pointer to the default \hyperlink{class_camera}{Camera} instance. 
+
+The \hyperlink{class_graphics}{Graphics} instance needs a \hyperlink{class_camera}{Camera} instance pointer in order to know at any moment which part of the \hyperlink{class_room}{Room} to draw on the screen. 
+\begin{DoxyParams}{Parameters}
+{\em camera} & a pointer to a \hyperlink{class_camera}{Camera} instance \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_room_a801c3de6ddff533edeb8fa68c7fcbb61}{\index{Room@{Room}!update@{update}}
+\index{update@{update}!Room@{Room}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Room\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_room_a801c3de6ddff533edeb8fa68c7fcbb61}
+
+
+The update method. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_room_aa580169e4f3c63e66b19f5216034eb54}{\index{Room@{Room}!compare\-Backgrounds\-By\-Depth@{compare\-Backgrounds\-By\-Depth}}
+\index{compare\-Backgrounds\-By\-Depth@{compare\-Backgrounds\-By\-Depth}!Room@{Room}}
+\subsubsection[{compare\-Backgrounds\-By\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}bool compare\-Backgrounds\-By\-Depth (
+\begin{DoxyParamCaption}
+\item[{{\bf Background} $\ast$}]{bg1, }
+\item[{{\bf Background} $\ast$}]{bg2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_room_aa580169e4f3c63e66b19f5216034eb54}
+\hypertarget{class_room_ae842d44dccbe2dfeb3671612e0a3e377}{\index{Room@{Room}!compare\-Objects\-By\-Depth@{compare\-Objects\-By\-Depth}}
+\index{compare\-Objects\-By\-Depth@{compare\-Objects\-By\-Depth}!Room@{Room}}
+\subsubsection[{compare\-Objects\-By\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}bool compare\-Objects\-By\-Depth (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} $\ast$}]{obj1, }
+\item[{{\bf Object} $\ast$}]{obj2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_room_ae842d44dccbe2dfeb3671612e0a3e377}
+
+
+A function that sorts Sprites by its depth. 
+
+\hypertarget{class_room_a614439ccac0344926adc4c0165d64060}{\index{Room@{Room}!Entity@{Entity}}
+\index{Entity@{Entity}!Room@{Room}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Entity}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_room_a614439ccac0344926adc4c0165d64060}
+\hypertarget{class_room_ae5cfe0c0e0b06d536d5814bd1ff4818f}{\index{Room@{Room}!Graphics@{Graphics}}
+\index{Graphics@{Graphics}!Room@{Room}}
+\subsubsection[{Graphics}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Graphics}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_room_ae5cfe0c0e0b06d536d5814bd1ff4818f}
+\hypertarget{class_room_aae5aa308717d7affd253c3645b9e011b}{\index{Room@{Room}!S2\-M\-\_\-\-Room\-::\-Load\-Script@{S2\-M\-\_\-\-Room\-::\-Load\-Script}}
+\index{S2\-M\-\_\-\-Room\-::\-Load\-Script@{S2\-M\-\_\-\-Room\-::\-Load\-Script}!Room@{Room}}
+\subsubsection[{S2\-M\-\_\-\-Room\-::\-Load\-Script}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S2\-M\-\_\-\-Room\-::\-Load\-Script} (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_room_aae5aa308717d7affd253c3645b9e011b}
+\hypertarget{class_room_a85c37ccb227fe7bcf3252708caa40d56}{\index{Room@{Room}!S2\-M\-\_\-\-Room\-::\-Load\-Script@{S2\-M\-\_\-\-Room\-::\-Load\-Script}}
+\index{S2\-M\-\_\-\-Room\-::\-Load\-Script@{S2\-M\-\_\-\-Room\-::\-Load\-Script}!Room@{Room}}
+\subsubsection[{S2\-M\-\_\-\-Room\-::\-Load\-Script}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf S2\-M\-\_\-\-Room\-::\-Load\-Script} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_room_a85c37ccb227fe7bcf3252708caa40d56}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_room_a2fc816969da445fc7f0bbb3ff7a5ca9f}{\index{Room@{Room}!backgrounds@{backgrounds}}
+\index{backgrounds@{backgrounds}!Room@{Room}}
+\subsubsection[{backgrounds}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Background} $\ast$$>$ Room\-::backgrounds\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_a2fc816969da445fc7f0bbb3ff7a5ca9f}
+\hypertarget{class_room_ae5dbd0283ba91cb66a53fd6f5229c4a3}{\index{Room@{Room}!camera@{camera}}
+\index{camera@{camera}!Room@{Room}}
+\subsubsection[{camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera}$\ast$ Room\-::camera}}\label{class_room_ae5dbd0283ba91cb66a53fd6f5229c4a3}
+
+
+The default camera. 
+
+\hypertarget{class_room_a881d5a108a9a3aba5f44279ebbd8a4f9}{\index{Room@{Room}!events@{events}}
+\index{events@{events}!Room@{Room}}
+\subsubsection[{events}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$event$>$ Room\-::events\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_a881d5a108a9a3aba5f44279ebbd8a4f9}
+\hypertarget{class_room_ab7d56b80d9eeefca79a2e83447ad4d66}{\index{Room@{Room}!height@{height}}
+\index{height@{height}!Room@{Room}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int Room\-::height\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_ab7d56b80d9eeefca79a2e83447ad4d66}
+\hypertarget{class_room_a6495b4a5cd0ea4979fcfbbb27c6b419e}{\index{Room@{Room}!objects@{objects}}
+\index{objects@{objects}!Room@{Room}}
+\subsubsection[{objects}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Object} $\ast$$>$ Room\-::objects\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_a6495b4a5cd0ea4979fcfbbb27c6b419e}
+\hypertarget{class_room_ac6125cd56db3bf38d2f44158159b3899}{\index{Room@{Room}!pfirstgid@{pfirstgid}}
+\index{pfirstgid@{pfirstgid}!Room@{Room}}
+\subsubsection[{pfirstgid}]{\setlength{\rightskip}{0pt plus 5cm}int Room\-::pfirstgid\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_ac6125cd56db3bf38d2f44158159b3899}
+\hypertarget{class_room_a37b095fddfc6230033ed1de7afd9ec8d}{\index{Room@{Room}!pmap@{pmap}}
+\index{pmap@{pmap}!Room@{Room}}
+\subsubsection[{pmap}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<$int$>$ $>$ Room\-::pmap\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_a37b095fddfc6230033ed1de7afd9ec8d}
+\hypertarget{class_room_ae7a9ba3c048cd82f2335f8da3e7dbe17}{\index{Room@{Room}!tileheight@{tileheight}}
+\index{tileheight@{tileheight}!Room@{Room}}
+\subsubsection[{tileheight}]{\setlength{\rightskip}{0pt plus 5cm}int Room\-::tileheight\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_ae7a9ba3c048cd82f2335f8da3e7dbe17}
+\hypertarget{class_room_a9ad1d805bf9c69b138a66b3f64adf88d}{\index{Room@{Room}!tilesets@{tilesets}}
+\index{tilesets@{tilesets}!Room@{Room}}
+\subsubsection[{tilesets}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$S\-D\-L\-\_\-\-Texture $\ast$$>$ Room\-::tilesets\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_a9ad1d805bf9c69b138a66b3f64adf88d}
+\hypertarget{class_room_a4664e77f8780c752449b57f2d603be5c}{\index{Room@{Room}!tilesetwidth@{tilesetwidth}}
+\index{tilesetwidth@{tilesetwidth}!Room@{Room}}
+\subsubsection[{tilesetwidth}]{\setlength{\rightskip}{0pt plus 5cm}int Room\-::tilesetwidth\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_a4664e77f8780c752449b57f2d603be5c}
+\hypertarget{class_room_a1ee2ea2d741c7196d7d2fd37ae741042}{\index{Room@{Room}!tilewidth@{tilewidth}}
+\index{tilewidth@{tilewidth}!Room@{Room}}
+\subsubsection[{tilewidth}]{\setlength{\rightskip}{0pt plus 5cm}int Room\-::tilewidth\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_a1ee2ea2d741c7196d7d2fd37ae741042}
+\hypertarget{class_room_aba520dbf1dd1907f5cdcbc8b6372ec53}{\index{Room@{Room}!tmap@{tmap}}
+\index{tmap@{tmap}!Room@{Room}}
+\subsubsection[{tmap}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<$vector$<$int$>$ $>$ $>$ Room\-::tmap\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_aba520dbf1dd1907f5cdcbc8b6372ec53}
+\hypertarget{class_room_a0c68c6762e7d93eb459ba552dadaf308}{\index{Room@{Room}!width@{width}}
+\index{width@{width}!Room@{Room}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}int Room\-::width\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_room_a0c68c6762e7d93eb459ba552dadaf308}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{room_8h}{room.\-h}\item 
+src/\hyperlink{room_8cpp}{room.\-cpp}\end{DoxyCompactItemize}

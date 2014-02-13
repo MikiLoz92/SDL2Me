@@ -1,0 +1,14 @@
+#4568
+
+lock
+faceplayer 4
+message 5 "Hi, \\I want to say \"something\" hi" 5 7 "Whatever dude" 900001  "Oki" 9 6 "Argh" 67
+nod
+transport 56 8
+
+
+#6782
+
+lock
+nod
+faceplayer 6

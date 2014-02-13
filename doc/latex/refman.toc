@@ -1,0 +1,257 @@
+\contentsline {chapter}{\numberline {1}S\discretionary {-}{}{}D\discretionary {-}{}{}L2\discretionary {-}{}{}Me Tutorial}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Actual use example}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}I\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}L use example}{1}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Step 1\discretionary {-}{}{}: Opening the box}{2}{subsection.1.3.1}
+\contentsline {chapter}{\numberline {2}page1}{3}{chapter.2}
+\contentsline {chapter}{\numberline {3}Functions}{5}{chapter.3}
+\contentsline {chapter}{\numberline {4}Namespace Index}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Namespace List}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}Hierarchical Index}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Class Hierarchy}{9}{section.5.1}
+\contentsline {chapter}{\numberline {6}Class Index}{11}{chapter.6}
+\contentsline {section}{\numberline {6.1}Class List}{11}{section.6.1}
+\contentsline {chapter}{\numberline {7}File Index}{13}{chapter.7}
+\contentsline {section}{\numberline {7.1}File List}{13}{section.7.1}
+\contentsline {chapter}{\numberline {8}Namespace Documentation}{15}{chapter.8}
+\contentsline {section}{\numberline {8.1}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room Namespace Reference}{15}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{15}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Function Documentation}{15}{subsection.8.1.2}
+\contentsline {subsubsection}{\numberline {8.1.2.1}Add\discretionary {-}{}{}Background}{15}{subsubsection.8.1.2.1}
+\contentsline {subsubsection}{\numberline {8.1.2.2}Load\discretionary {-}{}{}Script}{15}{subsubsection.8.1.2.2}
+\contentsline {subsubsection}{\numberline {8.1.2.3}Load\discretionary {-}{}{}Script}{15}{subsubsection.8.1.2.3}
+\contentsline {section}{\numberline {8.2}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Script Namespace Reference}{15}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{16}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Function Documentation}{16}{subsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.2.1}Find\discretionary {-}{}{}All\discretionary {-}{}{}Strings}{16}{subsubsection.8.2.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2.2}Parse\discretionary {-}{}{}Command}{16}{subsubsection.8.2.2.2}
+\contentsline {subsubsection}{\numberline {8.2.2.3}Parse\discretionary {-}{}{}File}{16}{subsubsection.8.2.2.3}
+\contentsline {subsubsection}{\numberline {8.2.2.4}Read\discretionary {-}{}{}File}{16}{subsubsection.8.2.2.4}
+\contentsline {subsubsection}{\numberline {8.2.2.5}Split\discretionary {-}{}{}String}{16}{subsubsection.8.2.2.5}
+\contentsline {subsubsection}{\numberline {8.2.2.6}Split\discretionary {-}{}{}String}{16}{subsubsection.8.2.2.6}
+\contentsline {chapter}{\numberline {9}Class Documentation}{17}{chapter.9}
+\contentsline {section}{\numberline {9.1}Background Class Reference}{17}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Detailed Description}{17}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Constructor \& Destructor Documentation}{18}{subsection.9.1.2}
+\contentsline {subsubsection}{\numberline {9.1.2.1}Background}{18}{subsubsection.9.1.2.1}
+\contentsline {subsubsection}{\numberline {9.1.2.2}Background}{19}{subsubsection.9.1.2.2}
+\contentsline {subsubsection}{\numberline {9.1.2.3}$\sim $\discretionary {-}{}{}Background}{19}{subsubsection.9.1.2.3}
+\contentsline {subsection}{\numberline {9.1.3}Member Function Documentation}{19}{subsection.9.1.3}
+\contentsline {subsubsection}{\numberline {9.1.3.1}get\discretionary {-}{}{}Height}{19}{subsubsection.9.1.3.1}
+\contentsline {subsubsection}{\numberline {9.1.3.2}get\discretionary {-}{}{}Width}{19}{subsubsection.9.1.3.2}
+\contentsline {subsubsection}{\numberline {9.1.3.3}update}{19}{subsubsection.9.1.3.3}
+\contentsline {subsection}{\numberline {9.1.4}Friends And Related Function Documentation}{19}{subsection.9.1.4}
+\contentsline {subsubsection}{\numberline {9.1.4.1}Graphics}{19}{subsubsection.9.1.4.1}
+\contentsline {subsection}{\numberline {9.1.5}Member Data Documentation}{19}{subsection.9.1.5}
+\contentsline {subsubsection}{\numberline {9.1.5.1}x}{19}{subsubsection.9.1.5.1}
+\contentsline {subsubsection}{\numberline {9.1.5.2}xspeed}{19}{subsubsection.9.1.5.2}
+\contentsline {subsubsection}{\numberline {9.1.5.3}y}{19}{subsubsection.9.1.5.3}
+\contentsline {subsubsection}{\numberline {9.1.5.4}yspeed}{19}{subsubsection.9.1.5.4}
+\contentsline {section}{\numberline {9.2}Camera Class Reference}{19}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Detailed Description}{20}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Constructor \& Destructor Documentation}{20}{subsection.9.2.2}
+\contentsline {subsubsection}{\numberline {9.2.2.1}Camera}{20}{subsubsection.9.2.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2.2}Camera}{20}{subsubsection.9.2.2.2}
+\contentsline {subsubsection}{\numberline {9.2.2.3}$\sim $\discretionary {-}{}{}Camera}{21}{subsubsection.9.2.2.3}
+\contentsline {subsection}{\numberline {9.2.3}Member Function Documentation}{21}{subsection.9.2.3}
+\contentsline {subsubsection}{\numberline {9.2.3.1}go\discretionary {-}{}{}To}{21}{subsubsection.9.2.3.1}
+\contentsline {subsubsection}{\numberline {9.2.3.2}go\discretionary {-}{}{}To}{21}{subsubsection.9.2.3.2}
+\contentsline {subsubsection}{\numberline {9.2.3.3}move}{21}{subsubsection.9.2.3.3}
+\contentsline {subsubsection}{\numberline {9.2.3.4}set\discretionary {-}{}{}Speed}{21}{subsubsection.9.2.3.4}
+\contentsline {subsubsection}{\numberline {9.2.3.5}update}{21}{subsubsection.9.2.3.5}
+\contentsline {subsection}{\numberline {9.2.4}Friends And Related Function Documentation}{22}{subsection.9.2.4}
+\contentsline {subsubsection}{\numberline {9.2.4.1}Background}{22}{subsubsection.9.2.4.1}
+\contentsline {subsubsection}{\numberline {9.2.4.2}Graphics}{22}{subsubsection.9.2.4.2}
+\contentsline {subsection}{\numberline {9.2.5}Member Data Documentation}{22}{subsection.9.2.5}
+\contentsline {subsubsection}{\numberline {9.2.5.1}x}{22}{subsubsection.9.2.5.1}
+\contentsline {subsubsection}{\numberline {9.2.5.2}xspeed}{22}{subsubsection.9.2.5.2}
+\contentsline {subsubsection}{\numberline {9.2.5.3}y}{22}{subsubsection.9.2.5.3}
+\contentsline {subsubsection}{\numberline {9.2.5.4}yspeed}{22}{subsubsection.9.2.5.4}
+\contentsline {section}{\numberline {9.3}Entity Class Reference}{22}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Detailed Description}{22}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Constructor \& Destructor Documentation}{23}{subsection.9.3.2}
+\contentsline {subsubsection}{\numberline {9.3.2.1}Entity}{23}{subsubsection.9.3.2.1}
+\contentsline {subsubsection}{\numberline {9.3.2.2}$\sim $\discretionary {-}{}{}Entity}{23}{subsubsection.9.3.2.2}
+\contentsline {subsection}{\numberline {9.3.3}Member Function Documentation}{23}{subsection.9.3.3}
+\contentsline {subsubsection}{\numberline {9.3.3.1}update}{23}{subsubsection.9.3.3.1}
+\contentsline {section}{\numberline {9.4}Graphics Class Reference}{23}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Detailed Description}{24}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Constructor \& Destructor Documentation}{24}{subsection.9.4.2}
+\contentsline {subsubsection}{\numberline {9.4.2.1}Graphics}{24}{subsubsection.9.4.2.1}
+\contentsline {subsubsection}{\numberline {9.4.2.2}$\sim $\discretionary {-}{}{}Graphics}{24}{subsubsection.9.4.2.2}
+\contentsline {subsection}{\numberline {9.4.3}Member Function Documentation}{25}{subsection.9.4.3}
+\contentsline {subsubsection}{\numberline {9.4.3.1}add\discretionary {-}{}{}Sprite}{25}{subsubsection.9.4.3.1}
+\contentsline {subsubsection}{\numberline {9.4.3.2}blit\discretionary {-}{}{}Texture}{26}{subsubsection.9.4.3.2}
+\contentsline {subsubsection}{\numberline {9.4.3.3}blit\discretionary {-}{}{}Texture}{26}{subsubsection.9.4.3.3}
+\contentsline {subsubsection}{\numberline {9.4.3.4}blit\discretionary {-}{}{}Texture}{26}{subsubsection.9.4.3.4}
+\contentsline {subsubsection}{\numberline {9.4.3.5}draw\discretionary {-}{}{}Texture}{26}{subsubsection.9.4.3.5}
+\contentsline {subsubsection}{\numberline {9.4.3.6}load\discretionary {-}{}{}Texture}{27}{subsubsection.9.4.3.6}
+\contentsline {subsubsection}{\numberline {9.4.3.7}update}{27}{subsubsection.9.4.3.7}
+\contentsline {subsection}{\numberline {9.4.4}Member Data Documentation}{27}{subsection.9.4.4}
+\contentsline {subsubsection}{\numberline {9.4.4.1}game\discretionary {-}{}{}Height}{27}{subsubsection.9.4.4.1}
+\contentsline {subsubsection}{\numberline {9.4.4.2}game\discretionary {-}{}{}Width}{27}{subsubsection.9.4.4.2}
+\contentsline {subsubsection}{\numberline {9.4.4.3}renderer}{27}{subsubsection.9.4.4.3}
+\contentsline {subsubsection}{\numberline {9.4.4.4}window}{27}{subsubsection.9.4.4.4}
+\contentsline {section}{\numberline {9.5}Hero Class Reference}{27}{section.9.5}
+\contentsline {subsection}{\numberline {9.5.1}Detailed Description}{28}{subsection.9.5.1}
+\contentsline {section}{\numberline {9.6}Joystick Class Reference}{28}{section.9.6}
+\contentsline {subsection}{\numberline {9.6.1}Detailed Description}{28}{subsection.9.6.1}
+\contentsline {subsection}{\numberline {9.6.2}Member Function Documentation}{28}{subsection.9.6.2}
+\contentsline {subsubsection}{\numberline {9.6.2.1}get\discretionary {-}{}{}Btn}{28}{subsubsection.9.6.2.1}
+\contentsline {subsubsection}{\numberline {9.6.2.2}get\discretionary {-}{}{}Dir}{29}{subsubsection.9.6.2.2}
+\contentsline {subsubsection}{\numberline {9.6.2.3}update}{29}{subsubsection.9.6.2.3}
+\contentsline {section}{\numberline {9.7}N\discretionary {-}{}{}P\discretionary {-}{}{}C Class Reference}{29}{section.9.7}
+\contentsline {subsection}{\numberline {9.7.1}Detailed Description}{29}{subsection.9.7.1}
+\contentsline {section}{\numberline {9.8}Object Class Reference}{29}{section.9.8}
+\contentsline {subsection}{\numberline {9.8.1}Detailed Description}{30}{subsection.9.8.1}
+\contentsline {subsection}{\numberline {9.8.2}Constructor \& Destructor Documentation}{30}{subsection.9.8.2}
+\contentsline {subsubsection}{\numberline {9.8.2.1}Object}{30}{subsubsection.9.8.2.1}
+\contentsline {subsubsection}{\numberline {9.8.2.2}$\sim $\discretionary {-}{}{}Object}{30}{subsubsection.9.8.2.2}
+\contentsline {subsection}{\numberline {9.8.3}Member Function Documentation}{30}{subsection.9.8.3}
+\contentsline {subsubsection}{\numberline {9.8.3.1}get\discretionary {-}{}{}Animation}{30}{subsubsection.9.8.3.1}
+\contentsline {subsubsection}{\numberline {9.8.3.2}get\discretionary {-}{}{}Depth}{30}{subsubsection.9.8.3.2}
+\contentsline {subsubsection}{\numberline {9.8.3.3}set\discretionary {-}{}{}Animation}{30}{subsubsection.9.8.3.3}
+\contentsline {subsubsection}{\numberline {9.8.3.4}set\discretionary {-}{}{}Depth}{30}{subsubsection.9.8.3.4}
+\contentsline {subsubsection}{\numberline {9.8.3.5}update}{30}{subsubsection.9.8.3.5}
+\contentsline {subsection}{\numberline {9.8.4}Friends And Related Function Documentation}{30}{subsection.9.8.4}
+\contentsline {subsubsection}{\numberline {9.8.4.1}Graphics}{30}{subsubsection.9.8.4.1}
+\contentsline {subsubsection}{\numberline {9.8.4.2}Room\discretionary {-}{}{}::update}{30}{subsubsection.9.8.4.2}
+\contentsline {subsection}{\numberline {9.8.5}Member Data Documentation}{30}{subsection.9.8.5}
+\contentsline {subsubsection}{\numberline {9.8.5.1}sprite}{31}{subsubsection.9.8.5.1}
+\contentsline {subsubsection}{\numberline {9.8.5.2}x}{31}{subsubsection.9.8.5.2}
+\contentsline {subsubsection}{\numberline {9.8.5.3}y}{31}{subsubsection.9.8.5.3}
+\contentsline {section}{\numberline {9.9}Options Class Reference}{31}{section.9.9}
+\contentsline {subsection}{\numberline {9.9.1}Detailed Description}{31}{subsection.9.9.1}
+\contentsline {subsection}{\numberline {9.9.2}Constructor \& Destructor Documentation}{31}{subsection.9.9.2}
+\contentsline {subsubsection}{\numberline {9.9.2.1}Options}{31}{subsubsection.9.9.2.1}
+\contentsline {subsection}{\numberline {9.9.3}Member Function Documentation}{31}{subsection.9.9.3}
+\contentsline {subsubsection}{\numberline {9.9.3.1}get\discretionary {-}{}{}Scale}{31}{subsubsection.9.9.3.1}
+\contentsline {subsubsection}{\numberline {9.9.3.2}set\discretionary {-}{}{}Scale}{32}{subsubsection.9.9.3.2}
+\contentsline {section}{\numberline {9.10}Room Class Reference}{33}{section.9.10}
+\contentsline {subsection}{\numberline {9.10.1}Detailed Description}{33}{subsection.9.10.1}
+\contentsline {subsection}{\numberline {9.10.2}Constructor \& Destructor Documentation}{34}{subsection.9.10.2}
+\contentsline {subsubsection}{\numberline {9.10.2.1}Room}{34}{subsubsection.9.10.2.1}
+\contentsline {subsubsection}{\numberline {9.10.2.2}Room}{34}{subsubsection.9.10.2.2}
+\contentsline {subsubsection}{\numberline {9.10.2.3}Room}{34}{subsubsection.9.10.2.3}
+\contentsline {subsubsection}{\numberline {9.10.2.4}$\sim $\discretionary {-}{}{}Room}{34}{subsubsection.9.10.2.4}
+\contentsline {subsection}{\numberline {9.10.3}Member Function Documentation}{34}{subsection.9.10.3}
+\contentsline {subsubsection}{\numberline {9.10.3.1}add\discretionary {-}{}{}Object}{34}{subsubsection.9.10.3.1}
+\contentsline {subsubsection}{\numberline {9.10.3.2}create\discretionary {-}{}{}Object}{34}{subsubsection.9.10.3.2}
+\contentsline {subsubsection}{\numberline {9.10.3.3}get\discretionary {-}{}{}Height}{34}{subsubsection.9.10.3.3}
+\contentsline {subsubsection}{\numberline {9.10.3.4}get\discretionary {-}{}{}Width}{34}{subsubsection.9.10.3.4}
+\contentsline {subsubsection}{\numberline {9.10.3.5}set\discretionary {-}{}{}Camera}{34}{subsubsection.9.10.3.5}
+\contentsline {subsubsection}{\numberline {9.10.3.6}update}{35}{subsubsection.9.10.3.6}
+\contentsline {subsection}{\numberline {9.10.4}Friends And Related Function Documentation}{35}{subsection.9.10.4}
+\contentsline {subsubsection}{\numberline {9.10.4.1}compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}{35}{subsubsection.9.10.4.1}
+\contentsline {subsubsection}{\numberline {9.10.4.2}Graphics}{35}{subsubsection.9.10.4.2}
+\contentsline {subsubsection}{\numberline {9.10.4.3}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room\discretionary {-}{}{}::\discretionary {-}{}{}Add\discretionary {-}{}{}Background}{35}{subsubsection.9.10.4.3}
+\contentsline {subsubsection}{\numberline {9.10.4.4}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room\discretionary {-}{}{}::\discretionary {-}{}{}Load\discretionary {-}{}{}Script}{35}{subsubsection.9.10.4.4}
+\contentsline {subsubsection}{\numberline {9.10.4.5}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room\discretionary {-}{}{}::\discretionary {-}{}{}Load\discretionary {-}{}{}Script}{35}{subsubsection.9.10.4.5}
+\contentsline {subsection}{\numberline {9.10.5}Member Data Documentation}{35}{subsection.9.10.5}
+\contentsline {subsubsection}{\numberline {9.10.5.1}camera}{35}{subsubsection.9.10.5.1}
+\contentsline {section}{\numberline {9.11}Sprite Class Reference}{35}{section.9.11}
+\contentsline {subsection}{\numberline {9.11.1}Detailed Description}{36}{subsection.9.11.1}
+\contentsline {subsection}{\numberline {9.11.2}Constructor \& Destructor Documentation}{36}{subsection.9.11.2}
+\contentsline {subsubsection}{\numberline {9.11.2.1}Sprite}{36}{subsubsection.9.11.2.1}
+\contentsline {subsubsection}{\numberline {9.11.2.2}$\sim $\discretionary {-}{}{}Sprite}{36}{subsubsection.9.11.2.2}
+\contentsline {subsection}{\numberline {9.11.3}Member Function Documentation}{36}{subsection.9.11.3}
+\contentsline {subsubsection}{\numberline {9.11.3.1}add\discretionary {-}{}{}Animation}{36}{subsubsection.9.11.3.1}
+\contentsline {subsubsection}{\numberline {9.11.3.2}add\discretionary {-}{}{}Object}{37}{subsubsection.9.11.3.2}
+\contentsline {subsubsection}{\numberline {9.11.3.3}get\discretionary {-}{}{}Animations\discretionary {-}{}{}Size}{37}{subsubsection.9.11.3.3}
+\contentsline {subsubsection}{\numberline {9.11.3.4}get\discretionary {-}{}{}Frame}{37}{subsubsection.9.11.3.4}
+\contentsline {subsubsection}{\numberline {9.11.3.5}get\discretionary {-}{}{}Height}{37}{subsubsection.9.11.3.5}
+\contentsline {subsubsection}{\numberline {9.11.3.6}get\discretionary {-}{}{}Rect}{37}{subsubsection.9.11.3.6}
+\contentsline {subsubsection}{\numberline {9.11.3.7}get\discretionary {-}{}{}Width}{37}{subsubsection.9.11.3.7}
+\contentsline {subsubsection}{\numberline {9.11.3.8}operator[]}{38}{subsubsection.9.11.3.8}
+\contentsline {subsubsection}{\numberline {9.11.3.9}ret\discretionary {-}{}{}Animation}{38}{subsubsection.9.11.3.9}
+\contentsline {subsubsection}{\numberline {9.11.3.10}set\discretionary {-}{}{}Frame}{38}{subsubsection.9.11.3.10}
+\contentsline {subsubsection}{\numberline {9.11.3.11}update}{38}{subsubsection.9.11.3.11}
+\contentsline {subsection}{\numberline {9.11.4}Friends And Related Function Documentation}{38}{subsection.9.11.4}
+\contentsline {subsubsection}{\numberline {9.11.4.1}Graphics\discretionary {-}{}{}::update}{38}{subsubsection.9.11.4.1}
+\contentsline {subsubsection}{\numberline {9.11.4.2}Object\discretionary {-}{}{}::update}{38}{subsubsection.9.11.4.2}
+\contentsline {section}{\numberline {9.12}Virtual\discretionary {-}{}{}Joystick Class Reference}{39}{section.9.12}
+\contentsline {subsection}{\numberline {9.12.1}Detailed Description}{39}{subsection.9.12.1}
+\contentsline {chapter}{\numberline {10}File Documentation}{41}{chapter.10}
+\contentsline {section}{\numberline {10.1}src/graphics.cpp File Reference}{41}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Function Documentation}{41}{subsection.10.1.1}
+\contentsline {subsubsection}{\numberline {10.1.1.1}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Graphics}{41}{subsubsection.10.1.1.1}
+\contentsline {subsubsection}{\numberline {10.1.1.2}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Sprite}{41}{subsubsection.10.1.1.2}
+\contentsline {subsubsection}{\numberline {10.1.1.3}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Graphics}{42}{subsubsection.10.1.1.3}
+\contentsline {subsection}{\numberline {10.1.2}Variable Documentation}{42}{subsection.10.1.2}
+\contentsline {subsubsection}{\numberline {10.1.2.1}g\discretionary {-}{}{}Graphics}{42}{subsubsection.10.1.2.1}
+\contentsline {subsubsection}{\numberline {10.1.2.2}g\discretionary {-}{}{}Options}{42}{subsubsection.10.1.2.2}
+\contentsline {section}{\numberline {10.2}src/graphics.h File Reference}{42}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Function Documentation}{42}{subsection.10.2.1}
+\contentsline {subsubsection}{\numberline {10.2.1.1}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Graphics}{42}{subsubsection.10.2.1.1}
+\contentsline {subsubsection}{\numberline {10.2.1.2}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Sprite}{42}{subsubsection.10.2.1.2}
+\contentsline {subsubsection}{\numberline {10.2.1.3}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Graphics}{43}{subsubsection.10.2.1.3}
+\contentsline {subsection}{\numberline {10.2.2}Variable Documentation}{43}{subsection.10.2.2}
+\contentsline {subsubsection}{\numberline {10.2.2.1}g\discretionary {-}{}{}Graphics}{43}{subsubsection.10.2.2.1}
+\contentsline {subsubsection}{\numberline {10.2.2.2}g\discretionary {-}{}{}Options}{43}{subsubsection.10.2.2.2}
+\contentsline {section}{\numberline {10.3}src/joystick.cpp File Reference}{43}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Variable Documentation}{43}{subsection.10.3.1}
+\contentsline {subsubsection}{\numberline {10.3.1.1}g\discretionary {-}{}{}Joystick}{43}{subsubsection.10.3.1.1}
+\contentsline {section}{\numberline {10.4}src/joystick.h File Reference}{43}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Variable Documentation}{44}{subsection.10.4.1}
+\contentsline {subsubsection}{\numberline {10.4.1.1}g\discretionary {-}{}{}Joystick}{44}{subsubsection.10.4.1.1}
+\contentsline {section}{\numberline {10.5}src/object.cpp File Reference}{44}{section.10.5}
+\contentsline {section}{\numberline {10.6}src/object.h File Reference}{44}{section.10.6}
+\contentsline {subsection}{\numberline {10.6.1}Function Documentation}{44}{subsection.10.6.1}
+\contentsline {subsubsection}{\numberline {10.6.1.1}compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}{44}{subsubsection.10.6.1.1}
+\contentsline {section}{\numberline {10.7}src/options.cpp File Reference}{44}{section.10.7}
+\contentsline {section}{\numberline {10.8}src/options.h File Reference}{44}{section.10.8}
+\contentsline {section}{\numberline {10.9}src/pause.cpp File Reference}{45}{section.10.9}
+\contentsline {subsection}{\numberline {10.9.1}Function Documentation}{45}{subsection.10.9.1}
+\contentsline {subsubsection}{\numberline {10.9.1.1}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Pause\discretionary {-}{}{}Game}{45}{subsubsection.10.9.1.1}
+\contentsline {subsubsection}{\numberline {10.9.1.2}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Unpause\discretionary {-}{}{}Game}{45}{subsubsection.10.9.1.2}
+\contentsline {subsection}{\numberline {10.9.2}Variable Documentation}{45}{subsection.10.9.2}
+\contentsline {subsubsection}{\numberline {10.9.2.1}game\discretionary {-}{}{}In\discretionary {-}{}{}Pause}{45}{subsubsection.10.9.2.1}
+\contentsline {section}{\numberline {10.10}src/pause.h File Reference}{45}{section.10.10}
+\contentsline {subsection}{\numberline {10.10.1}Function Documentation}{45}{subsection.10.10.1}
+\contentsline {subsubsection}{\numberline {10.10.1.1}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Pause\discretionary {-}{}{}Game}{45}{subsubsection.10.10.1.1}
+\contentsline {subsubsection}{\numberline {10.10.1.2}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Unpause\discretionary {-}{}{}Game}{45}{subsubsection.10.10.1.2}
+\contentsline {subsection}{\numberline {10.10.2}Variable Documentation}{45}{subsection.10.10.2}
+\contentsline {subsubsection}{\numberline {10.10.2.1}game\discretionary {-}{}{}In\discretionary {-}{}{}Pause}{45}{subsubsection.10.10.2.1}
+\contentsline {section}{\numberline {10.11}src/platformer/entity.cpp File Reference}{46}{section.10.11}
+\contentsline {subsection}{\numberline {10.11.1}Function Documentation}{46}{subsection.10.11.1}
+\contentsline {subsubsection}{\numberline {10.11.1.1}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Entity}{46}{subsubsection.10.11.1.1}
+\contentsline {section}{\numberline {10.12}src/platformer/entity.h File Reference}{46}{section.10.12}
+\contentsline {subsection}{\numberline {10.12.1}Function Documentation}{46}{subsection.10.12.1}
+\contentsline {subsubsection}{\numberline {10.12.1.1}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Entity}{46}{subsubsection.10.12.1.1}
+\contentsline {section}{\numberline {10.13}src/platformer/hero.h File Reference}{46}{section.10.13}
+\contentsline {section}{\numberline {10.14}src/room.cpp File Reference}{46}{section.10.14}
+\contentsline {subsection}{\numberline {10.14.1}Function Documentation}{47}{subsection.10.14.1}
+\contentsline {subsubsection}{\numberline {10.14.1.1}compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}{47}{subsubsection.10.14.1.1}
+\contentsline {subsubsection}{\numberline {10.14.1.2}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Room}{47}{subsubsection.10.14.1.2}
+\contentsline {subsubsection}{\numberline {10.14.1.3}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Room}{47}{subsubsection.10.14.1.3}
+\contentsline {subsubsection}{\numberline {10.14.1.4}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Set\discretionary {-}{}{}Room}{47}{subsubsection.10.14.1.4}
+\contentsline {subsubsection}{\numberline {10.14.1.5}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Room}{47}{subsubsection.10.14.1.5}
+\contentsline {subsection}{\numberline {10.14.2}Variable Documentation}{47}{subsection.10.14.2}
+\contentsline {subsubsection}{\numberline {10.14.2.1}g\discretionary {-}{}{}Room}{47}{subsubsection.10.14.2.1}
+\contentsline {section}{\numberline {10.15}src/room.h File Reference}{47}{section.10.15}
+\contentsline {subsection}{\numberline {10.15.1}Macro Definition Documentation}{48}{subsection.10.15.1}
+\contentsline {subsubsection}{\numberline {10.15.1.1}S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}E\discretionary {-}{}{}N\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}R}{48}{subsubsection.10.15.1.1}
+\contentsline {subsubsection}{\numberline {10.15.1.2}S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}L\discretionary {-}{}{}L}{48}{subsubsection.10.15.1.2}
+\contentsline {subsubsection}{\numberline {10.15.1.3}S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}A\discretionary {-}{}{}I\discretionary {-}{}{}C}{48}{subsubsection.10.15.1.3}
+\contentsline {subsubsection}{\numberline {10.15.1.4}S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}A\discretionary {-}{}{}I\discretionary {-}{}{}C\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}A\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}L\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}X}{48}{subsubsection.10.15.1.4}
+\contentsline {subsubsection}{\numberline {10.15.1.5}S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}A\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}L\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}X}{48}{subsubsection.10.15.1.5}
+\contentsline {subsubsection}{\numberline {10.15.1.6}S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}C}{48}{subsubsection.10.15.1.6}
+\contentsline {subsection}{\numberline {10.15.2}Function Documentation}{48}{subsection.10.15.2}
+\contentsline {subsubsection}{\numberline {10.15.2.1}compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}{48}{subsubsection.10.15.2.1}
+\contentsline {subsubsection}{\numberline {10.15.2.2}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Room}{48}{subsubsection.10.15.2.2}
+\contentsline {subsubsection}{\numberline {10.15.2.3}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Room}{49}{subsubsection.10.15.2.3}
+\contentsline {subsubsection}{\numberline {10.15.2.4}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Set\discretionary {-}{}{}Room}{49}{subsubsection.10.15.2.4}
+\contentsline {subsubsection}{\numberline {10.15.2.5}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Room}{49}{subsubsection.10.15.2.5}
+\contentsline {subsection}{\numberline {10.15.3}Variable Documentation}{49}{subsection.10.15.3}
+\contentsline {subsubsection}{\numberline {10.15.3.1}g\discretionary {-}{}{}Room}{49}{subsubsection.10.15.3.1}
+\contentsline {section}{\numberline {10.16}src/\discretionary {-}{}{}S2\discretionary {-}{}{}M.h File Reference}{49}{section.10.16}
+\contentsline {subsection}{\numberline {10.16.1}Function Documentation}{49}{subsection.10.16.1}
+\contentsline {subsubsection}{\numberline {10.16.1.1}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update}{49}{subsubsection.10.16.1.1}
+\contentsline {section}{\numberline {10.17}src/\discretionary {-}{}{}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Platformer.h File Reference}{49}{section.10.17}
+\contentsline {section}{\numberline {10.18}src/script.cpp File Reference}{49}{section.10.18}
+\contentsline {subsection}{\numberline {10.18.1}Variable Documentation}{50}{subsection.10.18.1}
+\contentsline {subsubsection}{\numberline {10.18.1.1}itn\discretionary {-}{}{}Map}{50}{subsubsection.10.18.1.1}
+\contentsline {section}{\numberline {10.19}src/script.h File Reference}{50}{section.10.19}
+\contentsline {subsection}{\numberline {10.19.1}Variable Documentation}{51}{subsection.10.19.1}
+\contentsline {subsubsection}{\numberline {10.19.1.1}itn\discretionary {-}{}{}Map}{51}{subsubsection.10.19.1.1}
+\contentsline {part}{Index}{52}{section*.58}

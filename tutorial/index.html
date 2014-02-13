@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Tutorial de SDL2Me</title>
+		<link rel="stylesheet" href="style.css" />
+		<script language="javascript"> 
+		function toggle(ar, tx) {
+			var ele = document.getElementById(tx);
+			var text = document.getElementById(ar);
+			if(ele.style.display == "block") {
+		    	ele.style.display = "none";
+				text.innerHTML = "&#9658";
+		  	} else {
+				ele.style.display = "block";
+				text.innerHTML = "&#9660";
+			}
+		}
+		function button() {
+			document.getElementById("title").style.textDecoration = "underline";
+			//document.write("holaaa");
+		}
+		</script>
+		<script type="text/javascript" src="syntaxhighlighter/scripts/shCore.js"></script>
+		<script type="text/javascript" src="syntaxhighlighter/scripts/shBrushCpp.js"></script>
+		<link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.css"/>
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			
+			<div class="content">
+				<h1 id="title">Tutorial de SDL2Me</h1>
+				<p>Así que quieres programar un juego usando SDL2Me... Voy a intentar guiarte por las ideas y conceptos básicos de este engine, y progresivamente profundizar en los aspectos más intrincados para que una vez hayas finalizado este tutorial, sepas dominar la librería y crear juegos impresionantes y de gran rendimiento con relativa facilidad.</p>
+				<h2>Tabla de Contenidos</h2>
+				<ol>
+					<li><a href="#1">¿Qué es SDL2Me?</a></li>
+					<li><a href="#2">Conocimientos previos</a></li>
+					<li><a href="#3">Elementos de un juego en S2M</a></li>
+					<li><a href="#4">Manos a la obra. Estructura básica de un juego</li>
+				</ol>
+				<h2 id="1"><a id="arrow1" class="arrow" href="javascript:toggle('arrow1','text1');">&#9660</a>¿Qué es SDL2Me?</h2>
+				<div id="text1" style="display: block;">
+					<p>SDL2Me (o S2M) es un engine de juegos en 2D que funciona con SDL2. El enfoque principal de esta librería es su facilidad de uso, por lo tanto el objetivo primordial es crear un surtido de clases y funciones que funcionen a la par, mantengan una abstracción de SDL coherente con el modelo implementado en el software GameMaker y sean facilmente derivables para y por el usuario final.</p>
+				</div>
+				<h2 id="2"><a id="arrow2" class="arrow" href="javascript:toggle('arrow2','text2');">&#9660</a>Conocimientos previos</h2>
+				<div id="text2" style="display: block;">
+					<ul>
+						<li>Conocimientos avanzados de C++, esto incluye:
+							<ul>
+								<li>Básica de programación (condiciones, bucles, tipos de variables, operadores...)</li>
+								<li>Programación Orientada a Objetos </li>
+								<li>Conceptos más avanzados de C++ como punteros,  templates, iteradores, etc.</li>
+							</ul>
+						</li>
+						<li>Programación de vieojuegos. Si no sabes qué es el game-loop abstente siquiera de seguir leyendo. Hay muchos tutoriales de iniciación en la programación de videojuegos en internet que te servirán de base si es que luego decides continuar con SDL2Me.</li>
+						<li>Conocimientos de SDL, la versión 2 en concreto. Si te quedaste en la 1 puedes echarle una ojeada a la <a href="http://wiki.libsdl.org/MigrationGuide">Guía de Migración</a> o a los magníficos tutoriales de <a href="http://lazyfoo.net/tutorials/SDL/index.php">Lazy Foo</a>, que se actualizan cada mes.</li>
+						<li>Aunque no sea estrictamente necesario, no viene de más haberse familiarizado con el entorno de GameMaker previamente</li>
+					</ul>
+				</div>
+				<h2 id="3"><a id="arrow3" class="arrow" href="javascript:toggle('arrow3','text3');">&#9660</a>Elementos de un juego en S2M</h2>
+				<div id="text3" style="display: block;">
+					<div id="sprites">
+					<p>Lo primero que debes saber es cómo se organiza un juego en S2M. Para empezar, tienes los Sprites:</p><img src="img/sprite.png" class="fright"><p>Los <b>Sprites</b> son todos aquellos gráficos de un juego que se mueven por pantalla, relativamente pequeños en comparación con el área del juego en sí. Los Sprites se animan y van cambiando con el tiempo, aunque en S2M los entenderemos como una simple estructura de datos y aquellos que serán animados serán los Objects.</p>
+					</div>
+					<div id="backgrounds">
+					<img src="img/background.png" class="fleft" width="30%" >
+					<p>Los <b>Backgrounds</b> son, como el nombre en inglés dice, fondos. Fondos estáticos, dinámicos, en mosaico, repetidos o de cualquier manera, mientras se mantengan en segundo plano.</p>
+					</div>
+					<div id="objects">
+					<p>Los <b>Objects</b> son, para simplificar, una abstracción de cualquier cosa que pueda tener una posición en pantalla determinada y un Sprite al mismo tiempo. Veremos más adelante.</p>
+					</div>
+					<div id="guielements">
+					<p>Los <b>GUIElements</b> son porciones de la interfaz de usuario del juego (una barra de salud, un indicador de puntuación, etc.) que se suporponen en pantalla a todos los elementos antes mencionados.</p>
+					</div>
+					<div id="rooms">
+					<p>Ahora viene la parte divertida: Las <b>Rooms</b> (en inglés 'habitaciones') son espacios del juego diferenciados. El menú de un juego es una Room mientras que un nivel puede ser también otra diferente. Dependiendo de tus gustos personales podrás hacer que el menú de pausa de tu juego sea un GUIElement que ocupe toda la pantalla o una Room diferente a la que acceder cuando se pulsa un botón.</p>
+					</div>
+					<div id="cameras">
+					<p>En las Rooms hay <b>Cameras</b> (cámaras), cuyo trabajo es indicar al engine qué parte de la Room mostrar por pantalla. Las Cameras normalmente siguen al personaje que controla el jugador mientras se mueve.</p>
+					</div>
+					<p>Y... de momento lo dejamos aquí. Hay muchas más clases y elementos pero ahora mismo no quiero embutírtelos en el cerebro a mala gana. Mejor ir despacio y controlar poco a poco que intentar abarcar mucho de primeras.</p>
+				</div>
+				<h2 id="4"><a id="arrow4" class="arrow" href="javascript:toggle('arrow4','text4');">&#9660</a>Manos a la obra. Estructura básica de un juego</h2>
+				<div id="text4" style="display: block;">
+					<p>Ya tienes una idea de los diferentes elementos que compondrán tu juego en SDL2Me, ahora hace falta que veas cómo se estructura un juego en puro código:</p>
+					<pre class="brush: cpp;">
+					#include "S2M.h"
+
+					int main( int argc, char* args[] ) {
+
+						Graphics *gGraphics = S2M_CreateGraphics(320,240,2,"Test");
+						Room *room = S2M_CreateRoom&ltTRoom&gt();
+						S2M_SetRoom(room);
+
+						SDL_Event e;
+
+						while (true) {
+
+							if (SDL_PollEvent(&e) != 0) {
+								if (e.type == SDL_QUIT) break;
+							}
+
+							S2M_Update();
+						}
+
+					}</pre>
+					<p>En estas 20 líneas (que en realidad son menos) ya hemos conseguido una pantalla en negro y... bueno, nada más. Te explicaré ahora en qué consiste cada parte importante:</p>
+					<pre class="brush: cpp;">
+					Graphics *gGraphics = S2M_CreateGraphics(320,240,2,"Test");</pre>
+					<p> La función <code>S2M_CreateGraphics()</code> crea una instancia de la clase <b>Graphics</b>, que controla toooooodas las operaciones de dibujado de tu juego. También crea una ventana, le asigna un título y, en general, se encarga de todo el proceso gráfico por ti.</p>
+					<p>Si lo prefieres, en vez de pasarle todos esos parámetros tú mismo, puedes pasarle un string con la ubicación de un fichero que contenga la configuración de resolución, escalado, etc. y un puntero a una función que a partir de ese fichero consiga susodichos parámetros (ver la documentación oficial).</p>
+					<p>Ya tenemos gráficos, pero ahora estamos flotando en la nada, puesto que no hemos definido ninguna Room como actual. Antes de definir una hace falta crearla, así que echando mano de la función <code>S2M_CreateRoom<>()</code> creamos una Room nueva de tipo <code>TRoom</code>.
+					<pre class="brush: cpp;">
+					Room *room = S2M_CreateRoom&ltTRoom&gt();</pre>
+					<div class="note">TRoom es un tipo de Room especial cuya estructura se basa en tiles.</div>
+					<p>Nota los "<code>&lt&gt</code>" que he puesto después del nombre de la función; esto es debido a que <code>S2M_CreateRoom</code> no es una función propiamente dicha, sinó una plantilla de función (template) que crea una nueva instancia de la clase especificada entre corchetes (siempre que la clase especificada sea derivada de la clase base Room). La función se encarga de pasarle los parámetros entre paréntesis al constructor de la clase especificada.</p>
+					<pre class="brush: cpp;">
+					S2M_SetRoom(room);</pre>
+					<p>Una vez hemos creado una Room lo inmediatamente necesario es asignarla como Room actual, ya que un juego no puede estar sin Room en ningún momento. Para eso utilizaremos la función <code>S2M_SetRoom()</code>.</p>
+				</div>
+				<h2 id="5"><a id="arrow5" class="arrow" href="javascript:toggle('arrow5','text5');">&#9660</a>Ya me he cansado de este nivel... ¡vámonos a otro!</h2>
+				<div id="text5" style="display: block;">
+					Bueno, claro, no podemos tirarnos todo el día en la misma Room: habrá que cambiar en algún momento. Aquí es donde entra en juego la función <code>S2M_GoToRoom&lt&gt()</code>. Nota los "<code>&lt&gt</code>" que he puesto después del nombre; esto es debido a que <code>S2M_GoToRoom</code> no es una función propiamente dicha, sinó una plantilla de función (template) que acepta una derivada de la clase <b>Transition</b>. Veamos un ejemplo de uso:
+					<pre class="brush: cpp;">
+					Room r = Room(...); // Room cualquiera cargada de una forma que no viene al caso
+					S2M_GoToRoom&ltTFlip&gt(r) // Vamos a la Room r usando TFflip como transición</pre>
+					<p>Fácil, ¿verdad? El hecho de que la función pida una clase derivada de una Transición es debido a que usará los métodos definidos en esa clase para añadir un efecto gradual al cambio de Room.</p>
+					<h3>Todo esto está muy bien, pero ¿cómo creo una transición?</h3>
+					<p>No es difícil, y en caso de que no quieras matarte programando puedes usar alguna de las que ya vienen definidas con SDL2Me, pero si quieres añadirle un grado más de personalización a tu juego te enseño cómo puedes crear la tuya:</p>
+					<pre class="brush: cpp;">
+					class Transition {
+					public:
+						Transition(bool m);
+						~Transition();
+						bool getMode();
+						int getDelay();
+						void changeMode();
+						virtual bool update();
+					protected:
+						SDL_Texture *texture; // Textura
+						bool done = false; // Estado
+						bool mode; // Modo
+						int step = 0;
+						const int maxstep;
+						int delay;
+					};</pre>
+					<p>Una transición tiene dos 'modos': de apertura y de cierre (<code>S2M_TRANSITION_OPEN</code> y <code>S2M_TRANSITION_CLOSE</code>). También tiene una textura que se dibujará en la pantalla por encima de todo mientras la transición siga activa. Fíjate también que tiene un método '<code>update()</code>': el objetivo de éste es hacer evolucionar a la transición en cada frame hacia su estado final.</p>
+					<p>El truco está en que en cada frame se llama el método <code>update()</code> y tú, derivando la clase base Transition y programando susodicho método, deberás actualizar la textura propia de tu clase conforme desees que sea la transición. Esa textura se dibujará en la pantalla hasta que indiques que <code>done = true</code>. Entonces, SDL2Me cambiará de Room y cambiará el modo de la transición (a no ser que el modo sea ya <code>S2M_TRANSITION_CLOSE</code>, en cuyo caso la transición finalizará) y tú deberás tener en cuenta ese cambio y volver a dibujar la textura propia del nuevo modo.</p>
+					<p>Así explicado puede parecer complicado, pero si te lees la documentación oficial y echas una ojeada al código fuente descubrirás que es en realidad bastante fácil.</p>
+				</div>
+					
+			</div>
+			<footer>
+				(C) Miguel Vera Belmonte 2014
+			</footer>
+		</div>
+	</body>
+
+</html>

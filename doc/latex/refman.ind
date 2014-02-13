@@ -1,0 +1,489 @@
+\begin{theindex}
+
+  \item {$\sim $\discretionary {-}{}{}Background}
+    \subitem {Background}, \hyperpage{19}
+  \item {$\sim $\discretionary {-}{}{}Camera}
+    \subitem {Camera}, \hyperpage{21}
+  \item {$\sim $\discretionary {-}{}{}Entity}
+    \subitem {Entity}, \hyperpage{23}
+  \item {$\sim $\discretionary {-}{}{}Graphics}
+    \subitem {Graphics}, \hyperpage{24}
+  \item {$\sim $\discretionary {-}{}{}Object}
+    \subitem {Object}, \hyperpage{30}
+  \item {$\sim $\discretionary {-}{}{}Room}
+    \subitem {Room}, \hyperpage{34}
+  \item {$\sim $\discretionary {-}{}{}Sprite}
+    \subitem {Sprite}, \hyperpage{36}
+
+  \indexspace
+
+  \item {add\discretionary {-}{}{}Animation}
+    \subitem {Sprite}, \hyperpage{36}
+  \item {Add\discretionary {-}{}{}Background}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room}, 
+		\hyperpage{15}
+  \item {add\discretionary {-}{}{}Object}
+    \subitem {Room}, \hyperpage{34}
+    \subitem {Sprite}, \hyperpage{37}
+  \item {add\discretionary {-}{}{}Sprite}
+    \subitem {Graphics}, \hyperpage{25}
+
+  \indexspace
+
+  \item {Background}, \hyperpage{17}
+    \subitem {$\sim $\discretionary {-}{}{}Background}, \hyperpage{19}
+    \subitem {Background}, \hyperpage{18, 19}
+    \subitem {Camera}, \hyperpage{22}
+    \subitem {get\discretionary {-}{}{}Height}, \hyperpage{19}
+    \subitem {get\discretionary {-}{}{}Width}, \hyperpage{19}
+    \subitem {Graphics}, \hyperpage{19}
+    \subitem {update}, \hyperpage{19}
+    \subitem {x}, \hyperpage{19}
+    \subitem {xspeed}, \hyperpage{19}
+    \subitem {y}, \hyperpage{19}
+    \subitem {yspeed}, \hyperpage{19}
+  \item {blit\discretionary {-}{}{}Texture}
+    \subitem {Graphics}, \hyperpage{26}
+
+  \indexspace
+
+  \item {Camera}, \hyperpage{19}
+    \subitem {$\sim $\discretionary {-}{}{}Camera}, \hyperpage{21}
+    \subitem {Background}, \hyperpage{22}
+    \subitem {Camera}, \hyperpage{20}
+    \subitem {go\discretionary {-}{}{}To}, \hyperpage{21}
+    \subitem {Graphics}, \hyperpage{22}
+    \subitem {move}, \hyperpage{21}
+    \subitem {set\discretionary {-}{}{}Speed}, \hyperpage{21}
+    \subitem {update}, \hyperpage{21}
+    \subitem {x}, \hyperpage{22}
+    \subitem {xspeed}, \hyperpage{22}
+    \subitem {y}, \hyperpage{22}
+    \subitem {yspeed}, \hyperpage{22}
+  \item {camera}
+    \subitem {Room}, \hyperpage{35}
+  \item {compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}
+    \subitem {object.\discretionary {-}{}{}h}, \hyperpage{44}
+    \subitem {Room}, \hyperpage{35}
+    \subitem {room.\discretionary {-}{}{}cpp}, \hyperpage{47}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{48}
+  \item {create\discretionary {-}{}{}Object}
+    \subitem {Room}, \hyperpage{34}
+
+  \indexspace
+
+  \item {draw\discretionary {-}{}{}Texture}
+    \subitem {Graphics}, \hyperpage{26}
+
+  \indexspace
+
+  \item {Entity}, \hyperpage{22}
+    \subitem {$\sim $\discretionary {-}{}{}Entity}, \hyperpage{23}
+    \subitem {Entity}, \hyperpage{23}
+    \subitem {update}, \hyperpage{23}
+  \item {entity.\discretionary {-}{}{}cpp}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Entity}, 
+		\hyperpage{46}
+  \item {entity.\discretionary {-}{}{}h}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Entity}, 
+		\hyperpage{46}
+
+  \indexspace
+
+  \item {Find\discretionary {-}{}{}All\discretionary {-}{}{}Strings}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Script}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {g\discretionary {-}{}{}Graphics}
+    \subitem {graphics.\discretionary {-}{}{}cpp}, \hyperpage{42}
+    \subitem {graphics.\discretionary {-}{}{}h}, \hyperpage{43}
+  \item {g\discretionary {-}{}{}Joystick}
+    \subitem {joystick.\discretionary {-}{}{}cpp}, \hyperpage{43}
+    \subitem {joystick.\discretionary {-}{}{}h}, \hyperpage{44}
+  \item {g\discretionary {-}{}{}Options}
+    \subitem {graphics.\discretionary {-}{}{}cpp}, \hyperpage{42}
+    \subitem {graphics.\discretionary {-}{}{}h}, \hyperpage{43}
+  \item {g\discretionary {-}{}{}Room}
+    \subitem {room.\discretionary {-}{}{}cpp}, \hyperpage{47}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{49}
+  \item {game\discretionary {-}{}{}Height}
+    \subitem {Graphics}, \hyperpage{27}
+  \item {game\discretionary {-}{}{}In\discretionary {-}{}{}Pause}
+    \subitem {pause.\discretionary {-}{}{}cpp}, \hyperpage{45}
+    \subitem {pause.\discretionary {-}{}{}h}, \hyperpage{45}
+  \item {game\discretionary {-}{}{}Width}
+    \subitem {Graphics}, \hyperpage{27}
+  \item {get\discretionary {-}{}{}Animation}
+    \subitem {Object}, \hyperpage{30}
+  \item {get\discretionary {-}{}{}Animations\discretionary {-}{}{}Size}
+    \subitem {Sprite}, \hyperpage{37}
+  \item {get\discretionary {-}{}{}Btn}
+    \subitem {Joystick}, \hyperpage{28}
+  \item {get\discretionary {-}{}{}Depth}
+    \subitem {Object}, \hyperpage{30}
+  \item {get\discretionary {-}{}{}Dir}
+    \subitem {Joystick}, \hyperpage{28}
+  \item {get\discretionary {-}{}{}Frame}
+    \subitem {Sprite}, \hyperpage{37}
+  \item {get\discretionary {-}{}{}Height}
+    \subitem {Background}, \hyperpage{19}
+    \subitem {Room}, \hyperpage{34}
+    \subitem {Sprite}, \hyperpage{37}
+  \item {get\discretionary {-}{}{}Rect}
+    \subitem {Sprite}, \hyperpage{37}
+  \item {get\discretionary {-}{}{}Scale}
+    \subitem {Options}, \hyperpage{31}
+  \item {get\discretionary {-}{}{}Width}
+    \subitem {Background}, \hyperpage{19}
+    \subitem {Room}, \hyperpage{34}
+    \subitem {Sprite}, \hyperpage{37}
+  \item {go\discretionary {-}{}{}To}
+    \subitem {Camera}, \hyperpage{21}
+  \item {Graphics}, \hyperpage{23}
+    \subitem {$\sim $\discretionary {-}{}{}Graphics}, \hyperpage{24}
+    \subitem {add\discretionary {-}{}{}Sprite}, \hyperpage{25}
+    \subitem {Background}, \hyperpage{19}
+    \subitem {blit\discretionary {-}{}{}Texture}, \hyperpage{26}
+    \subitem {Camera}, \hyperpage{22}
+    \subitem {draw\discretionary {-}{}{}Texture}, \hyperpage{26}
+    \subitem {game\discretionary {-}{}{}Height}, \hyperpage{27}
+    \subitem {game\discretionary {-}{}{}Width}, \hyperpage{27}
+    \subitem {Graphics}, \hyperpage{24}
+    \subitem {load\discretionary {-}{}{}Texture}, \hyperpage{27}
+    \subitem {Object}, \hyperpage{30}
+    \subitem {renderer}, \hyperpage{27}
+    \subitem {Room}, \hyperpage{35}
+    \subitem {update}, \hyperpage{27}
+    \subitem {window}, \hyperpage{27}
+  \item {graphics.\discretionary {-}{}{}cpp}
+    \subitem {g\discretionary {-}{}{}Graphics}, \hyperpage{42}
+    \subitem {g\discretionary {-}{}{}Options}, \hyperpage{42}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Graphics}, 
+		\hyperpage{41}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Sprite}, 
+		\hyperpage{41}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Graphics}, 
+		\hyperpage{41}
+  \item {graphics.\discretionary {-}{}{}h}
+    \subitem {g\discretionary {-}{}{}Graphics}, \hyperpage{43}
+    \subitem {g\discretionary {-}{}{}Options}, \hyperpage{43}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Graphics}, 
+		\hyperpage{42}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Sprite}, 
+		\hyperpage{42}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Graphics}, 
+		\hyperpage{43}
+  \item {Graphics\discretionary {-}{}{}::update}
+    \subitem {Sprite}, \hyperpage{38}
+
+  \indexspace
+
+  \item {Hero}, \hyperpage{27}
+
+  \indexspace
+
+  \item {itn\discretionary {-}{}{}Map}
+    \subitem {script.\discretionary {-}{}{}cpp}, \hyperpage{50}
+    \subitem {script.\discretionary {-}{}{}h}, \hyperpage{51}
+
+  \indexspace
+
+  \item {Joystick}, \hyperpage{28}
+    \subitem {get\discretionary {-}{}{}Btn}, \hyperpage{28}
+    \subitem {get\discretionary {-}{}{}Dir}, \hyperpage{28}
+    \subitem {update}, \hyperpage{29}
+  \item {joystick.\discretionary {-}{}{}cpp}
+    \subitem {g\discretionary {-}{}{}Joystick}, \hyperpage{43}
+  \item {joystick.\discretionary {-}{}{}h}
+    \subitem {g\discretionary {-}{}{}Joystick}, \hyperpage{44}
+
+  \indexspace
+
+  \item {Load\discretionary {-}{}{}Script}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room}, 
+		\hyperpage{15}
+  \item {load\discretionary {-}{}{}Texture}
+    \subitem {Graphics}, \hyperpage{27}
+
+  \indexspace
+
+  \item {move}
+    \subitem {Camera}, \hyperpage{21}
+
+  \indexspace
+
+  \item {N\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
+		\hyperpage{29}
+
+  \indexspace
+
+  \item {Object}, \hyperpage{29}
+    \subitem {$\sim $\discretionary {-}{}{}Object}, \hyperpage{30}
+    \subitem {get\discretionary {-}{}{}Animation}, \hyperpage{30}
+    \subitem {get\discretionary {-}{}{}Depth}, \hyperpage{30}
+    \subitem {Graphics}, \hyperpage{30}
+    \subitem {Object}, \hyperpage{30}
+    \subitem {Room\discretionary {-}{}{}::update}, \hyperpage{30}
+    \subitem {set\discretionary {-}{}{}Animation}, \hyperpage{30}
+    \subitem {set\discretionary {-}{}{}Depth}, \hyperpage{30}
+    \subitem {sprite}, \hyperpage{30}
+    \subitem {update}, \hyperpage{30}
+    \subitem {x}, \hyperpage{31}
+    \subitem {y}, \hyperpage{31}
+  \item {object.\discretionary {-}{}{}h}
+    \subitem {compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}, 
+		\hyperpage{44}
+  \item {Object\discretionary {-}{}{}::update}
+    \subitem {Sprite}, \hyperpage{38}
+  \item {Options}, \hyperpage{31}
+    \subitem {get\discretionary {-}{}{}Scale}, \hyperpage{31}
+    \subitem {Options}, \hyperpage{31}
+    \subitem {set\discretionary {-}{}{}Scale}, \hyperpage{31}
+
+  \indexspace
+
+  \item {Parse\discretionary {-}{}{}Command}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Script}, 
+		\hyperpage{16}
+  \item {Parse\discretionary {-}{}{}File}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Script}, 
+		\hyperpage{16}
+  \item {pause.\discretionary {-}{}{}cpp}
+    \subitem {game\discretionary {-}{}{}In\discretionary {-}{}{}Pause}, 
+		\hyperpage{45}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Pause\discretionary {-}{}{}Game}, 
+		\hyperpage{45}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Unpause\discretionary {-}{}{}Game}, 
+		\hyperpage{45}
+  \item {pause.\discretionary {-}{}{}h}
+    \subitem {game\discretionary {-}{}{}In\discretionary {-}{}{}Pause}, 
+		\hyperpage{45}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Pause\discretionary {-}{}{}Game}, 
+		\hyperpage{45}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Unpause\discretionary {-}{}{}Game}, 
+		\hyperpage{45}
+
+  \indexspace
+
+  \item {Read\discretionary {-}{}{}File}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Script}, 
+		\hyperpage{16}
+  \item {renderer}
+    \subitem {Graphics}, \hyperpage{27}
+  \item {ret\discretionary {-}{}{}Animation}
+    \subitem {Sprite}, \hyperpage{38}
+  \item {Room}, \hyperpage{33}
+    \subitem {$\sim $\discretionary {-}{}{}Room}, \hyperpage{34}
+    \subitem {add\discretionary {-}{}{}Object}, \hyperpage{34}
+    \subitem {camera}, \hyperpage{35}
+    \subitem {compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}, 
+		\hyperpage{35}
+    \subitem {create\discretionary {-}{}{}Object}, \hyperpage{34}
+    \subitem {get\discretionary {-}{}{}Height}, \hyperpage{34}
+    \subitem {get\discretionary {-}{}{}Width}, \hyperpage{34}
+    \subitem {Graphics}, \hyperpage{35}
+    \subitem {Room}, \hyperpage{34}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room\discretionary {-}{}{}::\discretionary {-}{}{}Add\discretionary {-}{}{}Background}, 
+		\hyperpage{35}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room\discretionary {-}{}{}::\discretionary {-}{}{}Load\discretionary {-}{}{}Script}, 
+		\hyperpage{35}
+    \subitem {set\discretionary {-}{}{}Camera}, \hyperpage{34}
+    \subitem {update}, \hyperpage{35}
+  \item {room.\discretionary {-}{}{}cpp}
+    \subitem {compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}, 
+		\hyperpage{47}
+    \subitem {g\discretionary {-}{}{}Room}, \hyperpage{47}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Room}, 
+		\hyperpage{47}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Set\discretionary {-}{}{}Room}, 
+		\hyperpage{47}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Room}, 
+		\hyperpage{47}
+  \item {room.\discretionary {-}{}{}h}
+    \subitem {compare\discretionary {-}{}{}Objects\discretionary {-}{}{}By\discretionary {-}{}{}Depth}, 
+		\hyperpage{48}
+    \subitem {g\discretionary {-}{}{}Room}, \hyperpage{49}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Room}, 
+		\hyperpage{48}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Set\discretionary {-}{}{}Room}, 
+		\hyperpage{49}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Room}, 
+		\hyperpage{49}
+    \subitem {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}E\discretionary {-}{}{}N\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}R}, 
+		\hyperpage{48}
+    \subitem {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}L\discretionary {-}{}{}L}, 
+		\hyperpage{48}
+    \subitem {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}A\discretionary {-}{}{}I\discretionary {-}{}{}C}, 
+		\hyperpage{48}
+    \subitem {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}A\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}L\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}X}, 
+		\hyperpage{48}
+    \subitem {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}C}, 
+		\hyperpage{48}
+  \item {Room\discretionary {-}{}{}::update}
+    \subitem {Object}, \hyperpage{30}
+
+  \indexspace
+
+  \item {S2\discretionary {-}{}{}M.\discretionary {-}{}{}h}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update}, 
+		\hyperpage{49}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Entity}
+    \subitem {entity.\discretionary {-}{}{}cpp}, \hyperpage{46}
+    \subitem {entity.\discretionary {-}{}{}h}, \hyperpage{46}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Graphics}
+    \subitem {graphics.\discretionary {-}{}{}cpp}, \hyperpage{41}
+    \subitem {graphics.\discretionary {-}{}{}h}, \hyperpage{42}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Room}
+    \subitem {room.\discretionary {-}{}{}cpp}, \hyperpage{47}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{48}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Create\discretionary {-}{}{}Sprite}
+    \subitem {graphics.\discretionary {-}{}{}cpp}, \hyperpage{41}
+    \subitem {graphics.\discretionary {-}{}{}h}, \hyperpage{42}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Pause\discretionary {-}{}{}Game}
+    \subitem {pause.\discretionary {-}{}{}cpp}, \hyperpage{45}
+    \subitem {pause.\discretionary {-}{}{}h}, \hyperpage{45}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room}, 
+		\hyperpage{15}
+    \subitem {Add\discretionary {-}{}{}Background}, \hyperpage{15}
+    \subitem {Load\discretionary {-}{}{}Script}, \hyperpage{15}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room\discretionary {-}{}{}::\discretionary {-}{}{}Add\discretionary {-}{}{}Background}
+    \subitem {Room}, \hyperpage{35}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Room\discretionary {-}{}{}::\discretionary {-}{}{}Load\discretionary {-}{}{}Script}
+    \subitem {Room}, \hyperpage{35}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Script}, 
+		\hyperpage{15}
+    \subitem {Find\discretionary {-}{}{}All\discretionary {-}{}{}Strings}, 
+		\hyperpage{16}
+    \subitem {Parse\discretionary {-}{}{}Command}, \hyperpage{16}
+    \subitem {Parse\discretionary {-}{}{}File}, \hyperpage{16}
+    \subitem {Read\discretionary {-}{}{}File}, \hyperpage{16}
+    \subitem {Split\discretionary {-}{}{}String}, \hyperpage{16}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Set\discretionary {-}{}{}Room}
+    \subitem {room.\discretionary {-}{}{}cpp}, \hyperpage{47}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{49}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Unpause\discretionary {-}{}{}Game}
+    \subitem {pause.\discretionary {-}{}{}cpp}, \hyperpage{45}
+    \subitem {pause.\discretionary {-}{}{}h}, \hyperpage{45}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update}
+    \subitem {S2\discretionary {-}{}{}M.\discretionary {-}{}{}h}, 
+		\hyperpage{49}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Graphics}
+    \subitem {graphics.\discretionary {-}{}{}cpp}, \hyperpage{41}
+    \subitem {graphics.\discretionary {-}{}{}h}, \hyperpage{43}
+  \item {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Update\discretionary {-}{}{}Room}
+    \subitem {room.\discretionary {-}{}{}cpp}, \hyperpage{47}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{49}
+  \item {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}E\discretionary {-}{}{}N\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}R}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{48}
+  \item {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}L\discretionary {-}{}{}L}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{48}
+  \item {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}A\discretionary {-}{}{}I\discretionary {-}{}{}C}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{48}
+  \item {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}P\discretionary {-}{}{}A\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}L\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}X}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{48}
+  \item {S\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}I\discretionary {-}{}{}C}
+    \subitem {room.\discretionary {-}{}{}h}, \hyperpage{48}
+  \item {script.\discretionary {-}{}{}cpp}
+    \subitem {itn\discretionary {-}{}{}Map}, \hyperpage{50}
+  \item {script.\discretionary {-}{}{}h}
+    \subitem {itn\discretionary {-}{}{}Map}, \hyperpage{51}
+  \item {set\discretionary {-}{}{}Animation}
+    \subitem {Object}, \hyperpage{30}
+  \item {set\discretionary {-}{}{}Camera}
+    \subitem {Room}, \hyperpage{34}
+  \item {set\discretionary {-}{}{}Depth}
+    \subitem {Object}, \hyperpage{30}
+  \item {set\discretionary {-}{}{}Frame}
+    \subitem {Sprite}, \hyperpage{38}
+  \item {set\discretionary {-}{}{}Scale}
+    \subitem {Options}, \hyperpage{31}
+  \item {set\discretionary {-}{}{}Speed}
+    \subitem {Camera}, \hyperpage{21}
+  \item {Split\discretionary {-}{}{}String}
+    \subitem {S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Script}, 
+		\hyperpage{16}
+  \item {Sprite}, \hyperpage{35}
+    \subitem {$\sim $\discretionary {-}{}{}Sprite}, \hyperpage{36}
+    \subitem {add\discretionary {-}{}{}Animation}, \hyperpage{36}
+    \subitem {add\discretionary {-}{}{}Object}, \hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Animations\discretionary {-}{}{}Size}, 
+		\hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Frame}, \hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Height}, \hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Rect}, \hyperpage{37}
+    \subitem {get\discretionary {-}{}{}Width}, \hyperpage{37}
+    \subitem {Graphics\discretionary {-}{}{}::update}, \hyperpage{38}
+    \subitem {Object\discretionary {-}{}{}::update}, \hyperpage{38}
+    \subitem {ret\discretionary {-}{}{}Animation}, \hyperpage{38}
+    \subitem {set\discretionary {-}{}{}Frame}, \hyperpage{38}
+    \subitem {Sprite}, \hyperpage{36}
+    \subitem {update}, \hyperpage{38}
+  \item {sprite}
+    \subitem {Object}, \hyperpage{30}
+  \item {src/\discretionary {-}{}{}S2\discretionary {-}{}{}M.\discretionary {-}{}{}h}, 
+		\hyperpage{49}
+  \item {src/\discretionary {-}{}{}S2\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}Platformer.\discretionary {-}{}{}h}, 
+		\hyperpage{49}
+  \item {src/graphics.\discretionary {-}{}{}cpp}, \hyperpage{41}
+  \item {src/graphics.\discretionary {-}{}{}h}, \hyperpage{42}
+  \item {src/joystick.\discretionary {-}{}{}cpp}, \hyperpage{43}
+  \item {src/joystick.\discretionary {-}{}{}h}, \hyperpage{43}
+  \item {src/object.\discretionary {-}{}{}cpp}, \hyperpage{44}
+  \item {src/object.\discretionary {-}{}{}h}, \hyperpage{44}
+  \item {src/options.\discretionary {-}{}{}cpp}, \hyperpage{44}
+  \item {src/options.\discretionary {-}{}{}h}, \hyperpage{44}
+  \item {src/pause.\discretionary {-}{}{}cpp}, \hyperpage{45}
+  \item {src/pause.\discretionary {-}{}{}h}, \hyperpage{45}
+  \item {src/platformer/entity.\discretionary {-}{}{}cpp}, 
+		\hyperpage{46}
+  \item {src/platformer/entity.\discretionary {-}{}{}h}, \hyperpage{46}
+  \item {src/platformer/hero.\discretionary {-}{}{}h}, \hyperpage{46}
+  \item {src/room.\discretionary {-}{}{}cpp}, \hyperpage{46}
+  \item {src/room.\discretionary {-}{}{}h}, \hyperpage{47}
+  \item {src/script.\discretionary {-}{}{}cpp}, \hyperpage{49}
+  \item {src/script.\discretionary {-}{}{}h}, \hyperpage{50}
+
+  \indexspace
+
+  \item {update}
+    \subitem {Background}, \hyperpage{19}
+    \subitem {Camera}, \hyperpage{21}
+    \subitem {Entity}, \hyperpage{23}
+    \subitem {Graphics}, \hyperpage{27}
+    \subitem {Joystick}, \hyperpage{29}
+    \subitem {Object}, \hyperpage{30}
+    \subitem {Room}, \hyperpage{35}
+    \subitem {Sprite}, \hyperpage{38}
+
+  \indexspace
+
+  \item {Virtual\discretionary {-}{}{}Joystick}, \hyperpage{39}
+
+  \indexspace
+
+  \item {window}
+    \subitem {Graphics}, \hyperpage{27}
+
+  \indexspace
+
+  \item {x}
+    \subitem {Background}, \hyperpage{19}
+    \subitem {Camera}, \hyperpage{22}
+    \subitem {Object}, \hyperpage{31}
+  \item {xspeed}
+    \subitem {Background}, \hyperpage{19}
+    \subitem {Camera}, \hyperpage{22}
+
+  \indexspace
+
+  \item {y}
+    \subitem {Background}, \hyperpage{19}
+    \subitem {Camera}, \hyperpage{22}
+    \subitem {Object}, \hyperpage{31}
+  \item {yspeed}
+    \subitem {Background}, \hyperpage{19}
+    \subitem {Camera}, \hyperpage{22}
+
+\end{theindex}

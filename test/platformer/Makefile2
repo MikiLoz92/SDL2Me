@@ -1,0 +1,43 @@
+CoreSources=graphics.cpp options.cpp room.cpp object.cpp pause.cpp script.cpp gui.cpp joystick.cpp
+ImplSources=entity.cpp
+GameSources=main.cpp healthbar.cpp
+Executable=test
+
+CFlags=-std=c++11 -c
+LDFlags=-lSDL2 -lSDL2_image
+ObjectDir=obj/
+CoreDir=../../src/
+ImplDir=../../src/platformer/
+GameDir=./
+TestDir=
+BinDir=
+
+CC=g++
+RM=rm
+
+#!!!!!DO NOT EDIT ANYTHING UNDER THIS LINE!!!!!
+Objects=$(CoreSources:.cpp=.o) $(ImplSources:.cpp=.o) $(GameSources:.cpp=.o)
+CCoreSources=$(addprefix $(CoreDir),$(CoreSources))
+CImplSources=$(addprefix $(ImplDir),$(ImplSources))
+CGameSources=$(addprefix $(GameDir),$(GameSources))
+CObjects=$(addprefix $(ObjectDir),$(Objects)) $(addprefix $(ObjectDir),$(Objects2))
+CExecutable=$(addprefix $(BinDir),$(Executable))
+
+all: test
+
+test: $(CCoreSources) $(CImplSources) $(CGameSources) $(CExecutable)
+
+$(CExecutable): $(CObjects)
+	$(CC) $(CObjects) $@ $(LDFlags)
+
+$(ObjectDir)%.o: $(CoreDir)%.cpp 
+	$(CC) $(CFlags) $< $(LDFlags) -o $@
+	
+$(ObjectDir)%.o: $(ImplDir)%.cpp
+	$(CC) $(CFlags) $< $(LDFlags) -o $@
+	
+$(ObjectDir)%.o: $(GameDir)%.cpp
+	$(CC) $(CFlags) $< $(LDFlags) -o $@
+
+clean:
+	$(RM) -rf obj/*o game

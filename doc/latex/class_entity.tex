@@ -1,0 +1,125 @@
+\hypertarget{class_entity}{\section{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+}
+
+
+Any \hyperlink{class_object}{Object} that is affected by gravity or capable of random motion.  
+
+
+
+
+{\ttfamily \#include $<$entity.\-h$>$}
+
+Inheritance diagram for Entity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_entity_adb44f34990023b1802bb95c280d62de0}{Entity} (\hyperlink{class_sprite}{Sprite} $\ast$\hyperlink{class_object_ad936466f3f6b6e8fa401842c573b44e6}{sprite}, float \hyperlink{class_object_a99addca3b5d96c214fa8f90474224699}{x}, float \hyperlink{class_object_a2870044ec214e97550ee28db89c6382a}{y}, char d)
+\begin{DoxyCompactList}\small\item\em Deafult constructor. Works just like it would work with an \hyperlink{class_object}{Object}. \end{DoxyCompactList}\item 
+\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{$\sim$\-Entity} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. Works just like it would work with an \hyperlink{class_object}{Object}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_entity_aac771d739c55a8bf04a40a7d65d849e4}{collides\-On} (char dir)
+\begin{DoxyCompactList}\small\item\em Check if a collision is ocurring in any direction. \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_a97bff8e950182981a271e548f63fb6c6}{bind\-Joystick} (\hyperlink{class_joystick}{Joystick} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Binds a new \hyperlink{class_joystick}{Joystick} instance to the \hyperlink{class_entity}{Entity}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{update} ()
+\begin{DoxyCompactList}\small\item\em Overridable update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Any \hyperlink{class_object}{Object} that is affected by gravity or capable of random motion. 
+
+Contrary to popular definition, an \hyperlink{class_entity}{Entity} is defined in S2\-M as any type of object (living, mechanic, inanimated) that is capable of being affected by gravity and having random motion at any given time of the game. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_entity_adb44f34990023b1802bb95c280d62de0}{\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}Entity\-::\-Entity (
+\begin{DoxyParamCaption}
+\item[{{\bf Sprite} $\ast$}]{sprite, }
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{char}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_entity_adb44f34990023b1802bb95c280d62de0}
+
+
+Deafult constructor. Works just like it would work with an \hyperlink{class_object}{Object}. 
+
+\hypertarget{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{\index{Entity@{Entity}!$\sim$\-Entity@{$\sim$\-Entity}}
+\index{$\sim$\-Entity@{$\sim$\-Entity}!Entity@{Entity}}
+\subsubsection[{$\sim$\-Entity}]{\setlength{\rightskip}{0pt plus 5cm}Entity\-::$\sim$\-Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}
+
+
+Default destructor. Works just like it would work with an \hyperlink{class_object}{Object}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_entity_a97bff8e950182981a271e548f63fb6c6}{\index{Entity@{Entity}!bind\-Joystick@{bind\-Joystick}}
+\index{bind\-Joystick@{bind\-Joystick}!Entity@{Entity}}
+\subsubsection[{bind\-Joystick}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::bind\-Joystick (
+\begin{DoxyParamCaption}
+\item[{{\bf Joystick} $\ast$}]{j}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a97bff8e950182981a271e548f63fb6c6}
+
+
+Binds a new \hyperlink{class_joystick}{Joystick} instance to the \hyperlink{class_entity}{Entity}. 
+
+\hypertarget{class_entity_aac771d739c55a8bf04a40a7d65d849e4}{\index{Entity@{Entity}!collides\-On@{collides\-On}}
+\index{collides\-On@{collides\-On}!Entity@{Entity}}
+\subsubsection[{collides\-On}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-::collides\-On (
+\begin{DoxyParamCaption}
+\item[{char}]{dir}
+\end{DoxyParamCaption}
+)}}\label{class_entity_aac771d739c55a8bf04a40a7d65d849e4}
+
+
+Check if a collision is ocurring in any direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & the direction to check the collision at. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether it is ocurring or not 
+\end{DoxyReturn}
+\hypertarget{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{\index{Entity@{Entity}!update@{update}}
+\index{update@{update}!Entity@{Entity}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}
+
+
+Overridable update method. 
+
+If you derive the \hyperlink{class_entity}{Entity} class be sure to place 
+\begin{DoxyCode}
+\hyperlink{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{Entity::update}();
+\end{DoxyCode}
+ on the E\-N\-D of the new class' update method so it can implement the \hyperlink{class_entity}{Entity} default update method, which implements \hyperlink{class_object}{Object}'s as well. Default \hyperlink{class_sprite}{Sprite} facing is left, so change this is it's not your case.
+
+When facing left, \hyperlink{}{facing} is equal to false. 
+
+Reimplemented from \hyperlink{class_object_a4abd48bacb1b004c8ac891597c831f77}{Object}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/platformer/\hyperlink{entity_8h}{entity.\-h}\item 
+src/platformer/\hyperlink{entity_8cpp}{entity.\-cpp}\end{DoxyCompactItemize}

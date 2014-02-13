@@ -1,0 +1,390 @@
+\hypertarget{class_graphics}{\section{Graphics Class Reference}
+\label{class_graphics}\index{Graphics@{Graphics}}
+}
+
+
+Controlls everything graphics-\/related.  
+
+
+
+
+{\ttfamily \#include $<$graphics.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphics_a6a0d98b9552ff541d543ff5f56759410}{Graphics} (int log\-Width, int log\-Height, string win\-Caption, \hyperlink{class_options}{Options} $\ast$options)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_graphics_a7841c9a961ac9bca33bd30ddf8066cdb}{$\sim$\-Graphics} ()
+\begin{DoxyCompactList}\small\item\em The destructor. \end{DoxyCompactList}\item 
+S\-D\-L\-\_\-\-Texture $\ast$ \hyperlink{class_graphics_ae584d38c352d13cf792d91bd3b1f2804}{load\-Texture} (string filename, bool drawable)
+\begin{DoxyCompactList}\small\item\em Loads a bitmap file and makes it an S\-D\-L\-\_\-\-Texture. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_abd63e855ce736b83c931a40257741145}{draw\-Texture} (S\-D\-L\-\_\-\-Texture $\ast$source, int x, int y, int w, int h)
+\begin{DoxyCompactList}\small\item\em Draws a texture directly on the screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_a84c6ec14161fd77ab529f3f985067df2}{blit\-Texture} (S\-D\-L\-\_\-\-Texture $\ast$tsrc, S\-D\-L\-\_\-\-Texture $\ast$tdest, int x, int y, bool clear)
+\begin{DoxyCompactList}\small\item\em Blits a source texture into a destination texture. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_a2b8441851d9c70e6ae7b3c103f46162d}{blit\-Texture} (S\-D\-L\-\_\-\-Texture $\ast$tsrc, S\-D\-L\-\_\-\-Texture $\ast$tdest, int x, int y, int w, int h, bool clear)
+\begin{DoxyCompactList}\small\item\em Blits a source texture into a destination texture. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_ab3ba379c5c196820b59dcda8fda24db9}{blit\-Texture} (S\-D\-L\-\_\-\-Texture $\ast$tsrc, S\-D\-L\-\_\-\-Texture $\ast$tdest, S\-D\-L\-\_\-\-Rect $\ast$src, S\-D\-L\-\_\-\-Rect $\ast$dest, bool clear)
+\begin{DoxyCompactList}\small\item\em Blits a source texture into a destination texture. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_a5a5297a160c22f73300dcf72ac0be7c2}{update} ()
+\begin{DoxyCompactList}\small\item\em Flips the game screen and updates all instantiated Sprites. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_a398c8e6d13eda586fcfb50952ba25eac}{add\-Sprite} (\hyperlink{class_sprite}{Sprite} $\ast$sprite)
+\begin{DoxyCompactList}\small\item\em Adds a \hyperlink{class_sprite}{Sprite} to the \hyperlink{class_graphics_ad01e5a24a1ce34c64f6dd7de4f85fc8b}{sprites} vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_ad06e41bffceda0186291e520fb37fa67}{add\-G\-U\-I\-Element} (\hyperlink{class_g_u_i_element}{G\-U\-I\-Element} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Adds a \hyperlink{class_g_u_i_element}{G\-U\-I\-Element} to the \hyperlink{class_graphics_ac4ea71ee39d3cbc7b3fc14bf89fa400f}{guielements} vector. \end{DoxyCompactList}\item 
+int \hyperlink{class_graphics_a6364aacb31a2f59c0ad7b423d10a6e3a}{get\-Game\-Width} ()
+\begin{DoxyCompactList}\small\item\em Gets the game width. \end{DoxyCompactList}\item 
+int \hyperlink{class_graphics_a714496ad1b9244d6f9dafe665b35860d}{get\-Game\-Height} ()
+\begin{DoxyCompactList}\small\item\em Gets the game height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+S\-D\-L\-\_\-\-Window $\ast$ \hyperlink{class_graphics_af397f61e26b41302b0b66ee4ab408952}{window}
+\begin{DoxyCompactList}\small\item\em The game window S\-D\-L\-\_\-\-Window instance pointer. \end{DoxyCompactList}\item 
+S\-D\-L\-\_\-\-Renderer $\ast$ \hyperlink{class_graphics_afee9119ae93eafc5707a9e868b539a2e}{renderer}
+\begin{DoxyCompactList}\small\item\em The game renderer S\-D\-L\-\_\-\-Renderer instance pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_graphics_adf4a36eb3049ba3d07d79af2b4ac6399}{gamewidth}
+\begin{DoxyCompactList}\small\item\em The game width. \end{DoxyCompactList}\item 
+int \hyperlink{class_graphics_ac176bce8a1a8b73f6ed05e68410d9a14}{gameheight}
+\begin{DoxyCompactList}\small\item\em The game height. \end{DoxyCompactList}\item 
+S\-D\-L\-\_\-\-Texture $\ast$ \hyperlink{class_graphics_aa3ea5fd0f0a672850bb1352d5ca302f1}{buffer}
+\begin{DoxyCompactList}\small\item\em D\-E\-P\-R\-E\-C\-A\-T\-E\-D\-: A buffer to hold the whole screen. \end{DoxyCompactList}\item 
+\hyperlink{class_options}{Options} $\ast$ \hyperlink{class_graphics_aafe6ff08323ccbe6478472e3ec30715c}{g\-Options}
+\begin{DoxyCompactList}\small\item\em Pointer to the \hyperlink{class_options}{Options} instance. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_sprite}{Sprite} $\ast$ $>$ \hyperlink{class_graphics_ad01e5a24a1ce34c64f6dd7de4f85fc8b}{sprites}
+\begin{DoxyCompactList}\small\item\em Vector containing every single \hyperlink{class_sprite}{Sprite} that is being used. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_g_u_i_element}{G\-U\-I\-Element} $\ast$ $>$ \hyperlink{class_graphics_ac4ea71ee39d3cbc7b3fc14bf89fa400f}{guielements}
+\begin{DoxyCompactList}\small\item\em Vector containing every single \hyperlink{class_g_u_i_element}{G\-U\-I\-Element}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controlls everything graphics-\/related. 
+
+The \hyperlink{class_graphics}{Graphics} class is an abstraction of everything graphic-\/based in the game. Every operation that involves graphics should need a pointer to this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_graphics_a6a0d98b9552ff541d543ff5f56759410}{\index{Graphics@{Graphics}!Graphics@{Graphics}}
+\index{Graphics@{Graphics}!Graphics@{Graphics}}
+\subsubsection[{Graphics}]{\setlength{\rightskip}{0pt plus 5cm}Graphics\-::\-Graphics (
+\begin{DoxyParamCaption}
+\item[{int}]{log\-Width, }
+\item[{int}]{log\-Height, }
+\item[{string}]{win\-Caption, }
+\item[{{\bf Options} $\ast$}]{options}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a6a0d98b9552ff541d543ff5f56759410}
+
+
+The constructor. 
+
+Creates a new window and gives it a caption. Uses logical size instead of window size. What this means is that it will create a window based on the size you input times the scaling integer that the \hyperlink{class_options}{Options} instance has, based on what you have specified in the config file. 
+\begin{DoxyParams}{Parameters}
+{\em win\-Width} & the game width \\
+\hline
+{\em win\-Height} & the game height \\
+\hline
+{\em win\-Caption} & the window caption \\
+\hline
+{\em options} & a pointer to an \hyperlink{class_options}{Options} instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_graphics_a7841c9a961ac9bca33bd30ddf8066cdb}{$\sim$\-Graphics} 
+\end{DoxySeeAlso}
+\hypertarget{class_graphics_a7841c9a961ac9bca33bd30ddf8066cdb}{\index{Graphics@{Graphics}!$\sim$\-Graphics@{$\sim$\-Graphics}}
+\index{$\sim$\-Graphics@{$\sim$\-Graphics}!Graphics@{Graphics}}
+\subsubsection[{$\sim$\-Graphics}]{\setlength{\rightskip}{0pt plus 5cm}Graphics\-::$\sim$\-Graphics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a7841c9a961ac9bca33bd30ddf8066cdb}
+
+
+The destructor. 
+
+Destroys the current window, frees all existing textures and by all means finishes the game. \begin{DoxySeeAlso}{See Also}
+\hyperlink{class_graphics}{Graphics} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_graphics_ad06e41bffceda0186291e520fb37fa67}{\index{Graphics@{Graphics}!add\-G\-U\-I\-Element@{add\-G\-U\-I\-Element}}
+\index{add\-G\-U\-I\-Element@{add\-G\-U\-I\-Element}!Graphics@{Graphics}}
+\subsubsection[{add\-G\-U\-I\-Element}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::add\-G\-U\-I\-Element (
+\begin{DoxyParamCaption}
+\item[{{\bf G\-U\-I\-Element} $\ast$}]{g}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_ad06e41bffceda0186291e520fb37fa67}
+
+
+Adds a \hyperlink{class_g_u_i_element}{G\-U\-I\-Element} to the \hyperlink{class_graphics_ac4ea71ee39d3cbc7b3fc14bf89fa400f}{guielements} vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & the \hyperlink{class_g_u_i_element}{G\-U\-I\-Element} to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_a398c8e6d13eda586fcfb50952ba25eac}{\index{Graphics@{Graphics}!add\-Sprite@{add\-Sprite}}
+\index{add\-Sprite@{add\-Sprite}!Graphics@{Graphics}}
+\subsubsection[{add\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::add\-Sprite (
+\begin{DoxyParamCaption}
+\item[{{\bf Sprite} $\ast$}]{sprite}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a398c8e6d13eda586fcfb50952ba25eac}
+
+
+Adds a \hyperlink{class_sprite}{Sprite} to the \hyperlink{class_graphics_ad01e5a24a1ce34c64f6dd7de4f85fc8b}{sprites} vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & the sprite pointer to add \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_a84c6ec14161fd77ab529f3f985067df2}{\index{Graphics@{Graphics}!blit\-Texture@{blit\-Texture}}
+\index{blit\-Texture@{blit\-Texture}!Graphics@{Graphics}}
+\subsubsection[{blit\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::blit\-Texture (
+\begin{DoxyParamCaption}
+\item[{S\-D\-L\-\_\-\-Texture $\ast$}]{tsrc, }
+\item[{S\-D\-L\-\_\-\-Texture $\ast$}]{tdest, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{bool}]{clear}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a84c6ec14161fd77ab529f3f985067df2}
+
+
+Blits a source texture into a destination texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tsrc} & the source texture \\
+\hline
+{\em tdest} & the destination texture \\
+\hline
+{\em x} & destination horizontal position \\
+\hline
+{\em y} & destination vertical position \\
+\hline
+{\em clear} & whether to clear or not the destination texture before blitting \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_a2b8441851d9c70e6ae7b3c103f46162d}{\index{Graphics@{Graphics}!blit\-Texture@{blit\-Texture}}
+\index{blit\-Texture@{blit\-Texture}!Graphics@{Graphics}}
+\subsubsection[{blit\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::blit\-Texture (
+\begin{DoxyParamCaption}
+\item[{S\-D\-L\-\_\-\-Texture $\ast$}]{tsrc, }
+\item[{S\-D\-L\-\_\-\-Texture $\ast$}]{tdest, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{bool}]{clear}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a2b8441851d9c70e6ae7b3c103f46162d}
+
+
+Blits a source texture into a destination texture. 
+
+This method lets you scale your texture. 
+\begin{DoxyParams}{Parameters}
+{\em tsrc} & the source texture \\
+\hline
+{\em tdest} & the destination texture \\
+\hline
+{\em x} & destination horizontal position \\
+\hline
+{\em y} & destination vertical position \\
+\hline
+{\em w} & width to scale the given texture to \\
+\hline
+{\em h} & height to scale the given texture to \\
+\hline
+{\em clear} & whether to clear or not the destination texture before blitting \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_ab3ba379c5c196820b59dcda8fda24db9}{\index{Graphics@{Graphics}!blit\-Texture@{blit\-Texture}}
+\index{blit\-Texture@{blit\-Texture}!Graphics@{Graphics}}
+\subsubsection[{blit\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::blit\-Texture (
+\begin{DoxyParamCaption}
+\item[{S\-D\-L\-\_\-\-Texture $\ast$}]{tsrc, }
+\item[{S\-D\-L\-\_\-\-Texture $\ast$}]{tdest, }
+\item[{S\-D\-L\-\_\-\-Rect $\ast$}]{src, }
+\item[{S\-D\-L\-\_\-\-Rect $\ast$}]{dest, }
+\item[{bool}]{clear}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_ab3ba379c5c196820b59dcda8fda24db9}
+
+
+Blits a source texture into a destination texture. 
+
+This method is a bit more complex but gives you access to cropping and scaling your textures. 
+\begin{DoxyParams}{Parameters}
+{\em tsrc} & the source texture \\
+\hline
+{\em tdest} & the destination texture \\
+\hline
+{\em src} & S\-D\-L\-\_\-\-Rect of the source texture \\
+\hline
+{\em dest} & S\-D\-L\-\_\-\-Rect of the destination texture \\
+\hline
+{\em clear} & whether to clear or not the destination texture before blitting \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_abd63e855ce736b83c931a40257741145}{\index{Graphics@{Graphics}!draw\-Texture@{draw\-Texture}}
+\index{draw\-Texture@{draw\-Texture}!Graphics@{Graphics}}
+\subsubsection[{draw\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::draw\-Texture (
+\begin{DoxyParamCaption}
+\item[{S\-D\-L\-\_\-\-Texture $\ast$}]{source, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_abd63e855ce736b83c931a40257741145}
+
+
+Draws a texture directly on the screen. 
+
+This function draws a texture onscreen, bypassing viewports. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the texture to blit \\
+\hline
+{\em x} & horizontal position on screen \\
+\hline
+{\em y} & vertical position on screen \\
+\hline
+{\em w} & width to scale the given texture to \\
+\hline
+{\em h} & height to scale the given texture to \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graphics_a714496ad1b9244d6f9dafe665b35860d}{\index{Graphics@{Graphics}!get\-Game\-Height@{get\-Game\-Height}}
+\index{get\-Game\-Height@{get\-Game\-Height}!Graphics@{Graphics}}
+\subsubsection[{get\-Game\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\-::get\-Game\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a714496ad1b9244d6f9dafe665b35860d}
+
+
+Gets the game height. 
+
+\begin{DoxyReturn}{Returns}
+The game height. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_a6364aacb31a2f59c0ad7b423d10a6e3a}{\index{Graphics@{Graphics}!get\-Game\-Width@{get\-Game\-Width}}
+\index{get\-Game\-Width@{get\-Game\-Width}!Graphics@{Graphics}}
+\subsubsection[{get\-Game\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\-::get\-Game\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a6364aacb31a2f59c0ad7b423d10a6e3a}
+
+
+Gets the game width. 
+
+\begin{DoxyReturn}{Returns}
+The game width. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_ae584d38c352d13cf792d91bd3b1f2804}{\index{Graphics@{Graphics}!load\-Texture@{load\-Texture}}
+\index{load\-Texture@{load\-Texture}!Graphics@{Graphics}}
+\subsubsection[{load\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Texture $\ast$ Graphics\-::load\-Texture (
+\begin{DoxyParamCaption}
+\item[{string}]{filename, }
+\item[{bool}]{drawable}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_ae584d38c352d13cf792d91bd3b1f2804}
+
+
+Loads a bitmap file and makes it an S\-D\-L\-\_\-\-Texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the bitmap to load (extension included) \\
+\hline
+{\em drawable} & indicates if the texture can or cannot be altered over time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to S\-D\-L\-\_\-\-Texture representing the loaded bitmap 
+\end{DoxyReturn}
+\hypertarget{class_graphics_a5a5297a160c22f73300dcf72ac0be7c2}{\index{Graphics@{Graphics}!update@{update}}
+\index{update@{update}!Graphics@{Graphics}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a5a5297a160c22f73300dcf72ac0be7c2}
+
+
+Flips the game screen and updates all instantiated Sprites. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_graphics_aa3ea5fd0f0a672850bb1352d5ca302f1}{\index{Graphics@{Graphics}!buffer@{buffer}}
+\index{buffer@{buffer}!Graphics@{Graphics}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Texture$\ast$ Graphics\-::buffer\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_graphics_aa3ea5fd0f0a672850bb1352d5ca302f1}
+
+
+D\-E\-P\-R\-E\-C\-A\-T\-E\-D\-: A buffer to hold the whole screen. 
+
+\hypertarget{class_graphics_ac176bce8a1a8b73f6ed05e68410d9a14}{\index{Graphics@{Graphics}!gameheight@{gameheight}}
+\index{gameheight@{gameheight}!Graphics@{Graphics}}
+\subsubsection[{gameheight}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\-::gameheight\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_graphics_ac176bce8a1a8b73f6ed05e68410d9a14}
+
+
+The game height. 
+
+\hypertarget{class_graphics_adf4a36eb3049ba3d07d79af2b4ac6399}{\index{Graphics@{Graphics}!gamewidth@{gamewidth}}
+\index{gamewidth@{gamewidth}!Graphics@{Graphics}}
+\subsubsection[{gamewidth}]{\setlength{\rightskip}{0pt plus 5cm}int Graphics\-::gamewidth\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_graphics_adf4a36eb3049ba3d07d79af2b4ac6399}
+
+
+The game width. 
+
+\hypertarget{class_graphics_aafe6ff08323ccbe6478472e3ec30715c}{\index{Graphics@{Graphics}!g\-Options@{g\-Options}}
+\index{g\-Options@{g\-Options}!Graphics@{Graphics}}
+\subsubsection[{g\-Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Options}$\ast$ Graphics\-::g\-Options\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_graphics_aafe6ff08323ccbe6478472e3ec30715c}
+
+
+Pointer to the \hyperlink{class_options}{Options} instance. 
+
+\hypertarget{class_graphics_ac4ea71ee39d3cbc7b3fc14bf89fa400f}{\index{Graphics@{Graphics}!guielements@{guielements}}
+\index{guielements@{guielements}!Graphics@{Graphics}}
+\subsubsection[{guielements}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf G\-U\-I\-Element} $\ast$$>$ Graphics\-::guielements\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_graphics_ac4ea71ee39d3cbc7b3fc14bf89fa400f}
+
+
+Vector containing every single \hyperlink{class_g_u_i_element}{G\-U\-I\-Element}. 
+
+\hypertarget{class_graphics_afee9119ae93eafc5707a9e868b539a2e}{\index{Graphics@{Graphics}!renderer@{renderer}}
+\index{renderer@{renderer}!Graphics@{Graphics}}
+\subsubsection[{renderer}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Renderer$\ast$ Graphics\-::renderer}}\label{class_graphics_afee9119ae93eafc5707a9e868b539a2e}
+
+
+The game renderer S\-D\-L\-\_\-\-Renderer instance pointer. 
+
+\hypertarget{class_graphics_ad01e5a24a1ce34c64f6dd7de4f85fc8b}{\index{Graphics@{Graphics}!sprites@{sprites}}
+\index{sprites@{sprites}!Graphics@{Graphics}}
+\subsubsection[{sprites}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Sprite} $\ast$$>$ Graphics\-::sprites\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_graphics_ad01e5a24a1ce34c64f6dd7de4f85fc8b}
+
+
+Vector containing every single \hyperlink{class_sprite}{Sprite} that is being used. 
+
+\hypertarget{class_graphics_af397f61e26b41302b0b66ee4ab408952}{\index{Graphics@{Graphics}!window@{window}}
+\index{window@{window}!Graphics@{Graphics}}
+\subsubsection[{window}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Window$\ast$ Graphics\-::window}}\label{class_graphics_af397f61e26b41302b0b66ee4ab408952}
+
+
+The game window S\-D\-L\-\_\-\-Window instance pointer. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{graphics_8h}{graphics.\-h}\item 
+src/\hyperlink{graphics_8cpp}{graphics.\-cpp}\end{DoxyCompactItemize}
