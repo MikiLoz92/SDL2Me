@@ -4,7 +4,6 @@
      /        \ |    `   \    |___/       \/    Y    \  ___/
     /_______  //_______  /_______ \_______ \____|__  /\___ \
             \/         \/        \/       \/       \/     \/
-============================================================
 
  Copyright © 2013 Miguel Vera Belmonte AKA MikiLoz92.
 
@@ -21,12 +20,10 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     
-============
 INSTALLATION
 ============
 ...
 
-========
 EXAMPLES
 ========
 Examples are provided in the 'test' folder. To compile one, just run the 'make' command within each subfolder.
