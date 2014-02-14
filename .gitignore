@@ -1,7 +1,10 @@
+# Makefile #
+############
+Makefile
+
 # Binary directories #
 ######################
 ./bin
-./lib
 ./obj
 
 # Compiled source #
@@ -11,8 +14,8 @@
 *.dll
 *.exe
 *.o
-*.so
-*.a
+lib/libS2M.so
+lib/libS2M.a
 
 # Packages #
 ############
