@@ -1,9 +1,23 @@
 # --- Compilar con .so ---
+# (Compilar con una librería dinámica disminuirá el peso del ejecutable)
+# (Pros: Tamaño del ejecutable reducido)
+# (Contras: Deberás proporcionar también la librería)
 #
 # $ g++ -std=c++1 -c main.cpp
 # $ g++ -std=c++1 -c healthbar.cpp
 # ... (cada archivo del proyecto)
-# $ g++ -o test *.o -L../../lib/ -lS2M -lSDL2 -lSDL2_image
+# $ g++ -o test *.o -L../../lib/ -lS2M -lSDL2 -lSDL2_image -Wl,-rpath=../../lib/
+
+# --- Compilar con .a ---
+# (Compilar con una librería estática la añadirá al ejecutable e incrementará su peso)
+# (Pros: No dependemos de librerías externas)
+# (Contras: Mayor peso del ejecutable)
+# 
+# $ g++ -std=c++1 -c main.cpp
+# $ g++ -std=c++1 -c healthbar.cpp
+# ... (cada archivo del proyecto)
+# $ g++ -o test *.o -L../../lib/ -lSDL2 -lSDL2_image -l:libS2M.a
+
 
 CoreSources=graphics.cpp options.cpp room.cpp object.cpp pause.cpp script.cpp gui.cpp joystick.cpp
 ImplSources= entity.cpp

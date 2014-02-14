@@ -200,8 +200,6 @@ void Graphics::update() {
 		}
 	}*/
 
-	cout << "Size of tmap: " << gRoom->tmap.size() << endl;
-
 	// Draw Tiles (for TRoom)
 	int w = gRoom->wtile;
 	int h = gRoom->htile;
@@ -391,5 +389,5 @@ bool Transition::isSingle() {
 }
 
 bool Transition::update() {
-	
+
 }

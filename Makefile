@@ -1,4 +1,4 @@
-# This Makefile will generate a shared library (.so)
+# This Makefile will generate a shared library (.so) and a static library (.a)
 
 CoreSources=graphics.cpp options.cpp room.cpp object.cpp pause.cpp script.cpp gui.cpp joystick.cpp
 ImplSources= entity.cpp
@@ -27,6 +27,7 @@ test: $(LibFile)
 
 $(LibFile): $(CObjects)
 	$(CC) -shared -std=c++11 -o $(LibFile) $(CObjects)
+	ar ruv lib/libS2M.a $(CObjects)
 
 $(ObjectDir)%.o: $(CoreDir)%.cpp 
 	$(CC) $(CFlags) $< $(LDFlags) -o $@
