@@ -5,7 +5,8 @@ ImplSources= entity.cpp
 Lib=libS2M.so
 
 CFlags=-std=c++11 -c -fPIC #-g #-Ofast
-LDFlags=-lSDL2 -lSDL2_image
+#LDFlags=-lSDL2 -lSDL2_image 			# Casa
+LDFlags=-L./lib/ -lSDL2 -lSDL2_image	# ETSEIB
 ObjDir=obj/
 CoreDir=src/
 ImplDir=src/platformer/
@@ -44,5 +45,5 @@ $(ObjDir)%.o: $(ImplDir)%.cpp
 	$(CC) $(CFlags) $< $(LDFlags) -o $@
 
 clean:
-	$(RM) -rf obj/*o lib/*
-	rmdir lib obj
+	$(RM) -rf obj/*o lib/libS2M.a lib/libS2M.so
+	rmdir obj
