@@ -1,0 +1,19 @@
+Iniciar un proyecto git:
+$ git init
+
+Configurar tu repositorio:
+$ git remote add origin https://github.com/MikiLoz92/*.git
+
+Añadir o quitar archivos del árbol:
+$ git add/rm *.*
+
+Hacer un commit
+$ git commit -a -m "Mensaje del commit"
+
+Subir los archivos del commit:
+$ git push -u origin master
+
+Descargar archivos del repositorio online:
+$ git pull -u origin master
+
+(Una vez has usado el "-u", se guarda ese repositorio como repositorio por defecto. Las siguientes veces podrás hacer "git pull" y "git push" sin especificarlo)
