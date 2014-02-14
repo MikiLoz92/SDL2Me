@@ -20,9 +20,10 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     
-INSTALLATION
-============
-...
+COMPILATION
+===========
+Use 'make' to compile S2M into two nice libraries within the lib folder. One is a static library and the other is a shared one.
+Use 'make clean' to clean everything up.
 
 EXAMPLES
 ========
