@@ -23,6 +23,7 @@
 COMPILATION
 ===========
 Use 'make' to compile S2M into two nice libraries within the lib folder. One is a static library and the other is a shared one.
+
 Use 'make clean' to clean everything up.
 
 EXAMPLES
