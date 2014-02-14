@@ -17,3 +17,6 @@ Descargar archivos del repositorio online:
 $ git pull -u origin master
 
 (Una vez has usado el "-u", se guarda ese repositorio como repositorio por defecto. Las siguientes veces podrás hacer "git pull" y "git push" sin especificarlo)
+
+Guardar credenciales:
+$ git config credential.helper store 
