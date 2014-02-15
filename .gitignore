@@ -1,11 +1,11 @@
 # Makefile #
 ############
-Makefile
+./Makefile
 
 # Binary directories #
 ######################
-./bin
-./obj
+./bin/
+./obj/
 
 # Compiled source #
 ###################
@@ -16,6 +16,7 @@ Makefile
 *.o
 lib/libS2M.so
 lib/libS2M.a
+test/platformer/test
 
 # Packages #
 ############

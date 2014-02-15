@@ -30,6 +30,7 @@ CoreDir=../../src/
 ImplDir=../../src/platformer/
 TestDir=
 BinDir=
+Library=../../
 
 CC=g++
 RM=rm
@@ -41,9 +42,19 @@ CImplSources=$(addprefix $(ImplDir),$(ImplSources))
 CObjects=$(addprefix $(ObjectDir),$(Objects)) $(addprefix $(ObjectDir),$(Objects2))
 CExecutable=$(addprefix $(BinDir),$(Executable))
 
-all: test
+all: library directories test
 
 test: $(CCoreSources) $(CImplSources) obj/main.o obj/healthbar.o $(CExecutable)
+
+directories: $(ObjectDir)
+
+library: $(Library)
+
+$(Library):
+	cd $(Library) && $(MAKE)
+
+$(ObjectDir):
+	mkdir -p $(ObjectDir)
 
 $(CExecutable): $(CObjects)
 	$(CC) $(CObjects) obj/main.o obj/healthbar.o -o $@ $(LDFlags)
@@ -61,4 +72,5 @@ obj/healthbar.o: healthbar.cpp
 	$(CC) $(CFlags) healthbar.cpp $(LDFlags) -o obj/healthbar.o
 
 clean:
-	$(RM) -rf obj/*o game
+	$(RM) -rf obj/*o $(Executable)
+	rmdir obj
