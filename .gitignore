@@ -1,3 +1,12 @@
+# Makefile #
+############
+./Makefile
+
+# Binary directories #
+######################
+./bin/
+./obj/
+
 # Compiled source #
 ###################
 *.com
@@ -5,8 +14,9 @@
 *.dll
 *.exe
 *.o
-*.so
-*.a
+lib/libS2M.so
+lib/libS2M.a
+test/platformer/test
 
 # Packages #
 ############

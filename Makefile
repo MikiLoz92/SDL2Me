@@ -5,8 +5,9 @@ ImplSources= entity.cpp
 Lib=libS2M.so
 
 CFlags=-std=c++11 -c -fPIC #-g #-Ofast
-LDFlags=-lSDL2 -lSDL2_image
-ObjectDir=obj/
+#LDFlags=-lSDL2 -lSDL2_image 			# Casa
+LDFlags=-L./lib/ -lSDL2 -lSDL2_image	# ETSEIB
+ObjDir=obj/
 CoreDir=src/
 ImplDir=src/platformer/
 LibDir=lib/
@@ -18,22 +19,31 @@ RM=rm
 Objects=$(CoreSources:.cpp=.o) $(ImplSources:.cpp=.o)
 CCoreSources=$(addprefix $(CoreDir),$(CoreSources))
 CImplSources=$(addprefix $(ImplDir),$(ImplSources))
-CObjects=$(addprefix $(ObjectDir),$(Objects)) $(addprefix $(ObjectDir),$(Objects2))
+CObjects=$(addprefix $(ObjDir),$(Objects)) $(addprefix $(ObjDir),$(Objects2))
 LibFile=$(addprefix $(LibDir),$(Lib))
 
-all: test
+all: directories test
 
 test: $(LibFile)
+
+directories: $(ObjDir) $(LibDir)
+
+$(ObjDir):
+	mkdir -p $(ObjDir)
+
+$(LibDir):
+	mkdir -p $(LibDir)
 
 $(LibFile): $(CObjects)
 	$(CC) -shared -std=c++11 -o $(LibFile) $(CObjects)
 	ar ruv lib/libS2M.a $(CObjects)
 
-$(ObjectDir)%.o: $(CoreDir)%.cpp 
+$(ObjDir)%.o: $(CoreDir)%.cpp 
 	$(CC) $(CFlags) $< $(LDFlags) -o $@
 	
-$(ObjectDir)%.o: $(ImplDir)%.cpp
+$(ObjDir)%.o: $(ImplDir)%.cpp
 	$(CC) $(CFlags) $< $(LDFlags) -o $@
 
 clean:
-	$(RM) -rf obj/*o game
+	$(RM) -rf obj/*o lib/libS2M.a lib/libS2M.so
+	rmdir obj
