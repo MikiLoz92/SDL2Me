@@ -18,16 +18,12 @@
 # ... (cada archivo del proyecto)
 # $ g++ -o test *.o -L../../lib/ -lSDL2 -lSDL2_image -l:libS2M.a
 
-
-CoreSources=graphics.cpp options.cpp room.cpp object.cpp pause.cpp script.cpp gui.cpp joystick.cpp
-ImplSources= entity.cpp
 Executable=test
 
 CFlags=-std=c++11 -c #-g #-Ofast
-LDFlags=-lSDL2 -lSDL2_image -L./S2M
+LDFlags=-L../../lib/ -lSDL2 -lSDL2_image -lS2M -Wl,-rpath=../../lib/
 ObjectDir=obj/
-CoreDir=../../src/
-ImplDir=../../src/platformer/
+SrcDir=
 TestDir=
 BinDir=
 Library=../../
@@ -37,39 +33,26 @@ RM=rm
 
 #!!!!!DO NOT EDIT ANYTHING UNDER THIS LINE!!!!!
 Objects=$(CoreSources:.cpp=.o) $(ImplSources:.cpp=.o)
-CCoreSources=$(addprefix $(CoreDir),$(CoreSources))
-CImplSources=$(addprefix $(ImplDir),$(ImplSources))
 CObjects=$(addprefix $(ObjectDir),$(Objects)) $(addprefix $(ObjectDir),$(Objects2))
 CExecutable=$(addprefix $(BinDir),$(Executable))
 
 all: library directories test
 
-test: $(CCoreSources) $(CImplSources) obj/main.o obj/healthbar.o $(CExecutable)
+test: obj/main.o obj/healthbar.o $(CExecutable)
 
 directories: $(ObjectDir)
 
-library: $(Library)
-
-$(Library):
-	cd $(Library) && $(MAKE)
+library:
+	cd ../.. && make
 
 $(ObjectDir):
 	mkdir -p $(ObjectDir)
 
 $(CExecutable): $(CObjects)
 	$(CC) $(CObjects) obj/main.o obj/healthbar.o -o $@ $(LDFlags)
-
-$(ObjectDir)%.o: $(CoreDir)%.cpp 
-	$(CC) $(CFlags) $< $(LDFlags) -o $@
 	
-$(ObjectDir)%.o: $(ImplDir)%.cpp
+$(ObjectDir)%.o: $(SrcDir)%.cpp
 	$(CC) $(CFlags) $< $(LDFlags) -o $@
-	
-obj/main.o: main.cpp
-	$(CC) $(CFlags) main.cpp $(LDFlags) -o obj/main.o
-
-obj/healthbar.o: healthbar.cpp
-	$(CC) $(CFlags) healthbar.cpp $(LDFlags) -o obj/healthbar.o
 
 clean:
 	$(RM) -rf obj/*o $(Executable)
