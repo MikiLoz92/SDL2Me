@@ -1,5 +1,6 @@
-# Makefile #
-############
+# Scripts #
+###########
+commit&push.sh
 
 # Binary directories #
 ######################

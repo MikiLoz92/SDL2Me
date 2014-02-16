@@ -112,6 +112,7 @@ while (true) {
 #define ROOM_H
 
 #include <iostream>
+#include <map>
 #include <string>
 #include <sstream>
 #include <fstream>
@@ -158,7 +159,7 @@ public:
 	/*! Creates a Room from a file.
 	 * \param filename the design file
 	 * \param scriptname the script file */
-	Room(string filename, string scriptname);
+	Room(string filename, string scriptname, map <string, Object *(*)(Sprite*, float, float, char)> objectMap);
 
 	//! The simple constructor.
 	/*! Creates an empty black Room with the game dimensions. */

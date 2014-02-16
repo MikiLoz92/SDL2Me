@@ -35,6 +35,7 @@
 
 // ALTAMENTE DEBUGEOSO/DEBUGIBLE/DEBUGEADO: ¡¡¡¡FRICKIN' GLOBALS!!!!
 Room *gRoom;
+
 /*
 Room *S2M_CreateRoom() {
 	Room *room = new Room();
@@ -74,7 +75,7 @@ bool compareBackgroundsByDepth(Background *bg1, Background *bg2) {
 	else return bg1->getDepth() < bg2->getDepth();
 }
 
-Room::Room(string filename, string scriptname) {
+Room::Room(string filename, string scriptname, map <string, Object *(*)(Sprite*, float, float, char)> objectMap) {
 
 	// MAP PART
 	xml_document<> mapxml;
@@ -89,11 +90,27 @@ Room::Room(string filename, string scriptname) {
 	buffer.push_back('\0');
 	mapxml.parse<0>(&buffer[0]);
 
+	// Leer atributos del mapa
 	xml_node<> *map_node = mapxml.first_node("map");
 	wtile = atoi(map_node->first_attribute("tilewidth")->value());
 	htile = atoi(map_node->first_attribute("tileheight")->value());
 	width = atoi(map_node->first_attribute("width")->value()) * wtile;
 	height = atoi(map_node->first_attribute("height")->value()) * htile;
+
+	cout << "Entering" << endl;
+	// Leer capa de objetos y crear instancias
+	xml_node<> *objectgroup_node = map_node->first_node("objectgroup");
+	while (objectgroup_node != NULL) {
+		xml_node<> *object_node = objectgroup_node->first_node("object");
+		while (object_node != NULL) {
+			char *type = object_node->first_attribute("type")->value();
+			Object *(*b)(Sprite*, float, float, char) = objectMap.find(type)->second;
+			//atoi(object_node->first_attribute("x")->value())
+			//atoi(object_node->first_attribute("y")->value())
+			object_node = objectgroup_node->next_sibling("object");
+		} objectgroup_node = map_node->next_sibling("objectgroup");
+	}
+	cout << "Exiting" << endl;
 
 	cout << "Map width: " << width << " Map height: " << height << endl;
 

@@ -120,17 +120,21 @@ int main( int argc, char* args[] ) {
 
 	S2M_CreateGraphics();
 
+	map <string, Object *(*)(Sprite*, float, float, char)> objectMap {
+		{ "warp", &S2M_CreateObject<Warp> }
+	};
+
 	//Room *room = S2M_CreateRoom(640,480);
 
 	//TRoom *room =  new TRoom("res/map.tmx", &populateRoom);
 	//Room *room = new Room("res/map.tmx", "res/script.txt");
-	Room *room = S2M_CreateRoom<Room>("res/map.tmx", "res/script.txt");
+	Room *room = S2M_CreateRoom<Room>("res/map.tmx", "res/script.txt", objectMap);
 
 	//cout << room->x << endl;
 	S2M_SetRoom(room);
 	//S2M_Room::LoadScript("res/script.txt");
 
-	Room *room2 = S2M_CreateRoom<Room>("res/map2.tmx", "res/script.txt");
+	Room *room2 = S2M_CreateRoom<Room>("res/map2.tmx", "res/script.txt", objectMap);
 
 	Background bg0 = Background("res/gfx/csbg0.png", S2M_BGSTYLE_STATIC, 0, 0, -1);
 	Background bg1 = Background("res/gfx/csbg1.png", S2M_BGSTYLE_PARALLAX, -0.25, 0, 4);

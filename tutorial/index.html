@@ -150,6 +150,14 @@
 					<p>El truco está en que en cada frame se llama el método <code>update()</code> y tú, derivando la clase base Transition y programando susodicho método, deberás actualizar la textura propia de tu clase conforme desees que sea la transición. Esa textura se dibujará en la pantalla hasta que indiques que <code>done = true</code>. Entonces, SDL2Me cambiará de Room y cambiará el modo de la transición (a no ser que el modo sea ya <code>S2M_TRANSITION_CLOSE</code>, en cuyo caso la transición finalizará) y tú deberás tener en cuenta ese cambio y volver a dibujar la textura propia del nuevo modo.</p>
 					<p>Así explicado puede parecer complicado, pero si te lees la documentación oficial y echas una ojeada al código fuente descubrirás que es en realidad bastante fácil.</p>
 				</div>
+				<h2 id="6"><a id="arrow6" class="arrow" href="javascript:toggle('arrow6','text6');">&#9660</a>Automatizando la creación de niveles. Uso de TRoom</h2>
+				<div id="text6" style="display: block;">
+					<p>Esta bien eso de saber crear niveles a mano (crear una Room, poblarla con Objects creados por ti con Sprites ídem, etc.), pero llega un punto que hacer eso para cada nivel de tu juego se vuelve largo, tedioso y en definitiva, insoportable. Para eso están las <b>TRoom</b>, un tipo especial de Room que automatiza la creación de niveles.</p>
+					<p>Por así decirlo, una TRoom acepta un archivo como parámetro, archivo que leerá y desde el cual obtendrá su altura y anchura, se poblará con los objetos que haya definidos, etc.</p>
+					<p>El punto a destacar de este tipo de Rooms es que funcionan con tiles. Supondré que ya sabes que es una tile, y sinó échale un vistazo a <a href="http://en.wikipedia.org/wiki/Tile-based_video_game">esto</a>. Una TRoom leerá el archivo que le has pasado, guardará el tileset que haya definido en ese archivo como una SDL_Texture y creará un mapa de tiles por capas que luego la instancia de Graphics dibujará por pantalla.</p>
+					<p>Puedes usar diferentes programas para crear niveles basados en tiles, pero independientemente del que uses deberás encargarte de derivar la clase <code>TRoom</code> e implementar un método propio que lea los archivos y los convierta en un mapa de tiles. Puedes usar el constructor mismo, o si quieres otro método aparte que llamarás después de crear una instancia de tu clase.</p>
+					<p>No obstante, si usas Tiled (un editor de niveles MUY potente) tienes a tu disposición la clase <b>TiledRoom</b>, que lee las diferentes capas de tu archivo (debe estar codificado en CSV), así como el tileset por defecto y pobla tanto las tiles como los Objects. Hay más información de este tipo de Room en la <a href="#">documentación oficial</a>.</p>
+				</div>
 					
 			</div>
 			<footer>

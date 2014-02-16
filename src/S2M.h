@@ -42,24 +42,20 @@ Object *S2M_CreateObject(Sprite *sprite, float x, float y, char d) {
 	return new T(sprite, x, y, d);
 }
 
-map <string, Object *(*)(Sprite*, float, float, char)> objectMap {
-	{ "warp", &S2M_CreateObject<Warp> }
-};
-
 template <class T>
-T *S2M_CreateRoom() {
+Room *S2M_CreateRoom() {
 	return new T();
 }
 
 template <class T>
-T *S2M_CreateRoom(int w, int h) {
+Room *S2M_CreateRoom(int w, int h) {
 	T *room = new T(w,h);
 	return room;
 }
 
 template <class T>
-T *S2M_CreateRoom(string filename, string scriptname) {
-	T *room = new T(filename, scriptname);
+Room *S2M_CreateRoom(string filename, string scriptname, map <string, Object *(*)(Sprite*, float, float, char)> objectMap) {
+	T *room = new T(filename, scriptname, objectMap);
 	return room;
 }
 
