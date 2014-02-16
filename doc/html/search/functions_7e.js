@@ -7,5 +7,8 @@ var searchData=
   ['_7eguielement',['~GUIElement',['../class_g_u_i_element.html#a96d6728fa2a9e92a5a0fe6481dfcae15',1,'GUIElement']]],
   ['_7eobject',['~Object',['../class_object.html#ae8f5483f459e46687bd01e6f9977afd3',1,'Object']]],
   ['_7eroom',['~Room',['../class_room.html#a67d5da09983cc53097807fd43ba5481a',1,'Room']]],
-  ['_7esprite',['~Sprite',['../class_sprite.html#a8accab430f9d90ae5117b57d67e32b84',1,'Sprite']]]
+  ['_7esprite',['~Sprite',['../class_sprite.html#a8accab430f9d90ae5117b57d67e32b84',1,'Sprite']]],
+  ['_7etransition',['~Transition',['../class_transition.html#ab66e8623f23c71cd4f07c69596427bab',1,'Transition']]],
+  ['_7etroom',['~TRoom',['../class_t_room.html#a9baf678b95bc171baf8bbc6c27986dd1',1,'TRoom']]],
+  ['_7ewarp',['~Warp',['../class_warp.html#a45c5af4f889b736f9dd463c8b19dddd6',1,'Warp']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['single',['single',['../class_transition.html#a6eaea427d213e52efeb38c7ddc8f81a7',1,'Transition']]],
   ['sprangle',['sprAngle',['../class_object.html#a5e5f645424be8ec1ce1cf9dd858e939a',1,'Object']]],
   ['spranimation',['sprAnimation',['../class_object.html#a72bd9c2d466c47f6cd8df5e38185d432',1,'Object']]],
   ['sprcenter',['sprCenter',['../class_object.html#ab5d3b1e8dbb35e139a3fd3a3b28b8610',1,'Object']]],

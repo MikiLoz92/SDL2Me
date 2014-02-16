@@ -2,6 +2,7 @@
 \label{room_8h}\index{src/room.\-h@{src/room.\-h}}
 }
 {\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
 {\ttfamily \#include $<$string$>$}\\*
 {\ttfamily \#include $<$sstream$>$}\\*
 {\ttfamily \#include $<$fstream$>$}\\*
@@ -18,8 +19,12 @@
 \item 
 class \hyperlink{class_room}{Room}
 \begin{DoxyCompactList}\small\item\em An abstraction of a certain space within a game. \end{DoxyCompactList}\item 
+class \hyperlink{class_t_room}{T\-Room}
+\begin{DoxyCompactList}\small\item\em Stands for Tile\-Room. It's a \hyperlink{class_room}{Room} that is populated by tiles. \end{DoxyCompactList}\item 
+class \hyperlink{class_td_room}{Td\-Room}
+\item 
 class \hyperlink{class_background}{Background}
-\begin{DoxyCompactList}\small\item\em A \hyperlink{class_room}{Room}'s background. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{class_room}{Room}. \end{DoxyCompactList}\item 
 class \hyperlink{class_camera}{Camera}
 \begin{DoxyCompactList}\small\item\em Manages the Screen's viewport on a \hyperlink{class_room}{Room}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Namespaces}
@@ -39,17 +44,7 @@ void \hyperlink{namespace_s2_m___room_a5b5e317e2a0d106c7697d8aa670f6877}{S2\-M\-
 void \hyperlink{namespace_s2_m___room_a3b936fba8d98180f0c9fef406e251492}{S2\-M\-\_\-\-Room\-::\-Load\-Script} (string filename)
 \begin{DoxyCompactList}\small\item\em Loads a script from a file and to the current \hyperlink{class_room}{Room}. \end{DoxyCompactList}\item 
 void \hyperlink{namespace_s2_m___room_a3c79e699afea76fc1140b197ca90688c}{S2\-M\-\_\-\-Room\-::\-Load\-Script} ()
-\begin{DoxyCompactList}\small\item\em Loads the default script of the current \hyperlink{class_room}{Room}. \end{DoxyCompactList}\item 
-\hyperlink{class_room}{Room} $\ast$ \hyperlink{room_8h_a940ca8eb90a41375769a376fd37c4339}{S2\-M\-\_\-\-Create\-Room} ()
-\begin{DoxyCompactList}\small\item\em Create an empty \hyperlink{class_room}{Room}. \end{DoxyCompactList}\item 
-\hyperlink{class_room}{Room} $\ast$ \hyperlink{room_8h_a48e2a3bd8d5e6004dba1e944b8d0c3ee}{S2\-M\-\_\-\-Create\-Room} (int w, int h)
-\item 
-\hyperlink{class_room}{Room} $\ast$ \hyperlink{room_8h_a977c1d0847fbcfb14c5aadbaa4173e6c}{S2\-M\-\_\-\-Create\-Room} (string filename, string scriptname)
-\item 
-void \hyperlink{room_8h_a0b0b65cda0765660bfe6a03badd6017d}{S2\-M\-\_\-\-Set\-Room} (\hyperlink{class_room}{Room} $\ast$room)
-\item 
-void \hyperlink{room_8h_a7e17b634091c660ba4b52f5a0940d7e4}{S2\-M\-\_\-\-Update\-Room} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Loads the default script of the current \hyperlink{class_room}{Room}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,47 +69,6 @@ void \hyperlink{room_8h_a7e17b634091c660ba4b52f5a0940d7e4}{S2\-M\-\_\-\-Update\-
 \item[{{\bf Object} $\ast$}]{obj2}
 \end{DoxyParamCaption}
 )}}\label{room_8h_ae842d44dccbe2dfeb3671612e0a3e377}
-\hypertarget{room_8h_a940ca8eb90a41375769a376fd37c4339}{\index{room.\-h@{room.\-h}!S2\-M\-\_\-\-Create\-Room@{S2\-M\-\_\-\-Create\-Room}}
-\index{S2\-M\-\_\-\-Create\-Room@{S2\-M\-\_\-\-Create\-Room}!room.h@{room.\-h}}
-\subsubsection[{S2\-M\-\_\-\-Create\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room}$\ast$ S2\-M\-\_\-\-Create\-Room (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{room_8h_a940ca8eb90a41375769a376fd37c4339}
-
-
-Create an empty \hyperlink{class_room}{Room}. 
-
-\hypertarget{room_8h_a48e2a3bd8d5e6004dba1e944b8d0c3ee}{\index{room.\-h@{room.\-h}!S2\-M\-\_\-\-Create\-Room@{S2\-M\-\_\-\-Create\-Room}}
-\index{S2\-M\-\_\-\-Create\-Room@{S2\-M\-\_\-\-Create\-Room}!room.h@{room.\-h}}
-\subsubsection[{S2\-M\-\_\-\-Create\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room}$\ast$ S2\-M\-\_\-\-Create\-Room (
-\begin{DoxyParamCaption}
-\item[{int}]{w, }
-\item[{int}]{h}
-\end{DoxyParamCaption}
-)}}\label{room_8h_a48e2a3bd8d5e6004dba1e944b8d0c3ee}
-\hypertarget{room_8h_a977c1d0847fbcfb14c5aadbaa4173e6c}{\index{room.\-h@{room.\-h}!S2\-M\-\_\-\-Create\-Room@{S2\-M\-\_\-\-Create\-Room}}
-\index{S2\-M\-\_\-\-Create\-Room@{S2\-M\-\_\-\-Create\-Room}!room.h@{room.\-h}}
-\subsubsection[{S2\-M\-\_\-\-Create\-Room}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Room}$\ast$ S2\-M\-\_\-\-Create\-Room (
-\begin{DoxyParamCaption}
-\item[{string}]{filename, }
-\item[{string}]{scriptname}
-\end{DoxyParamCaption}
-)}}\label{room_8h_a977c1d0847fbcfb14c5aadbaa4173e6c}
-\hypertarget{room_8h_a0b0b65cda0765660bfe6a03badd6017d}{\index{room.\-h@{room.\-h}!S2\-M\-\_\-\-Set\-Room@{S2\-M\-\_\-\-Set\-Room}}
-\index{S2\-M\-\_\-\-Set\-Room@{S2\-M\-\_\-\-Set\-Room}!room.h@{room.\-h}}
-\subsubsection[{S2\-M\-\_\-\-Set\-Room}]{\setlength{\rightskip}{0pt plus 5cm}void S2\-M\-\_\-\-Set\-Room (
-\begin{DoxyParamCaption}
-\item[{{\bf Room} $\ast$}]{room}
-\end{DoxyParamCaption}
-)}}\label{room_8h_a0b0b65cda0765660bfe6a03badd6017d}
-\hypertarget{room_8h_a7e17b634091c660ba4b52f5a0940d7e4}{\index{room.\-h@{room.\-h}!S2\-M\-\_\-\-Update\-Room@{S2\-M\-\_\-\-Update\-Room}}
-\index{S2\-M\-\_\-\-Update\-Room@{S2\-M\-\_\-\-Update\-Room}!room.h@{room.\-h}}
-\subsubsection[{S2\-M\-\_\-\-Update\-Room}]{\setlength{\rightskip}{0pt plus 5cm}void S2\-M\-\_\-\-Update\-Room (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{room_8h_a7e17b634091c660ba4b52f5a0940d7e4}
 
 
 \subsection{Variable Documentation}

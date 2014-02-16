@@ -36,7 +36,13 @@ void \hyperlink{class_graphics_ad06e41bffceda0186291e520fb37fa67}{add\-G\-U\-I\-
 int \hyperlink{class_graphics_a6364aacb31a2f59c0ad7b423d10a6e3a}{get\-Game\-Width} ()
 \begin{DoxyCompactList}\small\item\em Gets the game width. \end{DoxyCompactList}\item 
 int \hyperlink{class_graphics_a714496ad1b9244d6f9dafe665b35860d}{get\-Game\-Height} ()
-\begin{DoxyCompactList}\small\item\em Gets the game height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the game height. \end{DoxyCompactList}\item 
+\hyperlink{class_transition}{Transition} $\ast$ \hyperlink{class_graphics_ab70377438ad3cd1a77fa5d802c7eb324}{get\-Transition} ()
+\begin{DoxyCompactList}\small\item\em Get a pointer to the current transition. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphics_a3eb162b89e24962a946bc40e708dd0a0}{set\-Transition} (\hyperlink{class_transition}{Transition} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Make a \hyperlink{class_transition}{Transition} occur instantaniously. \end{DoxyCompactList}\item 
+S\-D\-L\-\_\-\-Renderer $\ast$ \hyperlink{class_graphics_afacc722603c661f667d0fcfd43f7ab5c}{get\-Renderer} ()
+\begin{DoxyCompactList}\small\item\em Return a pointer to the default renderer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -58,7 +64,9 @@ S\-D\-L\-\_\-\-Texture $\ast$ \hyperlink{class_graphics_aa3ea5fd0f0a672850bb1352
 vector$<$ \hyperlink{class_sprite}{Sprite} $\ast$ $>$ \hyperlink{class_graphics_ad01e5a24a1ce34c64f6dd7de4f85fc8b}{sprites}
 \begin{DoxyCompactList}\small\item\em Vector containing every single \hyperlink{class_sprite}{Sprite} that is being used. \end{DoxyCompactList}\item 
 vector$<$ \hyperlink{class_g_u_i_element}{G\-U\-I\-Element} $\ast$ $>$ \hyperlink{class_graphics_ac4ea71ee39d3cbc7b3fc14bf89fa400f}{guielements}
-\begin{DoxyCompactList}\small\item\em Vector containing every single \hyperlink{class_g_u_i_element}{G\-U\-I\-Element}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Vector containing every single \hyperlink{class_g_u_i_element}{G\-U\-I\-Element}. \end{DoxyCompactList}\item 
+\hyperlink{class_transition}{Transition} $\ast$ \hyperlink{class_graphics_a0e96d6ad5fd4a2546c2385f92e2ee12d}{trans}
+\begin{DoxyCompactList}\small\item\em Current transition pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -290,6 +298,34 @@ Gets the game width.
 \begin{DoxyReturn}{Returns}
 The game width. 
 \end{DoxyReturn}
+\hypertarget{class_graphics_afacc722603c661f667d0fcfd43f7ab5c}{\index{Graphics@{Graphics}!get\-Renderer@{get\-Renderer}}
+\index{get\-Renderer@{get\-Renderer}!Graphics@{Graphics}}
+\subsubsection[{get\-Renderer}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Renderer $\ast$ Graphics\-::get\-Renderer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_afacc722603c661f667d0fcfd43f7ab5c}
+
+
+Return a pointer to the default renderer. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the default renderer. 
+\end{DoxyReturn}
+\hypertarget{class_graphics_ab70377438ad3cd1a77fa5d802c7eb324}{\index{Graphics@{Graphics}!get\-Transition@{get\-Transition}}
+\index{get\-Transition@{get\-Transition}!Graphics@{Graphics}}
+\subsubsection[{get\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transition} $\ast$ Graphics\-::get\-Transition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_ab70377438ad3cd1a77fa5d802c7eb324}
+
+
+Get a pointer to the current transition. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the current transition. 
+\end{DoxyReturn}
 \hypertarget{class_graphics_ae584d38c352d13cf792d91bd3b1f2804}{\index{Graphics@{Graphics}!load\-Texture@{load\-Texture}}
 \index{load\-Texture@{load\-Texture}!Graphics@{Graphics}}
 \subsubsection[{load\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Texture $\ast$ Graphics\-::load\-Texture (
@@ -312,6 +348,22 @@ Loads a bitmap file and makes it an S\-D\-L\-\_\-\-Texture.
 \begin{DoxyReturn}{Returns}
 Pointer to S\-D\-L\-\_\-\-Texture representing the loaded bitmap 
 \end{DoxyReturn}
+\hypertarget{class_graphics_a3eb162b89e24962a946bc40e708dd0a0}{\index{Graphics@{Graphics}!set\-Transition@{set\-Transition}}
+\index{set\-Transition@{set\-Transition}!Graphics@{Graphics}}
+\subsubsection[{set\-Transition}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::set\-Transition (
+\begin{DoxyParamCaption}
+\item[{{\bf Transition} $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_graphics_a3eb162b89e24962a946bc40e708dd0a0}
+
+
+Make a \hyperlink{class_transition}{Transition} occur instantaniously. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & pointer to a \hyperlink{class_transition}{Transition} to make. \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_graphics_a5a5297a160c22f73300dcf72ac0be7c2}{\index{Graphics@{Graphics}!update@{update}}
 \index{update@{update}!Graphics@{Graphics}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Graphics\-::update (
@@ -375,7 +427,14 @@ The game renderer S\-D\-L\-\_\-\-Renderer instance pointer.
 
 Vector containing every single \hyperlink{class_sprite}{Sprite} that is being used. 
 
-\hypertarget{class_graphics_af397f61e26b41302b0b66ee4ab408952}{\index{Graphics@{Graphics}!window@{window}}
+\hypertarget{class_graphics_a0e96d6ad5fd4a2546c2385f92e2ee12d}{\index{Graphics@{Graphics}!trans@{trans}}
+\index{trans@{trans}!Graphics@{Graphics}}
+\subsubsection[{trans}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transition}$\ast$ Graphics\-::trans\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_graphics_a0e96d6ad5fd4a2546c2385f92e2ee12d}
+
+
+Current transition pointer. 
+
+When N\-U\-L\-L, no transition is taking effect. \hypertarget{class_graphics_af397f61e26b41302b0b66ee4ab408952}{\index{Graphics@{Graphics}!window@{window}}
 \index{window@{window}!Graphics@{Graphics}}
 \subsubsection[{window}]{\setlength{\rightskip}{0pt plus 5cm}S\-D\-L\-\_\-\-Window$\ast$ Graphics\-::window}}\label{class_graphics_af397f61e26b41302b0b66ee4ab408952}
 

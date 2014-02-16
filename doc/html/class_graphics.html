@@ -137,6 +137,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a714496ad1b9244d6f9dafe665b35860d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a714496ad1b9244d6f9dafe665b35860d">getGameHeight</a> ()</td></tr>
 <tr class="memdesc:a714496ad1b9244d6f9dafe665b35860d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the game height.  <a href="#a714496ad1b9244d6f9dafe665b35860d">More...</a><br/></td></tr>
 <tr class="separator:a714496ad1b9244d6f9dafe665b35860d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70377438ad3cd1a77fa5d802c7eb324"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transition.html">Transition</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#ab70377438ad3cd1a77fa5d802c7eb324">getTransition</a> ()</td></tr>
+<tr class="memdesc:ab70377438ad3cd1a77fa5d802c7eb324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the current transition.  <a href="#ab70377438ad3cd1a77fa5d802c7eb324">More...</a><br/></td></tr>
+<tr class="separator:ab70377438ad3cd1a77fa5d802c7eb324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb162b89e24962a946bc40e708dd0a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a3eb162b89e24962a946bc40e708dd0a0">setTransition</a> (<a class="el" href="class_transition.html">Transition</a> *t)</td></tr>
+<tr class="memdesc:a3eb162b89e24962a946bc40e708dd0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="class_transition.html" title="Takes care of transitioning towards another Room. ">Transition</a> occur instantaniously.  <a href="#a3eb162b89e24962a946bc40e708dd0a0">More...</a><br/></td></tr>
+<tr class="separator:a3eb162b89e24962a946bc40e708dd0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afacc722603c661f667d0fcfd43f7ab5c"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#afacc722603c661f667d0fcfd43f7ab5c">getRenderer</a> ()</td></tr>
+<tr class="memdesc:afacc722603c661f667d0fcfd43f7ab5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the default renderer.  <a href="#afacc722603c661f667d0fcfd43f7ab5c">More...</a><br/></td></tr>
+<tr class="separator:afacc722603c661f667d0fcfd43f7ab5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -167,6 +176,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ac4ea71ee39d3cbc7b3fc14bf89fa400f"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_g_u_i_element.html">GUIElement</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#ac4ea71ee39d3cbc7b3fc14bf89fa400f">guielements</a></td></tr>
 <tr class="memdesc:ac4ea71ee39d3cbc7b3fc14bf89fa400f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector containing every single <a class="el" href="class_g_u_i_element.html" title="A separate element of the GUI that stays on top of the game. ">GUIElement</a>.  <a href="#ac4ea71ee39d3cbc7b3fc14bf89fa400f">More...</a><br/></td></tr>
 <tr class="separator:ac4ea71ee39d3cbc7b3fc14bf89fa400f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e96d6ad5fd4a2546c2385f92e2ee12d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_transition.html">Transition</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a0e96d6ad5fd4a2546c2385f92e2ee12d">trans</a></td></tr>
+<tr class="memdesc:a0e96d6ad5fd4a2546c2385f92e2ee12d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current transition pointer.  <a href="#a0e96d6ad5fd4a2546c2385f92e2ee12d">More...</a><br/></td></tr>
+<tr class="separator:a0e96d6ad5fd4a2546c2385f92e2ee12d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controlls everything graphics-related. </p>
@@ -568,6 +580,42 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afacc722603c661f667d0fcfd43f7ab5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Renderer * Graphics::getRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a pointer to the default renderer. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the default renderer. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab70377438ad3cd1a77fa5d802c7eb324"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_transition.html">Transition</a> * Graphics::getTransition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a pointer to the current transition. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the current transition. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ae584d38c352d13cf792d91bd3b1f2804"></a>
 <div class="memitem">
 <div class="memproto">
@@ -601,6 +649,30 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to SDL_Texture representing the loaded bitmap </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3eb162b89e24962a946bc40e708dd0a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::setTransition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_transition.html">Transition</a> *&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Make a <a class="el" href="class_transition.html" title="Takes care of transitioning towards another Room. ">Transition</a> occur instantaniously. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>pointer to a <a class="el" href="class_transition.html" title="Takes care of transitioning towards another Room. ">Transition</a> to make. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -768,6 +840,29 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0e96d6ad5fd4a2546c2385f92e2ee12d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_transition.html">Transition</a>* Graphics::trans</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Current transition pointer. </p>
+<p>When NULL, no transition is taking effect. </p>
+
+</div>
+</div>
 <a class="anchor" id="af397f61e26b41302b0b66ee4ab408952"></a>
 <div class="memitem">
 <div class="memproto">
@@ -789,7 +884,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 8 2014 05:39:37 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 21:23:07 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

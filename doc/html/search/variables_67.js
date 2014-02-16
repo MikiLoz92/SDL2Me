@@ -2,6 +2,7 @@ var searchData=
 [
   ['gameheight',['gameheight',['../class_graphics.html#ac176bce8a1a8b73f6ed05e68410d9a14',1,'Graphics']]],
   ['gameinpause',['gameInPause',['../pause_8cpp.html#a0a047052d6d405ed221cfe9058e1abfa',1,'gameInPause():&#160;pause.cpp'],['../pause_8h.html#a0a047052d6d405ed221cfe9058e1abfa',1,'gameInPause():&#160;pause.cpp']]],
+  ['gameintransition',['gameInTransition',['../pause_8cpp.html#a4817064b158eb99ee519ae2d50801562',1,'gameInTransition():&#160;pause.cpp'],['../pause_8h.html#a4817064b158eb99ee519ae2d50801562',1,'gameInTransition():&#160;pause.cpp']]],
   ['gamewidth',['gamewidth',['../class_graphics.html#adf4a36eb3049ba3d07d79af2b4ac6399',1,'Graphics']]],
   ['ggraphics',['gGraphics',['../graphics_8cpp.html#a39566e00b94311ad006855b930cd8a94',1,'gGraphics():&#160;graphics.cpp'],['../graphics_8h.html#a39566e00b94311ad006855b930cd8a94',1,'gGraphics():&#160;graphics.cpp']]],
   ['gjoystick',['gJoystick',['../joystick_8cpp.html#af086526cf25607f16a7940bc163126b1',1,'gJoystick():&#160;joystick.cpp'],['../joystick_8h.html#af086526cf25607f16a7940bc163126b1',1,'gJoystick():&#160;joystick.cpp']]],

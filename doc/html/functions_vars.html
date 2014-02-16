@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
@@ -149,9 +150,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>defaultspeed
 : <a class="el" href="class_camera.html#a283eb5bb21146d7b8b12763c731c9b38">Camera</a>
 </li>
+<li>delay
+: <a class="el" href="class_transition.html#a674d97fbd95a9af526dd01282215f8a5">Transition</a>
+</li>
 <li>depth
 : <a class="el" href="class_background.html#a5df71997c2d1628f4e2d6d9c1cd08e08">Background</a>
 , <a class="el" href="class_object.html#ac02426a63de0baa3b1761925793ea1cf">Object</a>
+</li>
+<li>done
+: <a class="el" href="class_transition.html#a53252353be9882cf92d1913c44230119">Transition</a>
 </li>
 </ul>
 
@@ -187,12 +194,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>htexture
 : <a class="el" href="class_sprite.html#afa90435f9d50265180a80399fda091d1">Sprite</a>
 </li>
+<li>htile
+: <a class="el" href="class_room.html#a2925415ce7fb199e496ad61b77e256cb">Room</a>
+, <a class="el" href="class_t_room.html#aa0f8b0bb7087b0bcf9ff71da5b793346">TRoom</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>map_node
+: <a class="el" href="class_room.html#a865810da64fc41a3a0858e4e7b5b5241">Room</a>
+</li>
 <li>mode
 : <a class="el" href="class_camera.html#ac1b290d582f215ce1b0d13aa4dbb5f5a">Camera</a>
+, <a class="el" href="class_transition.html#a25bea1decaf8f06cd37b3511dda4740d">Transition</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>nextRoom
+: <a class="el" href="class_room.html#afc2baf90e55312f4a8b4967d0c7122db">Room</a>
 </li>
 </ul>
 
@@ -213,6 +235,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>pmap
 : <a class="el" href="class_room.html#a37b095fddfc6230033ed1de7afd9ec8d">Room</a>
+, <a class="el" href="class_t_room.html#a72353ac07e0abdf54b7ddf4cdb98e9b6">TRoom</a>
+</li>
+<li>prevRoom
+: <a class="el" href="class_room.html#a18aec7a7911d1d4874267f1d7dcaf1a6">Room</a>
 </li>
 </ul>
 
@@ -232,6 +258,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>single
+: <a class="el" href="class_transition.html#a6eaea427d213e52efeb38c7ddc8f81a7">Transition</a>
+</li>
 <li>sprAngle
 : <a class="el" href="class_object.html#a5e5f645424be8ec1ce1cf9dd858e939a">Object</a>
 </li>
@@ -268,21 +297,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
 <li>texture
 : <a class="el" href="class_sprite.html#a531ed274733d916261f49e1a2cbb6ba9">Sprite</a>
+, <a class="el" href="class_transition.html#a829f95e380ba4e3b363688a9e76f11af">Transition</a>
 </li>
-<li>tileheight
-: <a class="el" href="class_room.html#ae7a9ba3c048cd82f2335f8da3e7dbe17">Room</a>
-</li>
-<li>tilesets
-: <a class="el" href="class_room.html#a9ad1d805bf9c69b138a66b3f64adf88d">Room</a>
-</li>
-<li>tilesetwidth
-: <a class="el" href="class_room.html#a4664e77f8780c752449b57f2d603be5c">Room</a>
-</li>
-<li>tilewidth
-: <a class="el" href="class_room.html#a1ee2ea2d741c7196d7d2fd37ae741042">Room</a>
+<li>tileset
+: <a class="el" href="class_t_room.html#aafbdcd37fa2ba37ec001e0f71bf6ffda">TRoom</a>
+, <a class="el" href="class_room.html#a5cd50f4bfda869d4ad45cb52c7e97f5b">Room</a>
 </li>
 <li>tmap
-: <a class="el" href="class_room.html#aba520dbf1dd1907f5cdcbc8b6372ec53">Room</a>
+: <a class="el" href="class_t_room.html#a85a03ab34eea8960597351da92f3f15e">TRoom</a>
+, <a class="el" href="class_room.html#aba520dbf1dd1907f5cdcbc8b6372ec53">Room</a>
+</li>
+<li>trans
+: <a class="el" href="class_graphics.html#a0e96d6ad5fd4a2546c2385f92e2ee12d">Graphics</a>
 </li>
 </ul>
 
@@ -304,6 +330,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>wtexture
 : <a class="el" href="class_sprite.html#a342df27bc7e10f79c0bc4d89689e5bfe">Sprite</a>
+</li>
+<li>wtile
+: <a class="el" href="class_room.html#ac2d78d3f1097249ae3a447ebe907ed9c">Room</a>
+, <a class="el" href="class_t_room.html#a881912fe1ee9f7106c14b96ca9be2aaa">TRoom</a>
+</li>
+<li>wtileset
+: <a class="el" href="class_room.html#aa5480a57c054045be3c677e43e358357">Room</a>
 </li>
 </ul>
 
@@ -355,7 +388,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 8 2014 05:39:38 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 21:23:09 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

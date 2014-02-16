@@ -12,5 +12,8 @@ var searchData=
   ['s2m_5fdown',['S2M_DOWN',['../defines_8h.html#a08344519f8478258907a7bd9a4e09bd4',1,'defines.h']]],
   ['s2m_5fleft',['S2M_LEFT',['../defines_8h.html#acead703c49c5468120a57db6eca24278',1,'defines.h']]],
   ['s2m_5fright',['S2M_RIGHT',['../defines_8h.html#a1a2cad18c35cac1c3a056bb7a11a1e0b',1,'defines.h']]],
+  ['s2m_5ftransition_5fclose',['S2M_TRANSITION_CLOSE',['../defines_8h.html#a8c9d76bbaa869398cf5b351b48ce7ca5',1,'defines.h']]],
+  ['s2m_5ftransition_5fexpocover',['S2M_TRANSITION_EXPOCOVER',['../defines_8h.html#adeb026040479816936da78e6487fad5f',1,'defines.h']]],
+  ['s2m_5ftransition_5fopen',['S2M_TRANSITION_OPEN',['../defines_8h.html#aa3c236a8d06683601b6b0dfdaa9d7900',1,'defines.h']]],
   ['s2m_5fup',['S2M_UP',['../defines_8h.html#a6e77c78552ae0add26a634ea35a794a6',1,'defines.h']]]
 ];

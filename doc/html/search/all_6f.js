@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['object',['Object',['../class_object.html',1,'Object'],['../class_sprite.html#a0720b5f434e636e22a3ed34f847eec57',1,'Sprite::Object()'],['../class_object.html#a9e5569564089c40dbfa85703035ddaf2',1,'Object::Object()'],['../class_camera.html#ad836de76be258c26164908b9a5caf770',1,'Camera::object()']]],
+  ['object',['Object',['../class_object.html',1,'Object'],['../class_camera.html#ad836de76be258c26164908b9a5caf770',1,'Camera::object()'],['../class_sprite.html#a0720b5f434e636e22a3ed34f847eec57',1,'Sprite::Object()'],['../class_object.html#a9e5569564089c40dbfa85703035ddaf2',1,'Object::Object(Sprite *sprite, float x, float y, char d)'],['../class_object.html#a6259cbd5b31dfdbffe076fc491da6b55',1,'Object::Object(float x, float y)']]],
   ['object_2ecpp',['object.cpp',['../object_8cpp.html',1,'']]],
   ['object_2eh',['object.h',['../object_8h.html',1,'']]],
   ['objects',['objects',['../class_room.html#a6495b4a5cd0ea4979fcfbbb27c6b419e',1,'Room']]],

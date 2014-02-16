@@ -126,34 +126,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_joystick.html#a158b1f77b78717efbf1b8fac43b1fcef">Joystick</a>();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_joystick.html#aceddfa0d39a5a6f7041c2951cb628060">getDir</a>(<span class="keywordtype">int</span> i);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_joystick.html#a3a2c6a02979cd631a28f8ab7a5724fdb">getBtn</a>(<span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_joystick.html#a3c3fc5aa1a5482c172fa20f9661a9149">update</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> dir[4] = {<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> btn[4] = {<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_joystick.html">Joystick</a> *<a class="code" href="joystick_8cpp.html#af086526cf25607f16a7940bc163126b1">gJoystick</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="joystick_8cpp.html#a3813e3fef676781d7e98fbe3bdc321ed">S2M_UpdateJoystick</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_joystick.html#a726d84c93e26cea55c8e4b2235a13e7e">getDirPressed</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_joystick.html#a79399f1438c2ef54e5d8dd0ca59a2433">getBtnPressed</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_joystick.html#a3c3fc5aa1a5482c172fa20f9661a9149">update</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> dir[4] = {<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> btn[4] = {<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> dirPressed[4] = {<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> btnPressed[4] = {<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_virtual_joystick.html">   60</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_virtual_joystick.html">VirtualJoystick</a>: <a class="code" href="class_joystick.html">Joystick</a> {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_virtual_joystick_html"><div class="ttname"><a href="class_virtual_joystick.html">VirtualJoystick</a></div><div class="ttdoc">Virtual representation of game buttons/keys. </div><div class="ttdef"><b>Definition:</b> joystick.h:60</div></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_joystick.html">Joystick</a> *<a class="code" href="joystick_8cpp.html#af086526cf25607f16a7940bc163126b1">gJoystick</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="joystick_8cpp.html#a3813e3fef676781d7e98fbe3bdc321ed">S2M_UpdateJoystick</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_virtual_joystick.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_virtual_joystick.html">VirtualJoystick</a>: <a class="code" href="class_joystick.html">Joystick</a> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_virtual_joystick_html"><div class="ttname"><a href="class_virtual_joystick.html">VirtualJoystick</a></div><div class="ttdoc">Virtual representation of game buttons/keys. </div><div class="ttdef"><b>Definition:</b> joystick.h:66</div></div>
 <div class="ttc" id="class_joystick_html_aceddfa0d39a5a6f7041c2951cb628060"><div class="ttname"><a href="class_joystick.html#aceddfa0d39a5a6f7041c2951cb628060">Joystick::getDir</a></div><div class="ttdeci">bool getDir(int i)</div><div class="ttdef"><b>Definition:</b> joystick.cpp:31</div></div>
 <div class="ttc" id="class_joystick_html_a3a2c6a02979cd631a28f8ab7a5724fdb"><div class="ttname"><a href="class_joystick.html#a3a2c6a02979cd631a28f8ab7a5724fdb">Joystick::getBtn</a></div><div class="ttdeci">bool getBtn(int i)</div><div class="ttdef"><b>Definition:</b> joystick.cpp:35</div></div>
 <div class="ttc" id="class_joystick_html_a158b1f77b78717efbf1b8fac43b1fcef"><div class="ttname"><a href="class_joystick.html#a158b1f77b78717efbf1b8fac43b1fcef">Joystick::Joystick</a></div><div class="ttdeci">Joystick()</div><div class="ttdef"><b>Definition:</b> joystick.cpp:27</div></div>
-<div class="ttc" id="class_joystick_html_a3c3fc5aa1a5482c172fa20f9661a9149"><div class="ttname"><a href="class_joystick.html#a3c3fc5aa1a5482c172fa20f9661a9149">Joystick::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition:</b> joystick.cpp:39</div></div>
-<div class="ttc" id="joystick_8cpp_html_af086526cf25607f16a7940bc163126b1"><div class="ttname"><a href="joystick_8cpp.html#af086526cf25607f16a7940bc163126b1">gJoystick</a></div><div class="ttdeci">Joystick * gJoystick</div><div class="ttdoc">Global Joystick pointer. </div><div class="ttdef"><b>Definition:</b> joystick.cpp:49</div></div>
+<div class="ttc" id="class_joystick_html_a3c3fc5aa1a5482c172fa20f9661a9149"><div class="ttname"><a href="class_joystick.html#a3c3fc5aa1a5482c172fa20f9661a9149">Joystick::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition:</b> joystick.cpp:47</div></div>
+<div class="ttc" id="class_joystick_html_a726d84c93e26cea55c8e4b2235a13e7e"><div class="ttname"><a href="class_joystick.html#a726d84c93e26cea55c8e4b2235a13e7e">Joystick::getDirPressed</a></div><div class="ttdeci">bool getDirPressed(int i)</div><div class="ttdef"><b>Definition:</b> joystick.cpp:39</div></div>
+<div class="ttc" id="joystick_8cpp_html_af086526cf25607f16a7940bc163126b1"><div class="ttname"><a href="joystick_8cpp.html#af086526cf25607f16a7940bc163126b1">gJoystick</a></div><div class="ttdeci">Joystick * gJoystick</div><div class="ttdoc">Global Joystick pointer. </div><div class="ttdef"><b>Definition:</b> joystick.cpp:79</div></div>
 <div class="ttc" id="class_joystick_html"><div class="ttname"><a href="class_joystick.html">Joystick</a></div><div class="ttdoc">Representation of game buttons/keys. </div><div class="ttdef"><b>Definition:</b> joystick.h:36</div></div>
-<div class="ttc" id="joystick_8cpp_html_a3813e3fef676781d7e98fbe3bdc321ed"><div class="ttname"><a href="joystick_8cpp.html#a3813e3fef676781d7e98fbe3bdc321ed">S2M_UpdateJoystick</a></div><div class="ttdeci">void S2M_UpdateJoystick()</div><div class="ttdef"><b>Definition:</b> joystick.cpp:51</div></div>
+<div class="ttc" id="joystick_8cpp_html_a3813e3fef676781d7e98fbe3bdc321ed"><div class="ttname"><a href="joystick_8cpp.html#a3813e3fef676781d7e98fbe3bdc321ed">S2M_UpdateJoystick</a></div><div class="ttdeci">void S2M_UpdateJoystick()</div><div class="ttdef"><b>Definition:</b> joystick.cpp:81</div></div>
+<div class="ttc" id="class_joystick_html_a79399f1438c2ef54e5d8dd0ca59a2433"><div class="ttname"><a href="class_joystick.html#a79399f1438c2ef54e5d8dd0ca59a2433">Joystick::getBtnPressed</a></div><div class="ttdeci">bool getBtnPressed(int i)</div><div class="ttdef"><b>Definition:</b> joystick.cpp:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 8 2014 05:39:37 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 21:23:06 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A <a class="el" href="class_room.html" title="An abstraction of a certain space within a game. ">Room</a>'s background.  
+<p>Create an empty <a class="el" href="class_room.html" title="An abstraction of a certain space within a game. ">Room</a>.  
  <a href="class_background.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="room_8h_source.html">room.h</a>&gt;</code></p>
@@ -138,7 +138,15 @@ Friends</h2></td></tr>
 <tr class="separator:ae5cfe0c0e0b06d536d5814bd1ff4818f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A <a class="el" href="class_room.html" title="An abstraction of a certain space within a game. ">Room</a>'s background. </p>
+<div class="textblock"><p>Create an empty <a class="el" href="class_room.html" title="An abstraction of a certain space within a game. ">Room</a>. </p>
+<p><a class="el" href="class_transition.html" title="Takes care of transitioning towards another Room. ">Transition</a> smoothly to a given <a class="el" href="class_room.html" title="An abstraction of a certain space within a game. ">Room</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">room</td><td>room to transition to </td></tr>
+    <tr><td class="paramname">t</td><td>transition type: defined in <a class="el" href="defines_8h.html">defines.h</a> A <a class="el" href="class_room.html" title="An abstraction of a certain space within a game. ">Room</a>'s background. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a929e270a8ddd85e11ed2ad3047bb950e"></a>
 <div class="memitem">
@@ -235,7 +243,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The destructor. </p>
-<p>Frees the texture and destroys the <a class="el" href="class_background.html" title="A Room&#39;s background. ">Background</a>. </p>
+<p>Frees the texture and destroys the <a class="el" href="class_background.html" title="Create an empty Room. ">Background</a>. </p>
 
 </div>
 </div>
@@ -389,7 +397,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 8 2014 05:39:37 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 21:23:06 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

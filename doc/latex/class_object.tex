@@ -21,6 +21,8 @@ Inheritance diagram for Object\-:\begin{figure}[H]
 \item 
 \hyperlink{class_object_a9e5569564089c40dbfa85703035ddaf2}{Object} (\hyperlink{class_sprite}{Sprite} $\ast$\hyperlink{class_object_ad936466f3f6b6e8fa401842c573b44e6}{sprite}, float \hyperlink{class_object_a99addca3b5d96c214fa8f90474224699}{x}, float \hyperlink{class_object_a2870044ec214e97550ee28db89c6382a}{y}, char d)
 \begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_object_a6259cbd5b31dfdbffe076fc491da6b55}{Object} (float \hyperlink{class_object_a99addca3b5d96c214fa8f90474224699}{x}, float \hyperlink{class_object_a2870044ec214e97550ee28db89c6382a}{y})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_object}{Object} without \hyperlink{class_sprite}{Sprite} constructor. \end{DoxyCompactList}\item 
 \hyperlink{class_object_ae8f5483f459e46687bd01e6f9977afd3}{$\sim$\-Object} ()
 \begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
 void \hyperlink{class_object_a182782f2325980f649409507c2970af8}{set\-Animation} (int i)
@@ -40,7 +42,9 @@ float \hyperlink{class_object_a9397ff68bd3fdba963dfb054ea5e62c1}{get\-Next\-X} (
 float \hyperlink{class_object_afda996a7119562f31a67e85029567ba7}{get\-Next\-Y} ()
 \begin{DoxyCompactList}\small\item\em Get the object's vertical position on the next frame. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_object_a4abd48bacb1b004c8ac891597c831f77}{update} ()
-\begin{DoxyCompactList}\small\item\em Overridable update method. You'll need it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overridable update method. You'll need it. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_object_af4c1bcbca9ad6bf7c11e573f16fec895}{update\-Spr} ()
+\begin{DoxyCompactList}\small\item\em Overridable method. Updates all sprite-\/related variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -119,6 +123,18 @@ Default constructor.
 {\em d} & depth on the \hyperlink{class_room}{Room}, the higher the furthest away \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_object_a6259cbd5b31dfdbffe076fc491da6b55}{\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}Object\-::\-Object (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_object_a6259cbd5b31dfdbffe076fc491da6b55}
+
+
+\hyperlink{class_object}{Object} without \hyperlink{class_sprite}{Sprite} constructor. 
+
 \hypertarget{class_object_ae8f5483f459e46687bd01e6f9977afd3}{\index{Object@{Object}!$\sim$\-Object@{$\sim$\-Object}}
 \index{$\sim$\-Object@{$\sim$\-Object}!Object@{Object}}
 \subsubsection[{$\sim$\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Object\-::$\sim$\-Object (
@@ -265,6 +281,21 @@ Overridable update method. You'll need it.
 
 
 Reimplemented in \hyperlink{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{Entity}.
+
+\hypertarget{class_object_af4c1bcbca9ad6bf7c11e573f16fec895}{\index{Object@{Object}!update\-Spr@{update\-Spr}}
+\index{update\-Spr@{update\-Spr}!Object@{Object}}
+\subsubsection[{update\-Spr}]{\setlength{\rightskip}{0pt plus 5cm}void Object\-::update\-Spr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_object_af4c1bcbca9ad6bf7c11e573f16fec895}
+
+
+Overridable method. Updates all sprite-\/related variables. 
+
+Internally, it is always called after the general update method. This is because we don't want to update the \hyperlink{class_sprite}{Sprite} until we've done the logic of the \hyperlink{class_object}{Object}. Think about it as a simple Input-\/$>$Output procedure. 
+
+Reimplemented in \hyperlink{class_entity_a0421cb8e2a3eda9f1f6c8fc0ae83bb15}{Entity}.
 
 
 

@@ -48,13 +48,13 @@ S2M\_MakeCurrentRoom(gRoom);
        the screen.}
 
 \textcolor{comment}{// Create an object bound to that Sprite.}
-\hyperlink{class_object}{Object} *testObject = gRoom.\hyperlink{class_room_a0c09098560d165c23287969c77c702cc}{createObject}(testSprite);
+\hyperlink{class_object}{Object} *testObject = gRoom.createObject(testSprite);
 
 \textcolor{comment}{// Game Loop}
 \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{
 
     \textcolor{comment}{// Update the room}
-    \hyperlink{room_8cpp_a7e17b634091c660ba4b52f5a0940d7e4}{S2M\_UpdateRoom}();   \textcolor{comment}{// Will call the current Room's update method}
+    \hyperlink{_s2_m_8h_a7e17b634091c660ba4b52f5a0940d7e4}{S2M\_UpdateRoom}();   \textcolor{comment}{// Will call the current Room's update method}
                         \textcolor{comment}{// The current Room's update method will call each object's update method.}
                         \textcolor{comment}{// Each object's update method will update its associated sprite's position.}
                         \textcolor{comment}{// The Graphics instance handles the Sprites update method, so no need for those

@@ -130,13 +130,13 @@ IDEAL use example</h1>
 <div class="line"><a class="code" href="class_sprite.html">Sprite</a> *testSprite = gGraphics.createSprite(<span class="stringliteral">&quot;test.bmp&quot;</span>,16,16,0); <span class="comment">// After this it still won&#39;t show in the screen.</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Create an object bound to that Sprite.</span></div>
-<div class="line"><a class="code" href="class_object.html">Object</a> *testObject = gRoom.<a class="code" href="class_room.html#a0c09098560d165c23287969c77c702cc">createObject</a>(testSprite);</div>
+<div class="line"><a class="code" href="class_object.html">Object</a> *testObject = gRoom.createObject(testSprite);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Game Loop</span></div>
 <div class="line"><span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Update the room</span></div>
-<div class="line">    <a class="code" href="room_8cpp.html#a7e17b634091c660ba4b52f5a0940d7e4">S2M_UpdateRoom</a>();   <span class="comment">// Will call the current Room&#39;s update method</span></div>
+<div class="line">    <a class="code" href="_s2_m_8h.html#a7e17b634091c660ba4b52f5a0940d7e4">S2M_UpdateRoom</a>();   <span class="comment">// Will call the current Room&#39;s update method</span></div>
 <div class="line">                        <span class="comment">// The current Room&#39;s update method will call each object&#39;s update method.</span></div>
 <div class="line">                        <span class="comment">// Each object&#39;s update method will update its associated sprite&#39;s position.</span></div>
 <div class="line">                        <span class="comment">// The Graphics instance handles the Sprites update method, so no need for those calls here...</span></div>
@@ -150,7 +150,7 @@ Step 1: Opening the box</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 8 2014 05:39:38 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 21:23:09 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

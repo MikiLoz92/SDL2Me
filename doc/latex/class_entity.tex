@@ -28,7 +28,9 @@ bool \hyperlink{class_entity_aac771d739c55a8bf04a40a7d65d849e4}{collides\-On} (c
 void \hyperlink{class_entity_a97bff8e950182981a271e548f63fb6c6}{bind\-Joystick} (\hyperlink{class_joystick}{Joystick} $\ast$j)
 \begin{DoxyCompactList}\small\item\em Binds a new \hyperlink{class_joystick}{Joystick} instance to the \hyperlink{class_entity}{Entity}. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{update} ()
-\begin{DoxyCompactList}\small\item\em Overridable update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overridable update method. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_entity_a0421cb8e2a3eda9f1f6c8fc0ae83bb15}{update\-Spr} ()
+\begin{DoxyCompactList}\small\item\em Overridable method. Updates all sprite-\/related variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -116,6 +118,21 @@ If you derive the \hyperlink{class_entity}{Entity} class be sure to place
 When facing left, \hyperlink{}{facing} is equal to false. 
 
 Reimplemented from \hyperlink{class_object_a4abd48bacb1b004c8ac891597c831f77}{Object}.
+
+\hypertarget{class_entity_a0421cb8e2a3eda9f1f6c8fc0ae83bb15}{\index{Entity@{Entity}!update\-Spr@{update\-Spr}}
+\index{update\-Spr@{update\-Spr}!Entity@{Entity}}
+\subsubsection[{update\-Spr}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::update\-Spr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_entity_a0421cb8e2a3eda9f1f6c8fc0ae83bb15}
+
+
+Overridable method. Updates all sprite-\/related variables. 
+
+Internally, it is always called after the general update method. This is because we don't want to update the \hyperlink{class_sprite}{Sprite} until we've done the logic of the \hyperlink{class_object}{Object}. Think about it as a simple Input-\/$>$Output procedure. 
+
+Reimplemented from \hyperlink{class_object_af4c1bcbca9ad6bf7c11e573f16fec895}{Object}.
 
 
 

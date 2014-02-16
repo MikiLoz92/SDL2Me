@@ -127,26 +127,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="gui_8h.html">gui.h</a>&quot;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="defines_8h.html">defines.h</a>&quot;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#a990ec96bb3df48a467dc3ac08a2d8fb5">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s2_m_8h.html#a990ec96bb3df48a467dc3ac08a2d8fb5">S2M_Update</a>() {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="room_8cpp.html#a7e17b634091c660ba4b52f5a0940d7e4">S2M_UpdateRoom</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="graphics_8cpp.html#a01ce708f97ddc15c1845c68a6709a6d3">S2M_UpdateGraphics</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#ae4354b54df2c7e538d0568a338907191">   42</a></span>&#160;<a class="code" href="class_object.html">Object</a> *<a class="code" href="_s2_m_8h.html#ae4354b54df2c7e538d0568a338907191">S2M_CreateInstance</a>(<a class="code" href="class_sprite.html">Sprite</a> *sprite, <span class="keywordtype">float</span> <a class="code" href="class_background.html#af6650023418d2982420370f87eeff2de">x</a>, <span class="keywordtype">float</span> <a class="code" href="class_background.html#adb462ce7dc04d3b09698f1baa3d173e6">y</a>, <span class="keywordtype">char</span> d) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_object.html">Object</a> *obj = <span class="keyword">new</span> T(sprite, x, y, d);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="room_8cpp.html#aa12cc6463bbb49abba1aa725d5a24d90">gRoom</a>-&gt;<a class="code" href="class_room.html#acf9689e04f8bc98d658d12d62b95e8bf">addObject</a>(obj);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> obj;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#ab46f2abbaa089d762668dba84de47933">   50</a></span>&#160;<a class="code" href="class_object.html">Object</a> *<a class="code" href="_s2_m_8h.html#ae4354b54df2c7e538d0568a338907191">S2M_CreateInstance</a>(<span class="keywordtype">float</span> <a class="code" href="class_background.html#af6650023418d2982420370f87eeff2de">x</a>, <span class="keywordtype">float</span> <a class="code" href="class_background.html#adb462ce7dc04d3b09698f1baa3d173e6">y</a>, <a class="code" href="class_room.html">Room</a> *r = <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    cout &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot;-----&quot;</span> &lt;&lt; y &lt;&lt; endl;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="class_object.html">Object</a> *obj = <span class="keyword">new</span> T(x, y);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (r) r-&gt;addObject(obj);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span> <a class="code" href="room_8cpp.html#aa12cc6463bbb49abba1aa725d5a24d90">gRoom</a>-&gt;<a class="code" href="class_room.html#acf9689e04f8bc98d658d12d62b95e8bf">addObject</a>(obj);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> obj;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#a7251540357416bc271708a5260b6b7f1">   59</a></span>&#160;<a class="code" href="class_room.html">Room</a> *<a class="code" href="_s2_m_8h.html#a7251540357416bc271708a5260b6b7f1">S2M_CreateRoom</a>() {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> T();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#aaf50e2a247032a4b6beb4c0e6a3e72a5">   64</a></span>&#160;<a class="code" href="class_room.html">Room</a> *<a class="code" href="_s2_m_8h.html#a7251540357416bc271708a5260b6b7f1">S2M_CreateRoom</a>(<span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    T *room = <span class="keyword">new</span> T(w,h);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> room;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#a14d590824267056dad3aea8990470add">   70</a></span>&#160;<a class="code" href="class_room.html">Room</a> *<a class="code" href="_s2_m_8h.html#a7251540357416bc271708a5260b6b7f1">S2M_CreateRoom</a>(<span class="keywordtype">string</span> filename, <span class="keywordtype">string</span> scriptname, map &lt;<span class="keywordtype">string</span>, <a class="code" href="class_object.html">Object</a> *(*)(<span class="keywordtype">float</span>, <span class="keywordtype">float</span>, <a class="code" href="class_room.html">Room</a>*)&gt; objectMap) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    T *room = <span class="keyword">new</span> T(filename, scriptname);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    room-&gt;parseObjects(objectMap);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> room;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#a0b0b65cda0765660bfe6a03badd6017d">   76</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s2_m_8h.html#a0b0b65cda0765660bfe6a03badd6017d">S2M_SetRoom</a>(<a class="code" href="class_room.html">Room</a> *room) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="room_8cpp.html#aa12cc6463bbb49abba1aa725d5a24d90">gRoom</a> = room;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#a3ce3e8b28a082c97283e3d6cd53a2293">   81</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s2_m_8h.html#a3ce3e8b28a082c97283e3d6cd53a2293">S2M_GoToRoom</a>(<a class="code" href="class_room.html">Room</a> *room) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="graphics_8cpp.html#a39566e00b94311ad006855b930cd8a94">gGraphics</a>-&gt;<a class="code" href="class_graphics.html#a3eb162b89e24962a946bc40e708dd0a0">setTransition</a>(<span class="keyword">new</span> T(<a class="code" href="defines_8h.html#a8c9d76bbaa869398cf5b351b48ce7ca5">S2M_TRANSITION_CLOSE</a>, <span class="keyword">false</span>));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="room_8cpp.html#aa12cc6463bbb49abba1aa725d5a24d90">gRoom</a>-&gt;<a class="code" href="class_room.html#afc2baf90e55312f4a8b4967d0c7122db">nextRoom</a> = room;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#a7e17b634091c660ba4b52f5a0940d7e4">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s2_m_8h.html#a7e17b634091c660ba4b52f5a0940d7e4">S2M_UpdateRoom</a>() {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="room_8cpp.html#aa12cc6463bbb49abba1aa725d5a24d90">gRoom</a>-&gt;<a class="code" href="class_room.html#a801c3de6ddff533edeb8fa68c7fcbb61">update</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="_s2_m_8h.html#a990ec96bb3df48a467dc3ac08a2d8fb5">   90</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_s2_m_8h.html#a990ec96bb3df48a467dc3ac08a2d8fb5">S2M_Update</a>() {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="_s2_m_8h.html#a7e17b634091c660ba4b52f5a0940d7e4">S2M_UpdateRoom</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="graphics_8cpp.html#a01ce708f97ddc15c1845c68a6709a6d3">S2M_UpdateGraphics</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="_s2_m_8h_html_a7e17b634091c660ba4b52f5a0940d7e4"><div class="ttname"><a href="_s2_m_8h.html#a7e17b634091c660ba4b52f5a0940d7e4">S2M_UpdateRoom</a></div><div class="ttdeci">void S2M_UpdateRoom()</div><div class="ttdef"><b>Definition:</b> S2M.h:86</div></div>
+<div class="ttc" id="_s2_m_8h_html_a0b0b65cda0765660bfe6a03badd6017d"><div class="ttname"><a href="_s2_m_8h.html#a0b0b65cda0765660bfe6a03badd6017d">S2M_SetRoom</a></div><div class="ttdeci">void S2M_SetRoom(Room *room)</div><div class="ttdef"><b>Definition:</b> S2M.h:76</div></div>
 <div class="ttc" id="joystick_8h_html"><div class="ttname"><a href="joystick_8h.html">joystick.h</a></div></div>
+<div class="ttc" id="room_8cpp_html_aa12cc6463bbb49abba1aa725d5a24d90"><div class="ttname"><a href="room_8cpp.html#aa12cc6463bbb49abba1aa725d5a24d90">gRoom</a></div><div class="ttdeci">Room * gRoom</div><div class="ttdef"><b>Definition:</b> room.cpp:37</div></div>
+<div class="ttc" id="class_room_html_acf9689e04f8bc98d658d12d62b95e8bf"><div class="ttname"><a href="class_room.html#acf9689e04f8bc98d658d12d62b95e8bf">Room::addObject</a></div><div class="ttdeci">void addObject(Object *object)</div><div class="ttdoc">Adds an Object to the Room. </div><div class="ttdef"><b>Definition:</b> room.cpp:240</div></div>
+<div class="ttc" id="_s2_m_8h_html_a3ce3e8b28a082c97283e3d6cd53a2293"><div class="ttname"><a href="_s2_m_8h.html#a3ce3e8b28a082c97283e3d6cd53a2293">S2M_GoToRoom</a></div><div class="ttdeci">void S2M_GoToRoom(Room *room)</div><div class="ttdef"><b>Definition:</b> S2M.h:81</div></div>
 <div class="ttc" id="script_8h_html"><div class="ttname"><a href="script_8h.html">script.h</a></div></div>
-<div class="ttc" id="_s2_m_8h_html_a990ec96bb3df48a467dc3ac08a2d8fb5"><div class="ttname"><a href="_s2_m_8h.html#a990ec96bb3df48a467dc3ac08a2d8fb5">S2M_Update</a></div><div class="ttdeci">void S2M_Update()</div><div class="ttdef"><b>Definition:</b> S2M.h:38</div></div>
+<div class="ttc" id="class_room_html_afc2baf90e55312f4a8b4967d0c7122db"><div class="ttname"><a href="class_room.html#afc2baf90e55312f4a8b4967d0c7122db">Room::nextRoom</a></div><div class="ttdeci">Room * nextRoom</div><div class="ttdoc">Next Room pointer (when transitioning). </div><div class="ttdef"><b>Definition:</b> room.h:211</div></div>
+<div class="ttc" id="_s2_m_8h_html_a990ec96bb3df48a467dc3ac08a2d8fb5"><div class="ttname"><a href="_s2_m_8h.html#a990ec96bb3df48a467dc3ac08a2d8fb5">S2M_Update</a></div><div class="ttdeci">void S2M_Update()</div><div class="ttdef"><b>Definition:</b> S2M.h:90</div></div>
+<div class="ttc" id="class_sprite_html"><div class="ttname"><a href="class_sprite.html">Sprite</a></div><div class="ttdoc">A simple abstraction of a set of images and animations. </div><div class="ttdef"><b>Definition:</b> graphics.h:187</div></div>
+<div class="ttc" id="defines_8h_html_a8c9d76bbaa869398cf5b351b48ce7ca5"><div class="ttname"><a href="defines_8h.html#a8c9d76bbaa869398cf5b351b48ce7ca5">S2M_TRANSITION_CLOSE</a></div><div class="ttdeci">#define S2M_TRANSITION_CLOSE</div><div class="ttdef"><b>Definition:</b> defines.h:47</div></div>
 <div class="ttc" id="room_8h_html"><div class="ttname"><a href="room_8h.html">room.h</a></div></div>
+<div class="ttc" id="_s2_m_8h_html_ae4354b54df2c7e538d0568a338907191"><div class="ttname"><a href="_s2_m_8h.html#ae4354b54df2c7e538d0568a338907191">S2M_CreateInstance</a></div><div class="ttdeci">Object * S2M_CreateInstance(Sprite *sprite, float x, float y, char d)</div><div class="ttdoc">Manual S2M function for instance creation. Used by the end-user. </div><div class="ttdef"><b>Definition:</b> S2M.h:42</div></div>
 <div class="ttc" id="defines_8h_html"><div class="ttname"><a href="defines_8h.html">defines.h</a></div></div>
+<div class="ttc" id="class_graphics_html_a3eb162b89e24962a946bc40e708dd0a0"><div class="ttname"><a href="class_graphics.html#a3eb162b89e24962a946bc40e708dd0a0">Graphics::setTransition</a></div><div class="ttdeci">void setTransition(Transition *t)</div><div class="ttdoc">Make a Transition occur instantaniously. </div><div class="ttdef"><b>Definition:</b> graphics.cpp:292</div></div>
 <div class="ttc" id="pause_8h_html"><div class="ttname"><a href="pause_8h.html">pause.h</a></div></div>
-<div class="ttc" id="graphics_8cpp_html_a01ce708f97ddc15c1845c68a6709a6d3"><div class="ttname"><a href="graphics_8cpp.html#a01ce708f97ddc15c1845c68a6709a6d3">S2M_UpdateGraphics</a></div><div class="ttdeci">void S2M_UpdateGraphics()</div><div class="ttdoc">Updates the game&amp;#39;s graphics. </div><div class="ttdef"><b>Definition:</b> graphics.cpp:38</div></div>
+<div class="ttc" id="_s2_m_8h_html_a7251540357416bc271708a5260b6b7f1"><div class="ttname"><a href="_s2_m_8h.html#a7251540357416bc271708a5260b6b7f1">S2M_CreateRoom</a></div><div class="ttdeci">Room * S2M_CreateRoom()</div><div class="ttdef"><b>Definition:</b> S2M.h:59</div></div>
+<div class="ttc" id="graphics_8cpp_html_a01ce708f97ddc15c1845c68a6709a6d3"><div class="ttname"><a href="graphics_8cpp.html#a01ce708f97ddc15c1845c68a6709a6d3">S2M_UpdateGraphics</a></div><div class="ttdeci">void S2M_UpdateGraphics()</div><div class="ttdoc">Updates the game&amp;#39;s graphics. </div><div class="ttdef"><b>Definition:</b> graphics.cpp:39</div></div>
+<div class="ttc" id="class_background_html_adb462ce7dc04d3b09698f1baa3d173e6"><div class="ttname"><a href="class_background.html#adb462ce7dc04d3b09698f1baa3d173e6">Background::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> room.h:323</div></div>
+<div class="ttc" id="class_room_html_a801c3de6ddff533edeb8fa68c7fcbb61"><div class="ttname"><a href="class_room.html#a801c3de6ddff533edeb8fa68c7fcbb61">Room::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdoc">The update method. </div><div class="ttdef"><b>Definition:</b> room.cpp:206</div></div>
+<div class="ttc" id="graphics_8cpp_html_a39566e00b94311ad006855b930cd8a94"><div class="ttname"><a href="graphics_8cpp.html#a39566e00b94311ad006855b930cd8a94">gGraphics</a></div><div class="ttdeci">Graphics * gGraphics</div><div class="ttdoc">Global instance of Graphics. </div><div class="ttdef"><b>Definition:</b> graphics.cpp:27</div></div>
 <div class="ttc" id="object_8h_html"><div class="ttname"><a href="object_8h.html">object.h</a></div></div>
-<div class="ttc" id="room_8cpp_html_a7e17b634091c660ba4b52f5a0940d7e4"><div class="ttname"><a href="room_8cpp.html#a7e17b634091c660ba4b52f5a0940d7e4">S2M_UpdateRoom</a></div><div class="ttdeci">void S2M_UpdateRoom()</div><div class="ttdef"><b>Definition:</b> room.cpp:54</div></div>
+<div class="ttc" id="class_room_html"><div class="ttname"><a href="class_room.html">Room</a></div><div class="ttdoc">An abstraction of a certain space within a game. </div><div class="ttdef"><b>Definition:</b> room.h:156</div></div>
+<div class="ttc" id="class_background_html_af6650023418d2982420370f87eeff2de"><div class="ttname"><a href="class_background.html#af6650023418d2982420370f87eeff2de">Background::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> room.h:323</div></div>
+<div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Anything that can be positioned within a Room. </div><div class="ttdef"><b>Definition:</b> object.h:39</div></div>
 <div class="ttc" id="options_8h_html"><div class="ttname"><a href="options_8h.html">options.h</a></div></div>
 <div class="ttc" id="gui_8h_html"><div class="ttname"><a href="gui_8h.html">gui.h</a></div></div>
 <div class="ttc" id="graphics_8h_html"><div class="ttname"><a href="graphics_8h.html">graphics.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 8 2014 05:39:37 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 21:23:06 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

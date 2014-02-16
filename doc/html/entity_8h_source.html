@@ -133,59 +133,61 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a97bff8e950182981a271e548f63fb6c6">bindJoystick</a>(<a class="code" href="class_joystick.html">Joystick</a> *j);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a00b6eeaf99b35c8f8b10b5fbfc1baf4f">update</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_joystick.html">Joystick</a> *joystick = <span class="keyword">new</span> <a class="code" href="class_joystick.html">Joystick</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Physics</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span> xspeed, yspeed;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">float</span> FRICTION = 51.0/512.0;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> GRAVITY = 80.0/512.0;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">float</span> JUMPING_GRAVITY = 32.0/512.0;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">float</span> MAX_VX = 812.0/512.0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">float</span> MAX_VY = 1535.0/512.0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">float</span> WALK_ACCEL = 85.0/512.0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">float</span> AIR_ACCEL = 32.0/512.0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">float</span> JUMP_SPEED = 1280.0/512.0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">bool</span> onGround;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> facing = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> jump = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    vector&lt;bool&gt; collision = {<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<a class="code" href="class_entity.html">Entity</a> *<a class="code" href="entity_8cpp.html#a55474c51e56cf65a1b3a639d608120ab">S2M_CreateEntity</a>(<a class="code" href="class_sprite.html">Sprite</a> *sprite, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">char</span> d);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a0421cb8e2a3eda9f1f6c8fc0ae83bb15">updateSpr</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_joystick.html">Joystick</a> *joystick = <span class="keyword">new</span> <a class="code" href="class_joystick.html">Joystick</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Physics</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">float</span> xspeed, yspeed;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> FRICTION = 51.0/512.0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">float</span> GRAVITY = 80.0/512.0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">float</span> JUMPING_GRAVITY = 32.0/512.0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">float</span> MAX_VX = 812.0/512.0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">float</span> MAX_VY = 1535.0/512.0;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">float</span> WALK_ACCEL = 85.0/512.0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">float</span> AIR_ACCEL = 32.0/512.0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">float</span> JUMP_SPEED = 1280.0/512.0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> onGround;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> facing = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> jump = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    vector&lt;bool&gt; collision = {<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>,<span class="keyword">false</span>};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<a class="code" href="class_entity.html">Entity</a> *<a class="code" href="entity_8cpp.html#a55474c51e56cf65a1b3a639d608120ab">S2M_CreateEntity</a>(<a class="code" href="class_sprite.html">Sprite</a> *sprite, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">char</span> d);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_hero.html">   81</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_hero.html">Hero</a>: <span class="keyword">public</span> <a class="code" href="class_entity.html">Entity</a> {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_hero.html">   82</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_hero.html">Hero</a>: <span class="keyword">public</span> <a class="code" href="class_entity.html">Entity</a> {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_n_p_c.html">   88</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_n_p_c.html">NPC</a>: <span class="keyword">public</span> <a class="code" href="class_entity.html">Entity</a> {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_object_html_a2870044ec214e97550ee28db89c6382a"><div class="ttname"><a href="class_object.html#a2870044ec214e97550ee28db89c6382a">Object::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Vertical position on the Room. </div><div class="ttdef"><b>Definition:</b> object.h:89</div></div>
-<div class="ttc" id="class_hero_html"><div class="ttname"><a href="class_hero.html">Hero</a></div><div class="ttdoc">An Entity that can be controlled directly with user input. </div><div class="ttdef"><b>Definition:</b> entity.h:81</div></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_n_p_c.html">   89</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_n_p_c.html">NPC</a>: <span class="keyword">public</span> <a class="code" href="class_entity.html">Entity</a> {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_object_html_a2870044ec214e97550ee28db89c6382a"><div class="ttname"><a href="class_object.html#a2870044ec214e97550ee28db89c6382a">Object::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Vertical position on the Room. </div><div class="ttdef"><b>Definition:</b> object.h:98</div></div>
+<div class="ttc" id="class_hero_html"><div class="ttname"><a href="class_hero.html">Hero</a></div><div class="ttdoc">An Entity that can be controlled directly with user input. </div><div class="ttdef"><b>Definition:</b> entity.h:82</div></div>
 <div class="ttc" id="class_entity_html_a97bff8e950182981a271e548f63fb6c6"><div class="ttname"><a href="class_entity.html#a97bff8e950182981a271e548f63fb6c6">Entity::bindJoystick</a></div><div class="ttdeci">void bindJoystick(Joystick *j)</div><div class="ttdoc">Binds a new Joystick instance to the Entity. </div><div class="ttdef"><b>Definition:</b> entity.cpp:55</div></div>
-<div class="ttc" id="class_sprite_html"><div class="ttname"><a href="class_sprite.html">Sprite</a></div><div class="ttdoc">A simple abstraction of a set of images and animations. </div><div class="ttdef"><b>Definition:</b> graphics.h:171</div></div>
+<div class="ttc" id="class_sprite_html"><div class="ttname"><a href="class_sprite.html">Sprite</a></div><div class="ttdoc">A simple abstraction of a set of images and animations. </div><div class="ttdef"><b>Definition:</b> graphics.h:187</div></div>
+<div class="ttc" id="class_entity_html_a0421cb8e2a3eda9f1f6c8fc0ae83bb15"><div class="ttname"><a href="class_entity.html#a0421cb8e2a3eda9f1f6c8fc0ae83bb15">Entity::updateSpr</a></div><div class="ttdeci">virtual void updateSpr()</div><div class="ttdoc">Overridable method. Updates all sprite-related variables. </div><div class="ttdef"><b>Definition:</b> entity.cpp:147</div></div>
 <div class="ttc" id="class_entity_html_aac771d739c55a8bf04a40a7d65d849e4"><div class="ttname"><a href="class_entity.html#aac771d739c55a8bf04a40a7d65d849e4">Entity::collidesOn</a></div><div class="ttdeci">bool collidesOn(char dir)</div><div class="ttdoc">Check if a collision is ocurring in any direction. </div><div class="ttdef"><b>Definition:</b> entity.cpp:51</div></div>
 <div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdoc">Any Object that is affected by gravity or capable of random motion. </div><div class="ttdef"><b>Definition:</b> entity.h:38</div></div>
-<div class="ttc" id="class_object_html_a99addca3b5d96c214fa8f90474224699"><div class="ttname"><a href="class_object.html#a99addca3b5d96c214fa8f90474224699">Object::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Horizontal position on the Room. </div><div class="ttdef"><b>Definition:</b> object.h:87</div></div>
+<div class="ttc" id="class_object_html_a99addca3b5d96c214fa8f90474224699"><div class="ttname"><a href="class_object.html#a99addca3b5d96c214fa8f90474224699">Object::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Horizontal position on the Room. </div><div class="ttdef"><b>Definition:</b> object.h:96</div></div>
 <div class="ttc" id="class_entity_html_adf6d3f7cb1b2ba029b6b048a395cc8ae"><div class="ttname"><a href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">Entity::~Entity</a></div><div class="ttdeci">~Entity()</div><div class="ttdoc">Default destructor. Works just like it would work with an Object. </div><div class="ttdef"><b>Definition:</b> entity.cpp:47</div></div>
-<div class="ttc" id="entity_8cpp_html_a55474c51e56cf65a1b3a639d608120ab"><div class="ttname"><a href="entity_8cpp.html#a55474c51e56cf65a1b3a639d608120ab">S2M_CreateEntity</a></div><div class="ttdeci">Entity * S2M_CreateEntity(Sprite *sprite, float x, float y, char d)</div><div class="ttdef"><b>Definition:</b> entity.cpp:147</div></div>
-<div class="ttc" id="class_n_p_c_html"><div class="ttname"><a href="class_n_p_c.html">NPC</a></div><div class="ttdoc">An Entity that can&amp;#39;t be directly controlled with user input. </div><div class="ttdef"><b>Definition:</b> entity.h:88</div></div>
+<div class="ttc" id="entity_8cpp_html_a55474c51e56cf65a1b3a639d608120ab"><div class="ttname"><a href="entity_8cpp.html#a55474c51e56cf65a1b3a639d608120ab">S2M_CreateEntity</a></div><div class="ttdeci">Entity * S2M_CreateEntity(Sprite *sprite, float x, float y, char d)</div><div class="ttdef"><b>Definition:</b> entity.cpp:152</div></div>
+<div class="ttc" id="class_n_p_c_html"><div class="ttname"><a href="class_n_p_c.html">NPC</a></div><div class="ttdoc">An Entity that can&amp;#39;t be directly controlled with user input. </div><div class="ttdef"><b>Definition:</b> entity.h:89</div></div>
 <div class="ttc" id="class_entity_html_a00b6eeaf99b35c8f8b10b5fbfc1baf4f"><div class="ttname"><a href="class_entity.html#a00b6eeaf99b35c8f8b10b5fbfc1baf4f">Entity::update</a></div><div class="ttdeci">virtual void update()</div><div class="ttdoc">Overridable update method. </div><div class="ttdef"><b>Definition:</b> entity.cpp:59</div></div>
 <div class="ttc" id="class_object_html"><div class="ttname"><a href="class_object.html">Object</a></div><div class="ttdoc">Anything that can be positioned within a Room. </div><div class="ttdef"><b>Definition:</b> object.h:39</div></div>
-<div class="ttc" id="class_object_html_ad936466f3f6b6e8fa401842c573b44e6"><div class="ttname"><a href="class_object.html#ad936466f3f6b6e8fa401842c573b44e6">Object::sprite</a></div><div class="ttdeci">Sprite * sprite</div><div class="ttdoc">Current Sprite pointer. </div><div class="ttdef"><b>Definition:</b> object.h:91</div></div>
+<div class="ttc" id="class_object_html_ad936466f3f6b6e8fa401842c573b44e6"><div class="ttname"><a href="class_object.html#ad936466f3f6b6e8fa401842c573b44e6">Object::sprite</a></div><div class="ttdeci">Sprite * sprite</div><div class="ttdoc">Current Sprite pointer. </div><div class="ttdef"><b>Definition:</b> object.h:100</div></div>
 <div class="ttc" id="class_joystick_html"><div class="ttname"><a href="class_joystick.html">Joystick</a></div><div class="ttdoc">Representation of game buttons/keys. </div><div class="ttdef"><b>Definition:</b> joystick.h:36</div></div>
 <div class="ttc" id="class_entity_html_adb44f34990023b1802bb95c280d62de0"><div class="ttname"><a href="class_entity.html#adb44f34990023b1802bb95c280d62de0">Entity::Entity</a></div><div class="ttdeci">Entity(Sprite *sprite, float x, float y, char d)</div><div class="ttdoc">Deafult constructor. Works just like it would work with an Object. </div><div class="ttdef"><b>Definition:</b> entity.cpp:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 8 2014 05:39:37 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 16 2014 21:23:06 for SDL2Me by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
