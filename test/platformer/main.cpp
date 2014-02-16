@@ -27,7 +27,7 @@
 #include "../../src/transitions/TFlipExpo.h"
 #include "healthbar.h"
 
-vector<int> populateRoom (string filename, TRoom *room) {
+/*vector<int> populateRoom (string filename, TRoom *room) {
 
 	vector<vector<vector<int>>> tmap;
 	vector<vector<int>> pmap;
@@ -113,7 +113,7 @@ vector<int> populateRoom (string filename, TRoom *room) {
 	room->setTileMap(tmap);
 	room->setPermissionMap(pmap);
 	return data;
-}
+}*/
 
 
 int main( int argc, char* args[] ) {
@@ -203,7 +203,7 @@ int main( int argc, char* args[] ) {
 		}
 
 		if (gJoystick->getBtnPressed(2)) {
-			S2M_GoToRoom<TFlipExpo> (room2);
+			S2M_GoToRoom<TFlipExpo>(room2);
 		}
 
 	    S2M_Update();

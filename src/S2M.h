@@ -35,10 +35,20 @@
 #include "gui.h"
 #include "defines.h"
 
+using namespace std;
+
+template <class T>
+Object *S2M_CreateObject(Sprite *sprite, float x, float y, char d) {
+	return new T(sprite, x, y, d);
+}
+
+map <string, Object *(*)(Sprite*, float, float, char)> objectMap {
+	{ "warp", &S2M_CreateObject<Warp> }
+};
+
 template <class T>
 T *S2M_CreateRoom() {
-	T *room = new T();
-	return room;
+	return new T();
 }
 
 template <class T>

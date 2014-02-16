@@ -126,6 +126,10 @@ public:
 	/*! \return The game height. */
 	int getGameHeight();
 
+	//! Get a pointer to the current transition.
+	/*! \return Pointer to the current transition. */
+	Transition *getTransition();
+
 	//! Make a Transition occur instantaniously.
 	/*! \param t pointer to a Transition to make. */
 	void setTransition(Transition *t);

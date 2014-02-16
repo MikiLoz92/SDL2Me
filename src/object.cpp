@@ -115,3 +115,11 @@ void Object::updateSpr() {
 	//xnext = x + xspeed;
 	//ynext = y + yspeed;
 }
+
+Warp::Warp(Sprite *sprite, float x, float y, char d) : Object(sprite, x, y, d) {
+	cout << "Creating WARP" << endl;
+}
+
+Warp::~Warp() {
+	
+}

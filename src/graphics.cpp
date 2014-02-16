@@ -174,12 +174,12 @@ void Graphics::update() {
 	} 
 
 	float cx, cy;
-	if (gRoom->camera == NULL) {
-		cx = 0;
-		cy = 0;
-	} else {
+	if (gRoom->camera) {
 		cx = int(gRoom->camera->x);
 		cy = int(gRoom->camera->y);
+	} else {
+		cx = 0;
+		cy = 0;
 	}
 
 	// Draw Tiles
@@ -258,7 +258,7 @@ void Graphics::update() {
 				trans->changeMode();
 				trans->update();
 				gRoom = gRoom->nextRoom;
-				gRoom->setCamera(new Camera(0,0));
+				//gRoom->setCamera(new Camera(0,0));
 			} else {
 				delete trans;
 				trans = nullptr;
@@ -285,7 +285,12 @@ int Graphics::getGameHeight() {
 	return gameheight;
 }
 
+Transition *Graphics::getTransition() {
+	return trans;
+}
+
 void Graphics::setTransition(Transition *t) {
+	if (trans) delete trans;
 	trans = t;
 }
 
@@ -304,9 +309,8 @@ Sprite::Sprite(string filename, int w, int h) {
 	height = h;
 	// Añadimos el Sprite al vector global de Sprites actuales de gGraphics
 	gGraphics->addSprite(this);
-
 	//DEBUG: Creamos el rect a mano
-	rect = {3,2,6,14};
+	/**/rect = {3,2,6,14};
 }
 
 Sprite::~Sprite() {

@@ -125,6 +125,12 @@ protected:
 	SDL_Rect rect;
 };
 
+class Warp: public Object {
+public:
+	Warp(Sprite *sprite, float x, float y, char d);
+	~Warp();
+};
+
 // TODO: Pasar variables públicas a privadas y construir sets & gets.
 
 #endif

@@ -189,7 +189,7 @@ int Room::getHeight() {
 
 void Room::update() {
 	// Actualizamos la Cámara
-	camera->update();
+	if (camera)	camera->update();
 
 	// Reordenar los objetos a cada frame es una tarea tediosa que puede suponer un incremento
 	// del 100% de trabajo de la CPU para cantidades abundantes de objetos (~8000 obj.).
