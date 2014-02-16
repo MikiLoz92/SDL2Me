@@ -75,7 +75,7 @@ bool compareBackgroundsByDepth(Background *bg1, Background *bg2) {
 	else return bg1->getDepth() < bg2->getDepth();
 }
 
-Room::Room(string filename, string scriptname, map <string, Object *(*)(Sprite*, float, float, char)> objectMap) {
+Room::Room(string filename, string scriptname) {
 
 	// MAP PART
 	xml_document<> mapxml;
@@ -91,28 +91,13 @@ Room::Room(string filename, string scriptname, map <string, Object *(*)(Sprite*,
 	mapxml.parse<0>(&buffer[0]);
 
 	// Leer atributos del mapa
-	xml_node<> *map_node = mapxml.first_node("map");
+	map_node = mapxml.first_node("map");
 	wtile = atoi(map_node->first_attribute("tilewidth")->value());
 	htile = atoi(map_node->first_attribute("tileheight")->value());
 	width = atoi(map_node->first_attribute("width")->value()) * wtile;
 	height = atoi(map_node->first_attribute("height")->value()) * htile;
 
-	cout << "Entering" << endl;
-	// Leer capa de objetos y crear instancias
-	xml_node<> *objectgroup_node = map_node->first_node("objectgroup");
-	while (objectgroup_node != NULL) {
-		xml_node<> *object_node = objectgroup_node->first_node("object");
-		while (object_node != NULL) {
-			char *type = object_node->first_attribute("type")->value();
-			Object *(*b)(Sprite*, float, float, char) = objectMap.find(type)->second;
-			//atoi(object_node->first_attribute("x")->value())
-			//atoi(object_node->first_attribute("y")->value())
-			object_node = objectgroup_node->next_sibling("object");
-		} objectgroup_node = map_node->next_sibling("objectgroup");
-	}
-	cout << "Exiting" << endl;
-
-	cout << "Map width: " << width << " Map height: " << height << endl;
+	/**/cout << "Map width: " << width << " Map height: " << height << endl;
 
 	xml_node<> *tileset_node = map_node->first_node("tileset");
 	xml_node<> *layer_node = map_node->first_node("layer");
@@ -129,7 +114,6 @@ Room::Room(string filename, string scriptname, map <string, Object *(*)(Sprite*,
 			pfirstgid = atoi(tileset_node->first_attribute("firstgid")->value());
 		} tileset_node = tileset_node->next_sibling("tileset");
 	}
-	//cout << tilesets.size() << endl;
 
 	while (layer_node != NULL) {
 		string layerName = layer_node->first_attribute("name")->value();
@@ -178,10 +162,6 @@ Room::Room(string filename, string scriptname, map <string, Object *(*)(Sprite*,
 	camera = nullptr;
 }
 
-/*Room::Room(string filename, void (*f)(string, Room*)) {
-	f(filename,this);
-}*/
-
 Room::Room() {
 	width = gGraphics->getGameWidth();
 	height = gGraphics->getGameHeight();
@@ -193,6 +173,25 @@ Room::Room(int w, int h) {
 }
 
 Room::~Room() {
+
+}
+
+void Room::parseObjects(map <string, Object *(*)(float, float, Room*)> objectMap) {
+
+	// Leer capa de objetos y crear instancias
+	xml_node<> *objectgroup_node = map_node->first_node("objectgroup");
+	while (objectgroup_node != NULL) {
+		xml_node<> *object_node = objectgroup_node->first_node("object");
+		while (object_node != NULL) {
+			char *type = object_node->first_attribute("type")->value();
+			Object *(*b)(float, float, Room*) = objectMap.find(type)->second;
+			int x = atoi(object_node->first_attribute("x")->value());
+			int y = atoi(object_node->first_attribute("y")->value());
+			cout << x << " " << y;
+			(*b)(x,y,this);
+			object_node = object_node->next_sibling("object");
+		} objectgroup_node = objectgroup_node->next_sibling("objectgroup");
+	}
 
 }
 
@@ -220,6 +219,8 @@ void Room::update() {
 		for (int i = 0; i < int(objects.size()); i++) {
 			objects[i]->update();
 			objects[i]->updateSpr();
+
+			/**/cout << "Object#" << i << " x: " << objects[i]->x << " y: " << objects[i]->y << endl;
 		}	
 	}
 
@@ -230,8 +231,6 @@ void Room::update() {
 	for (int i = 0; i < int(backgrounds.size()); i++) {
 		backgrounds[i]->update();
 	}
-
-	//cout << "#Objects: " << objects.size() << " Pos: " << objects[0]->x << endl;
 }
 
 void Room::setCamera(Camera *c) {

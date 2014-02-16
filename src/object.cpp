@@ -40,18 +40,22 @@ Object::Object(Sprite *sprite, float x, float y, char d) {
 	//image = SDL_CreateTexture(room->graphics->renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, sprite->w, sprite->h);
 }
 
+Object::Object(float x, float y) {
+	sprite = nullptr;
+	depth = 0; 
+}
+
 Object::~Object() {
 
 }
 
 void Object::setAnimation(int i) {
-	if (/*i > 0 && */i < int(sprite->getAnimationsSize())) {
-		sprAnimation = i;
-		sprSpeed = 16;
-	} /*else if (i == -1) {
-		sprSpeedCounter = 0;
-		sprFrame = sprDefaultFrame;
-	} */else cout << "Trying to set animation to " << i << " but index out of range... (size=" << sprite->getAnimationsSize() << ")" << endl;
+	if (sprite) {
+		if (i < int(sprite->getAnimationsSize())) {
+			sprAnimation = i;
+			sprSpeed = 16;
+		} else cout << "Trying to set animation to " << i << " but index out of range... (size=" << sprite->getAnimationsSize() << ")" << endl;
+	}
 }
 
 int Object::getAnimation() {
@@ -79,47 +83,51 @@ void Object::update() {
 }
 
 void Object::updateSpr() {
-	// Update the rect.
-	//rect.x = int(round(x + sprite->rect.x));
-	//rect.y = int(round(y + sprite->rect.y));
-	if (sprFlip == SDL_FLIP_HORIZONTAL) {
-		rect.x = int(round(x + sprite->rect.x - sprite->getWidth() + sprite->getXCenter() ));
-	} else {
-		rect.x = int(round(x + sprite->rect.x - sprite->getXCenter()));
-	} 
-	rect.y = int(round(y + sprite->rect.y));
-	//cout << "object x: " << x << " bbox x: " << rect.x << endl;
-
-	/*if (sprFlip == SDL_FLIP_HORIZONTAL) {
-		sprite->setCenter(sprite->getWidth()-sprite->getXCenter(),0);
-	} else {
-		sprite->setCenter(4,0);
-	}*/
-
-	if (sprAnimation != -1) {
-		if (sprSpeedCounter == sprSpeed-1) {
-			if (animationFrame >= sprite->animations[sprAnimation].size()-1) {
-				animationFrame = 0;
-			} else animationFrame++;
-			sprSpeedCounter = 0;
+	if (sprite) {
+		// Update the rect.
+		//rect.x = int(round(x + sprite->rect.x));
+		//rect.y = int(round(y + sprite->rect.y));
+		if (sprFlip == SDL_FLIP_HORIZONTAL) {
+			rect.x = int(round(x + sprite->rect.x - sprite->getWidth() + sprite->getXCenter() ));
 		} else {
-			sprSpeedCounter++;
-		}
-		sprFrame = sprite->animations[sprAnimation][animationFrame];
-		//cout << sprSpeedCounter << endl;
-	} else {
-		sprFrame = sprDefaultFrame;
-		sprSpeedCounter = 0;
-	}
+			rect.x = int(round(x + sprite->rect.x - sprite->getXCenter()));
+		} 
+		rect.y = int(round(y + sprite->rect.y));
+		//cout << "object x: " << x << " bbox x: " << rect.x << endl;
 
-	//xnext = x + xspeed;
-	//ynext = y + yspeed;
+		/*if (sprFlip == SDL_FLIP_HORIZONTAL) {
+			sprite->setCenter(sprite->getWidth()-sprite->getXCenter(),0);
+		} else {
+			sprite->setCenter(4,0);
+		}*/
+
+		if (sprAnimation != -1) {
+			if (sprSpeedCounter == sprSpeed-1) {
+				if (animationFrame >= sprite->animations[sprAnimation].size()-1) {
+					animationFrame = 0;
+				} else animationFrame++;
+				sprSpeedCounter = 0;
+			} else {
+				sprSpeedCounter++;
+			}
+			sprFrame = sprite->animations[sprAnimation][animationFrame];
+			//cout << sprSpeedCounter << endl;
+		} else {
+			sprFrame = sprDefaultFrame;
+			sprSpeedCounter = 0;
+		}
+
+		//xnext = x + xspeed;
+		//ynext = y + yspeed;
+	}
 }
 
-Warp::Warp(Sprite *sprite, float x, float y, char d) : Object(sprite, x, y, d) {
+Warp::Warp(float x, float y) : Object(x, y) {
+	this->x = x;
+	this->y = y;
 	cout << "Creating WARP" << endl;
 }
 
 Warp::~Warp() {
-	
+
 }

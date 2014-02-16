@@ -4,7 +4,7 @@ CoreSources=graphics.cpp options.cpp room.cpp object.cpp pause.cpp script.cpp gu
 ImplSources= entity.cpp
 Lib=libS2M.so
 
-CFlags=-std=c++11 -c -fPIC #-g #-Ofast
+CFlags=-std=c++11 -c -fPIC -g #-Ofast
 #LDFlags=-lSDL2 -lSDL2_image 			# Casa
 LDFlags=-L./lib/ -lSDL2 -lSDL2_image	# ETSEIB
 ObjDir=obj/

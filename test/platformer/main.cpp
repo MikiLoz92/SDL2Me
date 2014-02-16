@@ -27,112 +27,16 @@
 #include "../../src/transitions/TFlipExpo.h"
 #include "healthbar.h"
 
-/*vector<int> populateRoom (string filename, TRoom *room) {
-
-	vector<vector<vector<int>>> tmap;
-	vector<vector<int>> pmap;
-	vector<int> data;
-	int pfirstgid;
-
-	// MAP PART
-	xml_document<> mapxml;
-	ifstream file;
-	file.exceptions( ifstream::failbit );
-	try {
-		file.open(filename);
-	} catch (ifstream::failure e) {
-		cerr << "Error: resource \"" << filename << "\" is missing." << endl;
-	}
-	vector<char> buffer((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
-	buffer.push_back('\0');
-	mapxml.parse<0>(&buffer[0]);
-
-	xml_node<> *map_node = mapxml.first_node("map");
-	int wtile = atoi(map_node->first_attribute("tilewidth")->value());
-	data.push_back(wtile);
-	int htile = atoi(map_node->first_attribute("tileheight")->value());
-	data.push_back(htile);
-	data.push_back(atoi(map_node->first_attribute("width")->value()) * wtile);
-	data.push_back(atoi(map_node->first_attribute("height")->value()) * htile);
-
-	xml_node<> *tileset_node = map_node->first_node("tileset");
-	xml_node<> *layer_node = map_node->first_node("layer");
-
-	while (tileset_node != NULL) {
-		string tilesetName = tileset_node->first_attribute("name")->value();
-		if ( tilesetName != "permissions") {
-			stringstream ss;
-			ss << "res/" << tileset_node->first_node("image")->first_attribute("source")->value();
-			string s = ss.str();
-			int tilesetwidth = atoi(tileset_node->first_node("image")->first_attribute("width")->value());
-			room->setTileset(gGraphics->loadTexture(s,false));
-		} else {
-			pfirstgid = atoi(tileset_node->first_attribute("firstgid")->value());
-		} tileset_node = tileset_node->next_sibling("tileset");
-	}
-	while (layer_node != NULL) {
-		string layerName = layer_node->first_attribute("name")->value();
-		if (layerName != "Permissions") {
-			cout << "CACACACACA" << endl;
-			xml_node<> *data_node = layer_node->first_node("data");
-			string layerText = data_node->value();
-			vector<vector<int>> layer;
-			vector<string> lines = S2M_Script::SplitString(layerText,'\n');
-			for (int i = 0; i < lines.size(); i++) {
-				vector<string> strLine = S2M_Script::SplitString(lines[i],',');
-				vector<int> intLine;
-				for (int j = 0; j < strLine.size(); j++) {
-					intLine.push_back(atoi(strLine[j].c_str()));
-				} layer.push_back(intLine);
-			} 
-			for (int i = 0; i < layer.size(); i++) {
-				for (int j = 0; j < layer[i].size(); j++) {
-					cout << layer[i][j] << "-";
-				} cout << endl;
-			}
-			tmap.push_back(layer);
-		} else {
-			xml_node<> *data_node = layer_node->first_node("data");
-			string layerText = data_node->value();
-			vector<string> lines = S2M_Script::SplitString(layerText,'\n');
-			for (int i = 0; i < lines.size(); i++) {
-				vector<string> strLine = S2M_Script::SplitString(lines[i],',');
-				vector<int> intLine;
-				for (int j = 0; j < strLine.size(); j++) {
-					intLine.push_back(atoi(strLine[j].c_str()));
-				} pmap.push_back(intLine);
-			}
-			for (int i = 0; i < pmap.size(); i++) {
-				for (int j = 0; j < pmap[i].size(); j++) {
-					cout << pmap[i][j] << "-";
-				} cout << endl;
-			}
-		} layer_node = layer_node->next_sibling("layer");
-	}
-
-	room->setTileMap(tmap);
-	room->setPermissionMap(pmap);
-	return data;
-}*/
-
-
 int main( int argc, char* args[] ) {
 
 	S2M_CreateGraphics();
 
-	map <string, Object *(*)(Sprite*, float, float, char)> objectMap {
-		{ "warp", &S2M_CreateObject<Warp> }
+	map <string, Object *(*)(float, float, Room*)> objectMap {
+		{ "Warp", &S2M_CreateInstance<Warp> }
 	};
 
-	//Room *room = S2M_CreateRoom(640,480);
-
-	//TRoom *room =  new TRoom("res/map.tmx", &populateRoom);
-	//Room *room = new Room("res/map.tmx", "res/script.txt");
 	Room *room = S2M_CreateRoom<Room>("res/map.tmx", "res/script.txt", objectMap);
-
-	//cout << room->x << endl;
 	S2M_SetRoom(room);
-	//S2M_Room::LoadScript("res/script.txt");
 
 	Room *room2 = S2M_CreateRoom<Room>("res/map2.tmx", "res/script.txt", objectMap);
 

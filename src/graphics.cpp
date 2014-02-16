@@ -224,7 +224,7 @@ void Graphics::update() {
 	for (int i = 0; i < gRoom->objects.size(); i++) {
 		// If Object is in view (TO BE CORRECTED)
 		//cout << "Object no" << i << ".x and y " << gRoom->objects[i]->x << " " << gRoom->objects[i]->y << endl;
-		if (gRoom->objects[i]->x < gRoom->camera->x+320 && gRoom->objects[i]->y < gRoom->camera->y+240) {
+		if (gRoom->objects[i]->x < gRoom->camera->x+320 && gRoom->objects[i]->y < gRoom->camera->y+240 && gRoom->objects[i]->sprite) {
 			Sprite *sprite = gRoom->objects[i]->sprite;
 			Object *object = gRoom->objects[i];
 			int w = gRoom->objects[i]->sprite->width;

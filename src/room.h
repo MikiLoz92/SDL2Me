@@ -159,7 +159,7 @@ public:
 	/*! Creates a Room from a file.
 	 * \param filename the design file
 	 * \param scriptname the script file */
-	Room(string filename, string scriptname, map <string, Object *(*)(Sprite*, float, float, char)> objectMap);
+	Room(string filename, string scriptname);
 
 	//! The simple constructor.
 	/*! Creates an empty black Room with the game dimensions. */
@@ -174,6 +174,9 @@ public:
 	//! The destructor.
 	/*! Destroys the Room and all its associated tile textures. */
 	~Room();
+
+	//! Creates all instances in the Room.
+	void parseObjects(map <string, Object *(*)(float, float, Room*)> objectMap);
 
 	//! Get the Room's width.
 	/*! \return the Room's width \sa getHeight() */
@@ -220,6 +223,7 @@ public:
 	friend class Entity;
 
 protected:
+	xml_node<> *map_node;
 	int width, height, wtile, htile, wtileset;
 	int pfirstgid;
 	vector<Object *> objects;

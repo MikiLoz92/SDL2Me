@@ -37,9 +37,22 @@
 
 using namespace std;
 
+//! Manual S2M function for instance creation. Used by the end-user.
 template <class T>
-Object *S2M_CreateObject(Sprite *sprite, float x, float y, char d) {
-	return new T(sprite, x, y, d);
+Object *S2M_CreateInstance(Sprite *sprite, float x, float y, char d) {
+	Object *obj = new T(sprite, x, y, d);
+	gRoom->addObject(obj);
+	return obj;
+}
+
+//! Automatic S2M function for instance creation. Used in the engine.
+template <class T>
+Object *S2M_CreateInstance(float x, float y, Room *r = nullptr) {
+	cout << x << "-----" << y << endl;
+	Object *obj = new T(x, y);
+	if (r) r->addObject(obj);
+	else gRoom->addObject(obj);
+	return obj;
 }
 
 template <class T>
@@ -54,8 +67,9 @@ Room *S2M_CreateRoom(int w, int h) {
 }
 
 template <class T>
-Room *S2M_CreateRoom(string filename, string scriptname, map <string, Object *(*)(Sprite*, float, float, char)> objectMap) {
-	T *room = new T(filename, scriptname, objectMap);
+Room *S2M_CreateRoom(string filename, string scriptname, map <string, Object *(*)(float, float, Room*)> objectMap) {
+	T *room = new T(filename, scriptname);
+	room->parseObjects(objectMap);
 	return room;
 }
 

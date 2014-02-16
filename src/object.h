@@ -45,6 +45,9 @@ public:
 	 * \param d depth on the Room, the higher the furthest away */
 	Object(Sprite *sprite, float x, float y, char d);
 
+	//! Object without Sprite constructor.
+	Object(float x, float y);
+
 	//! Default destructor.
 	~Object();
 
@@ -127,7 +130,7 @@ protected:
 
 class Warp: public Object {
 public:
-	Warp(Sprite *sprite, float x, float y, char d);
+	Warp(float x, float y);
 	~Warp();
 };
 
