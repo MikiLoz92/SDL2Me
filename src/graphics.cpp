@@ -37,13 +37,13 @@ Graphics *S2M_CreateGraphics() {
 // estas dos instancias por su nombre de pila; sólo haría falta incluir "graphics.h".
 
 void S2M_UpdateGraphics() {
-	gGraphics->update();
+	if (gGraphics) gGraphics->update();
+	else {
+		cerr << "Error: Trying to update game graphics but no Graphics instance created. Please use S2M_CreateGraphics to start the graphics engine." << endl;
+		exit(EXIT_FAILURE);
+	}
 }
 
-Sprite *S2M_CreateSprite(string filename, int w, int h) {
-	Sprite *sprite = new Sprite(filename, w, h);
-	return sprite;
-}
 /*
 float easeInExpo (float t,float b , float c, float d) {
 	return (t==0) ? b : c * pow(2, 10 * (t/d - 1)) + b;
@@ -162,88 +162,8 @@ void Graphics::update() {
 
 	SDL_RenderClear(renderer);
 
-	// Draw Backgrounds
-	for (int i = gRoom->backgrounds.size()-1; i >= 0 ; i--) {
-		Background *background = gRoom->backgrounds[i];
-		drawTexture(background->texture, int(background->x), int(background->y), background->getWidth(), background->getHeight());
-		if (background->x < 0) {
-			drawTexture(background->texture, int(background->x) + background->getWidth(), int(background->y), background->getWidth(), background->getHeight());
-		} else if (background->x > 0) {
-			drawTexture(background->texture, int(background->x) - background->getWidth(), int(background->y), background->getWidth(), background->getHeight());
-		}
-	} 
-
-	float cx, cy;
-	if (gRoom->camera) {
-		cx = int(gRoom->camera->x);
-		cy = int(gRoom->camera->y);
-	} else {
-		cx = 0;
-		cy = 0;
-	}
-
-	// Draw Tiles
-	/*int w = gRoom->tilewidth;
-	int h = gRoom->tileheight;
-	div_t divresult;
-	int x, y;
-	for (int i = 0; i < gRoom->tmap.size(); i++) {
-		for (int j = 0; j < gRoom->tmap[i].size(); j++) {
-			for (int k = 0; k < gRoom->tmap[i][j].size(); k++) {
-				divresult = div(gRoom->tmap[i][j][k]-1,gRoom->tilesetwidth/gRoom->tilewidth);
-				y = divresult.quot;
-				x = divresult.rem;
-				SDL_Rect src = {x*w,y*h,w,h};
-				SDL_Rect dest = {int(round(k*gRoom->tilewidth-cx)),int(round(j*gRoom->tileheight-cy)),w,h};
-				SDL_RenderCopy(renderer,gRoom->tilesets[0],&src,&dest);
-			}
-		}
-	}*/
-
-	// Draw Tiles (for TRoom)
-	int w = gRoom->wtile;
-	int h = gRoom->htile;
-	int wtileset;
-	SDL_QueryTexture(gRoom->tileset,NULL,NULL,&wtileset,NULL);
-	div_t divresult;
-	int x, y;
-	for (int i = 0; i < gRoom->tmap.size(); i++) {
-		for (int j = 0; j < gRoom->tmap[i].size(); j++) {
-			for (int k = 0; k < gRoom->tmap[i][j].size(); k++) {
-				divresult = div(gRoom->tmap[i][j][k]-1,wtileset/gRoom->wtile);
-				y = divresult.quot;
-				x = divresult.rem;
-				SDL_Rect src = {x*w,y*h,w,h};
-				SDL_Rect dest = {int(round(k*gRoom->wtile-cx)),int(round(j*gRoom->htile-cy)),w,h};
-				SDL_RenderCopy(renderer,gRoom->tileset,&src,&dest);
-			}
-		}
-	}
-
-	// Draw Sprites
-	for (int i = 0; i < gRoom->objects.size(); i++) {
-		// If Object is in view (TO BE CORRECTED)
-		//cout << "Object no" << i << ".x and y " << gRoom->objects[i]->x << " " << gRoom->objects[i]->y << endl;
-		if (gRoom->objects[i]->x < gRoom->camera->x+320 && gRoom->objects[i]->y < gRoom->camera->y+240 && gRoom->objects[i]->sprite) {
-			Sprite *sprite = gRoom->objects[i]->sprite;
-			Object *object = gRoom->objects[i];
-			int w = gRoom->objects[i]->sprite->width;
-			int h = gRoom->objects[i]->sprite->height;
-
-			SDL_Rect *src = sprite->getRect(object->sprFrame);
-			SDL_Rect dest;
-			if (object->sprFlip == SDL_FLIP_HORIZONTAL)	dest = {int(round(object->x-cx))-sprite->getWidth()+sprite->getXCenter(),int(round(object->y-cy))-sprite->ycenter,w,h};
-			else dest = {int(round(object->x-cx))-sprite->xcenter,int(round(object->y-cy))-sprite->ycenter,w,h};
-
-			SDL_RenderCopyEx(renderer,sprite->texture, src, &dest, object->sprAngle, &(object->sprCenter), object->sprFlip);
-			
-			/* DEBUG: Draw each object's rect */
-			/**/SDL_Rect onScreen = {object->rect.x-int(cx), object->rect.y-int(cy)-sprite->ycenter, object->rect.w, object->rect.h};
-			/**/SDL_SetRenderDrawColor(renderer,255,30,0,0);
-			/**/SDL_RenderDrawRect(renderer,&onScreen);
-			/**/SDL_SetRenderDrawColor(renderer,0,0,0,0);
-		}
-	}
+	// Draw the Room elements
+	gRoom->draw();
 
 	// Draw GUI
 	for (int i = 0; i < guielements.size(); i++) {
@@ -290,8 +210,8 @@ Transition *Graphics::getTransition() {
 }
 
 void Graphics::setTransition(Transition *t) {
-	if (trans) delete trans;
-	trans = t;
+	if (!trans) trans = t;
+	else delete t;
 }
 
 SDL_Renderer *Graphics::getRenderer() {

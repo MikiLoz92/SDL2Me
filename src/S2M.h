@@ -37,23 +37,51 @@
 
 using namespace std;
 
+//! Creates a Sprite and registers it on the Graphics sprite vector.
+/*! \param filename the bitmap filename where all the sprite images are to be loaded
+ * \param w the width of each image
+ * \param h the height of each image
+ * \return A pointer to the recently created Sprite. */
+template <class T = Sprite>
+Sprite *S2M_CreateSprite(string filename, int w, int h) {
+	Sprite *sprite = new T(filename, w, h);
+	return sprite;
+}
+
 //! Manual S2M function for instance creation. Used by the end-user.
 template <class T>
-Object *S2M_CreateInstance(Sprite *sprite, float x, float y, char d) {
+Object *S2M_CreateInstance(Sprite *sprite, float x, float y, char d, Room *r = nullptr) {
 	Object *obj = new T(sprite, x, y, d);
-	gRoom->addObject(obj);
+	if (r) r->addObject(obj);
+	else gRoom->addObject(obj);
 	return obj;
 }
 
 //! Automatic S2M function for instance creation. Used in the engine.
 template <class T>
 Object *S2M_CreateInstance(float x, float y, Room *r = nullptr) {
-	cout << x << "-----" << y << endl;
 	Object *obj = new T(x, y);
 	if (r) r->addObject(obj);
 	else gRoom->addObject(obj);
 	return obj;
 }
+/*
+//! Manual S2M function for entity creation. Used by the end-user.
+Object *S2M_CreateEntity(Sprite *sprite, float x, float y, char d) {
+	cout << "Creating Entity!" << endl;
+	Object *ent = new Entity(sprite, x, y, d);
+	gRoom->addObject(ent);
+	return ent;
+}
+
+//! Automatic S2M function for entity creation. Used in the engine.
+Object *S2M_CreateEntity(float x, float y, Room *r = nullptr) {
+	cout << "Creating Entity!" << endl;
+	Object *ent = new Entity(x, y);
+	if (r) r->addObject(ent);
+	else gRoom->addObject(ent);
+	return ent;
+}*/
 
 template <class T>
 Room *S2M_CreateRoom() {
@@ -79,12 +107,15 @@ void S2M_SetRoom(Room *room) {
 
 template <class T>
 void S2M_GoToRoom(Room *room) {
-	gGraphics->setTransition(new T(S2M_TRANSITION_CLOSE, false));
-	gRoom->nextRoom = room;
+	if (!gGraphics->getTransition()) {
+		gGraphics->setTransition(new T(S2M_TRANSITION_CLOSE, false));
+		gRoom->nextRoom = room;
+	}
 }
 
 void S2M_UpdateRoom() {
-	gRoom->update();
+	if (gRoom) gRoom->update();
+	else cerr << "Error: Trying to update Room but no Room currently set. Please use S2M_SetRoom() to define a current Room." << endl;
 }
 
 void S2M_Update() {

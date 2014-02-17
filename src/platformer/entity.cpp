@@ -44,6 +44,15 @@ Entity::Entity(Sprite *sprite, float x, float y, char d) : Object(sprite, x, y, 
 	yspeed = 0;
 }
 
+/*Entity::Entity(float x, float y) {
+	this->sprite = nullptr;
+	this->x = x;
+	this->y = y;
+	depth = 0;
+	xspeed = 0;
+	yspeed = 0;
+}*/
+
 Entity::~Entity() {
 
 }
@@ -147,11 +156,4 @@ void Entity::update() {
 void Entity::updateSpr() {
 	Object::updateSpr();
 	if (facing) rect.x += 4;
-}
-
-Entity *S2M_CreateEntity(Sprite *sprite, float x, float y, char d) {
-	cout << "Creating Entity!" << endl;
-	Entity *ent = new Entity(sprite, x, y, d);
-	gRoom->addObject(ent);
-	return ent;
 }

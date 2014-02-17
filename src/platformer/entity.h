@@ -39,6 +39,8 @@ class Entity: public Object {
 public:
 	//! Deafult constructor. Works just like it would work with an Object.
 	Entity(Sprite *sprite, float x, float y, char d);
+	//! Constructor.
+	//Entity(float x, float y);
 	//! Default destructor. Works just like it would work with an Object.
 	~Entity();
 	//! Check if a collision is ocurring in any direction.
@@ -71,8 +73,6 @@ private:
 	bool jump = false;
 	vector<bool> collision = {false,false,false,false};
 };
-
-Entity *S2M_CreateEntity(Sprite *sprite, float x, float y, char d);
 
 
 //! An Entity that can be controlled directly with user input.

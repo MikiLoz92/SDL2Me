@@ -174,13 +174,6 @@ Graphics *S2M_CreateGraphics();
 //! Updates the game's graphics
 void S2M_UpdateGraphics();
 
-//! Creates a Sprite and registers it on the Graphics sprite vector.
-/*! \param filename the bitmap filename where all the sprite images are to be loaded
- * \param w the width of each image
- * \param h the height of each image
- * \return A pointer to the recently created Sprite. */
-Sprite *S2M_CreateSprite(string filename, int w, int h);
-
 //! A simple abstraction of a set of images and animations.
 /*! A Sprite instance must be instantiated by each object who wants to have
  * a screen representation. */
@@ -238,6 +231,7 @@ public:
 	friend void Graphics::update();
 	friend void Object::update();
 	friend class Graphics;
+	friend void Room::drawInstances();
 	friend class Object;
 
 protected:

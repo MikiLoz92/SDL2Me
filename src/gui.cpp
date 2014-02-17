@@ -35,3 +35,11 @@ GUIElement::~GUIElement() {
 void GUIElement::draw() {
 
 }
+
+bool GUIElement::isVisible() {
+	return show;
+}
+
+void GUIElement::setVisibility(bool s) {
+	show = s;
+}

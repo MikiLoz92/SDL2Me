@@ -155,12 +155,6 @@ namespace S2M_Room {
  * credits screen. */
 class Room {
 public:
-	//! DEPRECATED: The constructor.
-	/*! Creates a Room from a file.
-	 * \param filename the design file
-	 * \param scriptname the script file */
-	Room(string filename, string scriptname);
-
 	//! The simple constructor.
 	/*! Creates an empty black Room with the game dimensions. */
 	Room();
@@ -174,9 +168,6 @@ public:
 	//! The destructor.
 	/*! Destroys the Room and all its associated tile textures. */
 	~Room();
-
-	//! Creates all instances in the Room.
-	void parseObjects(map <string, Object *(*)(float, float, Room*)> objectMap);
 
 	//! Get the Room's width.
 	/*! \return the Room's width \sa getHeight() */
@@ -204,6 +195,17 @@ public:
 	//! The update method.
 	virtual void update();
 
+	//! Overridable method that draws all backgrounds.
+	virtual void drawBackgrounds();
+
+	//! Overridable method that draws all instances.
+	virtual void drawInstances();
+
+	//! Overridable global draw method.
+	/*! In this method you should put the other drawing methods in the order
+	 * you want them to be executed. */
+	virtual void draw();
+
 	//! The default camera
 	Camera *camera;
 
@@ -223,15 +225,13 @@ public:
 	friend class Entity;
 
 protected:
-	xml_node<> *map_node;
-	int width, height, wtile, htile, wtileset;
-	int pfirstgid;
+	int width, height;
 	vector<Object *> objects;
 	vector<Background *> backgrounds;
 	vector<event> events;
-	vector<vector<vector<int>>> tmap;
-	vector<vector<int>> pmap;
-	SDL_Texture *tileset;
+	//vector<vector<vector<int>>> tmap;
+	//vector<vector<int>> pmap;
+	//SDL_Texture *tileset;
 	//Graphics *graphics;
 };
 
@@ -245,10 +245,21 @@ public:
 	/*! Creates a Room from a file.
 	 * \param filename a file that has the Room's tile information
 	 * \param (*f)(string, *Room) a pointer to a function that populates the Room */
-	TRoom(string filename, vector<int> (*f)(string, TRoom*));
+	TRoom(string filename, string scriptname);
 
 	//! Default destructor.
 	~TRoom();
+
+	//! Creates all instances in the Room.
+	void parseObjects(map <string, Object *(*)(float, float, Room*)> objectMap);
+
+	//! Overridable method that draws the TileMap on the screen.
+	virtual void drawTileMap();
+
+	//! Overridable global draw method.
+	/*! In this method you should put the other drawing methods in the order
+	 * you want them to be executed. */
+	virtual void draw();
 
 	//! Sets the TileMap.
 	/*! \param tm the Tile Map	*/
@@ -262,7 +273,8 @@ public:
 	void setTileset(SDL_Texture *t);
 
 protected:
-	int wtile, htile;
+	xml_node<> *map_node;
+	int wtile, htile, wtileset, pfirstgid;
 	vector<vector<vector<int>>> tmap;
 	vector<vector<int>> pmap;
 	SDL_Texture *tileset;
@@ -319,6 +331,7 @@ public:
 	void update();
 
 	friend class Graphics;
+	friend void Room::drawBackgrounds();
 
 	float x, y;
 	float xspeed, yspeed;

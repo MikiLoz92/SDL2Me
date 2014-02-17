@@ -33,12 +33,14 @@ class GUIElement {
 public:
 	GUIElement();
 	~GUIElement();
+	bool isVisible();
+	void setVisibility(bool s);
 	virtual void draw();
 protected:
 	//! Position in the window.
 	float x, y;
 	//! Determines wether this GUIElement is currently visible onscreen.
-	bool visible = true;
+	bool show = true;
 };
 
 #endif

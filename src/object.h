@@ -101,6 +101,7 @@ public:
 
 	friend void Room::update();
 	friend class Graphics;
+	friend void Room::drawInstances();
 
 protected:
 	//! Next frame's horizontal position on the Room.

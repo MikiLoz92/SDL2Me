@@ -50,11 +50,11 @@
 						<li>Conocimientos avanzados de C++, esto incluye:
 							<ul>
 								<li>Básica de programación (condiciones, bucles, tipos de variables, operadores...)</li>
-								<li>Programación Orientada a Objetos </li>
-								<li>Conceptos más avanzados de C++ como punteros,  templates, iteradores, etc.</li>
+								<li>Programación Orientada a Objetos (friendship, inheritance, polymorphism...)</li>
+								<li>Conceptos más avanzados de C++ como punteros,  templates, dynamic casting, etc.</li>
 							</ul>
 						</li>
-						<li>Programación de vieojuegos. Si no sabes qué es el game-loop abstente siquiera de seguir leyendo. Hay muchos tutoriales de iniciación en la programación de videojuegos en internet que te servirán de base si es que luego decides continuar con SDL2Me.</li>
+						<li>Programación de videojuegos. Si no sabes qué es el game-loop abstente siquiera de seguir leyendo. Hay muchos tutoriales de iniciación en la programación de videojuegos en internet que te servirán de base si es que luego decides continuar con SDL2Me.</li>
 						<li>Conocimientos de SDL, la versión 2 en concreto. Si te quedaste en la 1 puedes echarle una ojeada a la <a href="http://wiki.libsdl.org/MigrationGuide">Guía de Migración</a> o a los magníficos tutoriales de <a href="http://lazyfoo.net/tutorials/SDL/index.php">Lazy Foo</a>, que se actualizan cada mes.</li>
 						<li>Aunque no sea estrictamente necesario, no viene de más haberse familiarizado con el entorno de GameMaker previamente</li>
 					</ul>
@@ -91,7 +91,7 @@
 					int main( int argc, char* args[] ) {
 
 						Graphics *gGraphics = S2M_CreateGraphics(320,240,2,"Test");
-						Room *room = S2M_CreateRoom&ltTRoom&gt();
+						Room *room = S2M_CreateRoom&ltRoom&gt();
 						S2M_SetRoom(room);
 
 						SDL_Event e;
@@ -113,8 +113,7 @@
 					<p>Si lo prefieres, en vez de pasarle todos esos parámetros tú mismo, puedes pasarle un string con la ubicación de un fichero que contenga la configuración de resolución, escalado, etc. y un puntero a una función que a partir de ese fichero consiga susodichos parámetros (ver la documentación oficial).</p>
 					<p>Ya tenemos gráficos, pero ahora estamos flotando en la nada, puesto que no hemos definido ninguna Room como actual. Antes de definir una hace falta crearla, así que echando mano de la función <code>S2M_CreateRoom<>()</code> creamos una Room nueva de tipo <code>TRoom</code>.
 					<pre class="brush: cpp;">
-					Room *room = S2M_CreateRoom&ltTRoom&gt();</pre>
-					<div class="note">TRoom es un tipo de Room especial cuya estructura se basa en tiles.</div>
+					Room *room = S2M_CreateRoom&ltRoom&gt();</pre>
 					<p>Nota los "<code>&lt&gt</code>" que he puesto después del nombre de la función; esto es debido a que <code>S2M_CreateRoom</code> no es una función propiamente dicha, sinó una plantilla de función (template) que crea una nueva instancia de la clase especificada entre corchetes (siempre que la clase especificada sea derivada de la clase base Room). La función se encarga de pasarle los parámetros entre paréntesis al constructor de la clase especificada.</p>
 					<pre class="brush: cpp;">
 					S2M_SetRoom(room);</pre>

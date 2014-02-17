@@ -75,7 +75,138 @@ bool compareBackgroundsByDepth(Background *bg1, Background *bg2) {
 	else return bg1->getDepth() < bg2->getDepth();
 }
 
-Room::Room(string filename, string scriptname) {
+Room::Room() {
+	width = gGraphics->getGameWidth();
+	height = gGraphics->getGameHeight();
+	camera = nullptr;
+}
+
+Room::Room(int w, int h) {
+	width = w;
+	height = h;
+	camera = nullptr;
+}
+
+Room::~Room() {
+	for (int i = 0; i < objects.size(); i++) {
+		delete objects[i];
+	}
+}
+
+int Room::getWidth() {
+	return width;
+}
+
+int Room::getHeight() {
+	return height;
+}
+
+void Room::update() {
+	// Actualizamos la Cámara
+	if (camera)	camera->update();
+
+	// Reordenar los objetos a cada frame es una tarea tediosa que puede suponer un incremento
+	// del 100% de trabajo de la CPU para cantidades abundantes de objetos (~8000 obj.).
+	// NO SERÍA MEJOR ORDENARLOS SOLO CUANDO SE AÑADE UNO NUEVO???? DUH
+	sort(objects.begin(), objects.end(), compareObjectsByDepth);
+	//cout << objects.size() << " objects." << endl;
+
+	// Dereferenciar cada objeto, sin embargo, es una tarea relativamente barata, ya que apenas
+	// aumenta en un 10% el trabajo de la CPU para la misma copiosa cantidad de objetos.
+	if (!gameInPause) {
+		for (int i = 0; i < int(objects.size()); i++) {
+			objects[i]->update();
+			objects[i]->updateSpr();
+
+			/**/cout << "Object#" << i << " x: " << objects[i]->x << " y: " << objects[i]->y << endl;
+		}	
+	}
+
+	// Hay que comprobar si se activa algún evento y en ese caso, ejecutarlo.
+	// TODO
+
+	// Actualizamos cada Background
+	for (int i = 0; i < int(backgrounds.size()); i++) {
+		backgrounds[i]->update();
+	}
+}
+
+void Room::drawBackgrounds() {
+
+	for (int i = backgrounds.size()-1; i >= 0 ; i--) {
+		Background *bg = backgrounds[i];
+		gGraphics->drawTexture(bg->texture, int(bg->x), int(bg->y), bg->getWidth(), bg->getHeight());
+		if (bg->x < 0) {
+			gGraphics->drawTexture(bg->texture, int(bg->x) + bg->getWidth(), int(bg->y), bg->getWidth(), bg->getHeight());
+		} else if (bg->x > 0) {
+			gGraphics->drawTexture(bg->texture, int(bg->x) - bg->getWidth(), int(bg->y), bg->getWidth(), bg->getHeight());
+		}
+	} 
+
+}
+
+void Room::drawInstances() {
+
+	float cx, cy;
+	if (gRoom->camera) { cx = int(gRoom->camera->x); cy = int(gRoom->camera->y); }
+	else { cx = 0; cy = 0; }
+
+	for (int i = 0; i < objects.size(); i++) {
+
+		Sprite *sprite = objects[i]->sprite;
+		Object *object = objects[i];
+
+		if (object->x < cx+320 && object->y < cy+240 && sprite) {
+			
+			int w = sprite->width;
+			int h = sprite->height;
+
+			SDL_Rect *src = sprite->getRect(object->sprFrame);
+			SDL_Rect dest;
+			if (object->sprFlip == SDL_FLIP_HORIZONTAL)	dest = {int(round(object->x-cx))-sprite->getWidth()+sprite->getXCenter(),int(round(object->y-cy))-sprite->ycenter,w,h};
+			else dest = {int(round(object->x-cx))-sprite->xcenter,int(round(object->y-cy))-sprite->ycenter,w,h};
+
+			SDL_RenderCopyEx(gGraphics->getRenderer(),sprite->texture, src, &dest, object->sprAngle, &(object->sprCenter), object->sprFlip);
+			
+			/* DEBUG: Draw each object's rect */
+			/**/SDL_Rect onScreen = {object->rect.x-int(cx), object->rect.y-int(cy)-sprite->ycenter, object->rect.w, object->rect.h};
+			/**/SDL_SetRenderDrawColor(gGraphics->getRenderer(),255,30,0,0);
+			/**/SDL_RenderDrawRect(gGraphics->getRenderer(),&onScreen);
+			/**/SDL_SetRenderDrawColor(gGraphics->getRenderer(),0,0,0,0);
+		}
+	}
+
+}
+
+void Room::draw() {
+	drawBackgrounds();
+	drawInstances();
+}
+
+void Room::setCamera(Camera *c) {
+	camera = c;
+}
+
+void Room::addObject(Object *object) {
+	cout << "Adding object to room" << endl;
+	objects.push_back(object);
+}
+
+void Room::addBackground(Background *bg) {
+	cout << "Adding Background to room" << endl;
+	backgrounds.push_back(bg);
+	sort(backgrounds.begin(), backgrounds.end(), compareBackgroundsByDepth);
+}
+
+/*TRoom::TRoom(string filename, vector<int> (*f)(string fname, TRoom *room)) {
+	vector<int> data = f(filename, this);
+	wtile = data[0];
+	htile = data[1];
+	width = data[2];
+	height = data[3];
+}*/
+
+TRoom::TRoom(string filename, string scriptname) {
 
 	// MAP PART
 	xml_document<> mapxml;
@@ -154,29 +285,17 @@ Room::Room(string filename, string scriptname) {
 		} layer_node = layer_node->next_sibling("layer");
 	}
 
-	//cout << tilesets.size() << endl;
-
 	// SCRIPT PART
 	S2M_Script::ParseFile(scriptname);
 
 	camera = nullptr;
 }
 
-Room::Room() {
-	width = gGraphics->getGameWidth();
-	height = gGraphics->getGameHeight();
+TRoom::~TRoom() {
+	SDL_DestroyTexture(tileset);
 }
 
-Room::Room(int w, int h) {
-	width = w;
-	height = h;
-}
-
-Room::~Room() {
-
-}
-
-void Room::parseObjects(map <string, Object *(*)(float, float, Room*)> objectMap) {
+void TRoom::parseObjects(map <string, Object *(*)(float, float, Room*)> objectMap) {
 
 	// Leer capa de objetos y crear instancias
 	xml_node<> *objectgroup_node = map_node->first_node("objectgroup");
@@ -195,71 +314,6 @@ void Room::parseObjects(map <string, Object *(*)(float, float, Room*)> objectMap
 
 }
 
-int Room::getWidth() {
-	return width;
-}
-
-int Room::getHeight() {
-	return height;
-}
-
-void Room::update() {
-	// Actualizamos la Cámara
-	if (camera)	camera->update();
-
-	// Reordenar los objetos a cada frame es una tarea tediosa que puede suponer un incremento
-	// del 100% de trabajo de la CPU para cantidades abundantes de objetos (~8000 obj.).
-	// NO SERÍA MEJOR ORDENARLOS SOLO CUANDO SE AÑADE UNO NUEVO???? DUH
-	sort(objects.begin(), objects.end(), compareObjectsByDepth);
-	//cout << objects.size() << " objects." << endl;
-
-	// Dereferenciar cada objeto, sin embargo, es una tarea relativamente barata, ya que apenas
-	// aumenta en un 10% el trabajo de la CPU para la misma copiosa cantidad de objetos.
-	if (!gameInPause) {
-		for (int i = 0; i < int(objects.size()); i++) {
-			objects[i]->update();
-			objects[i]->updateSpr();
-
-			/**/cout << "Object#" << i << " x: " << objects[i]->x << " y: " << objects[i]->y << endl;
-		}	
-	}
-
-	// Hay que comprobar si se activa algún evento y en ese caso, ejecutarlo.
-	// TODO
-
-	// Actualizamos cada Background
-	for (int i = 0; i < int(backgrounds.size()); i++) {
-		backgrounds[i]->update();
-	}
-}
-
-void Room::setCamera(Camera *c) {
-	camera = c;
-}
-
-void Room::addObject(Object *object) {
-	cout << "Adding object to room" << endl;
-	objects.push_back(object);
-}
-
-void Room::addBackground(Background *background) {
-	cout << "Adding Background to room" << endl;
-	backgrounds.push_back(background);
-	sort(backgrounds.begin(), backgrounds.end(), compareBackgroundsByDepth);
-}
-
-TRoom::TRoom(string filename, vector<int> (*f)(string fname, TRoom *room)) {
-	vector<int> data = f(filename, this);
-	wtile = data[0];
-	htile = data[1];
-	width = data[2];
-	height = data[3];
-}
-
-TRoom::~TRoom() {
-	SDL_DestroyTexture(tileset);
-}
-
 void TRoom::setTileMap(vector<vector<vector<int>>> tm) {
 	cout << "TM SIZEEEEEEEEEEEEEEE " << tm.size() <<endl;
 	tmap = tm;
@@ -275,6 +329,37 @@ void TRoom::setTileset(SDL_Texture *t) {
 	int w, h;
 	SDL_QueryTexture(t, NULL, NULL, &w, &h);
 	cout << "Dimensiones: " << w << " " << h << endl;
+}
+
+void TRoom::drawTileMap() {
+
+	float cx, cy;
+	if (gRoom->camera) { cx = int(gRoom->camera->x); cy = int(gRoom->camera->y); }
+	else { cx = 0; cy = 0; }
+
+	int wtileset;
+	SDL_QueryTexture(tileset,NULL,NULL,&wtileset,NULL);
+	div_t divresult;
+	int x, y;
+	for (int i = 0; i < tmap.size(); i++) {
+		for (int j = 0; j < tmap[i].size(); j++) {
+			for (int k = 0; k < tmap[i][j].size(); k++) {
+				divresult = div(tmap[i][j][k]-1,wtileset/wtile);
+				y = divresult.quot;
+				x = divresult.rem;
+				SDL_Rect src = {x*wtile,y*htile,wtile,htile};
+				SDL_Rect dest = {int(round(k*wtile-cx)),int(round(j*htile-cy)),wtile,htile};
+				SDL_RenderCopy(gGraphics->getRenderer(),tileset,&src,&dest);
+			}
+		}
+	}
+
+}
+
+void TRoom::draw() {
+	drawBackgrounds();
+	drawTileMap();
+	drawInstances();
 }
 
 Background::Background(string filename, char s) {
@@ -324,8 +409,12 @@ float Background::getDepth() {
 }
 
 void Background::update() {
+	float cxs, cys;
+	if (gRoom->camera) { cxs = int(gRoom->camera->xspeed); cys = int(gRoom->camera->yspeed); }
+	else { cxs = 0; cys = 0; }
+
 	if (style != S2M_BGSTYLE_STATIC) {
-		if (depth > 0) x += xspeed - gRoom->camera->xspeed * (-1.0/depth);
+		if (depth > 0) x += xspeed - cxs * (-1.0/depth);
 		//y += yspeed - gRoom->camera->yspeed;
 	}
 	if (abs(x) > width) {
@@ -336,8 +425,8 @@ void Background::update() {
 	if (y == -height) y = 0;
 }
 
-void S2M_Room::AddBackground(Background *background) {
-	gRoom->addBackground(background);
+void S2M_Room::AddBackground(Background *bg) {
+	gRoom->addBackground(bg);
 }
 
 void S2M_Room::LoadScript(string filename) {
