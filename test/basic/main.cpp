@@ -1,5 +1,4 @@
 #include "../../src/S2M.h"
-#include "../../src/S2M_Platformer.h"
 
 int main( int argc, char* args[] ) {
 

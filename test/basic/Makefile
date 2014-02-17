@@ -19,7 +19,7 @@
 # $ g++ -o test *.o -L../../lib/ -lSDL2 -lSDL2_image -l:libS2M.a
 
 Sources=main.cpp
-Executable=blackwindow
+Executable=basic
 
 CFlags=-std=c++11 -c -g #-Ofast
 LDFlags=-L../../lib/ -lSDL2 -lSDL2_image -lS2M -Wl,-rpath=../../lib/
