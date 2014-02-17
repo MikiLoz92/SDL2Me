@@ -79,18 +79,32 @@ Room::Room() {
 	width = gGraphics->getGameWidth();
 	height = gGraphics->getGameHeight();
 	camera = nullptr;
+	nextRoom = nullptr;
+	prevRoom = nullptr;
 }
 
 Room::Room(int w, int h) {
 	width = w;
 	height = h;
 	camera = nullptr;
+	nextRoom = nullptr;
+	prevRoom = nullptr;
 }
 
 Room::~Room() {
+	/**/cout << "Cleaning Room" << endl;
+	if (nextRoom) { cout << "-> Cleaning next Room" << endl; delete nextRoom; }
+	if (prevRoom) { cout << "-> Cleaning previous Room" << endl; delete prevRoom; }
+	/**/cout << "-> Cleaning Objects (if any): ";
 	for (int i = 0; i < objects.size(); i++) {
-		delete objects[i];
+		//delete objects[i];
 	}
+	/**/cout << endl;
+	/**/cout << "-> Cleaning Backgrounds (if any): ";
+	for (int i = 0; i < backgrounds.size(); i++) {
+		//delete backgrounds[i]; // Backgrounds are not dynamically created yet.
+	}
+	/**/cout << endl;
 }
 
 int Room::getWidth() {
@@ -392,8 +406,9 @@ Background::Background(string filename, char s, float xspe, float yspe, float d)
 }
 
 Background::~Background() {
-	/*SDL_DestroyTexture(texture);
-	SDL_DestroyTexture(image);*/ //Da SegFault si una no está inicializada
+	/**/cout << "|";
+	SDL_DestroyTexture(texture);
+	//SDL_DestroyTexture(image); //Da SegFault si una no está inicializada
 }
 
 int Background::getWidth() {

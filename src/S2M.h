@@ -122,3 +122,9 @@ void S2M_Update() {
 	S2M_UpdateRoom();
 	S2M_UpdateGraphics();
 }
+
+void S2M_ExitGame() {
+	delete gGraphics;
+	delete gRoom;
+	cout << "Exiting SDL2Me... Goodbye!" << endl;
+}

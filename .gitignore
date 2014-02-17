@@ -18,6 +18,7 @@ lib/libS2M.so
 lib/libS2M.a
 test/platformer/test
 test/blackwindow/blackwindow
+test/pmates/pmates
 
 # Packages #
 ############

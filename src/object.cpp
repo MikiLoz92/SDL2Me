@@ -46,7 +46,8 @@ Object::Object(float x, float y) {
 }
 
 Object::~Object() {
-
+	/**/cout << "$";
+	if (sprite) delete sprite;
 }
 
 void Object::setAnimation(int i) {

@@ -21,6 +21,7 @@ int main( int argc, char* args[] ) {
 
 	}
 
+	S2M_ExitGame();
 	return 0;
 
 }

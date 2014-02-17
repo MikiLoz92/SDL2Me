@@ -82,17 +82,12 @@ Graphics::Graphics(int logWidth, int logHeight, string winCaption, Options * opt
 }
 
 Graphics::~Graphics() {
-	cout << "Exiting game... Bye!";
+	/**/ cout << "Cleaning Graphics" << endl;
 	for (int i = 0; i < sprites.size(); i++) {
 		delete sprites[i];
 	}
-	for (int i = 0; i < gRoom->backgrounds.size(); i++) {
-		delete gRoom->backgrounds[i];
-	}
 	SDL_DestroyRenderer( renderer );
 	SDL_DestroyWindow( window );
-	window = NULL;
-	renderer = NULL;
 	IMG_Quit();
 	SDL_Quit();
 }

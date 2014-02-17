@@ -113,7 +113,7 @@ int main( int argc, char* args[] ) {
 
 		CreditRoom *r = dynamic_cast<CreditRoom*>(gRoom);
 		if (r) {
-			if (r->mode) S2M_GoToRoom<TFlipExpo>(room2);
+			if (r->mode) S2M_GoToRoom<TFlipExpo>(room);
 		}
 
 		if (SDL_PollEvent(&e) != 0) {
@@ -148,12 +148,13 @@ int main( int argc, char* args[] ) {
 		}
 
 		if (gJoystick->getBtnPressed(2)) {
-			S2M_GoToRoom<TFlipExpo>(room2);
+			S2M_GoToRoom<TFlipExpo>(room);
 		}
 
 	    S2M_Update();
 	}
 
-	exit(0);
+	S2M_ExitGame();
+	return 0;
 }
 
