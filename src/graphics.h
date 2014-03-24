@@ -171,6 +171,8 @@ extern Options *gOptions;
 /*! \return A pointer to the global Graphics instance. */
 Graphics *S2M_CreateGraphics();
 
+Graphics *S2M_CreateGraphics(int w, int h, string title);
+
 //! Updates the game's graphics
 void S2M_UpdateGraphics();
 

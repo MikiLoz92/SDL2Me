@@ -33,6 +33,7 @@
 #include "script.h"
 #include "joystick.h"
 #include "gui.h"
+#include "gamedata.h"
 #include "defines.h"
 
 using namespace std;

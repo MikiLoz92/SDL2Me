@@ -1,6 +1,6 @@
 # This Makefile will generate a shared library (.so) and a static library (.a)
 
-CoreSources=graphics.cpp options.cpp room.cpp object.cpp pause.cpp script.cpp gui.cpp joystick.cpp
+CoreSources=graphics.cpp options.cpp room.cpp object.cpp pause.cpp script.cpp gui.cpp joystick.cpp gamedata.cpp
 ImplSources= entity.cpp
 Lib=libS2M.so
 

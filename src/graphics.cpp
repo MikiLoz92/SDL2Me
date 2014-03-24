@@ -36,6 +36,12 @@ Graphics *S2M_CreateGraphics() {
 // puesto que su nombre no cambiará nunca, y podríamos programar toda la librería utilizando
 // estas dos instancias por su nombre de pila; sólo haría falta incluir "graphics.h".
 
+Graphics *S2M_CreateGraphics(int w, int h, string title) {
+	gOptions = new Options("config.cfg");
+	gGraphics = new Graphics(w, h, title, gOptions);
+	return gGraphics;
+}
+
 void S2M_UpdateGraphics() {
 	if (gGraphics) gGraphics->update();
 	else {
